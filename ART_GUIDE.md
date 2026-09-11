@@ -37,13 +37,13 @@ Do not imply that the crown establishes ownership of the Cone. Do not substitute
 
 ## Depth and interaction
 
-The relic scene uses the supplied transparent Sacred Signal artwork, CSS perspective, a layered plinth, orbital rings, a soft pool of light and three restrained dust points. It is **2.5D/CSS 3D**, not a physically modelled WebGL object. This is sufficient for the required perspective and keeps the experience lightweight.
+The relic scene begins with the supplied transparent Sacred Signal artwork, CSS perspective, a layered plinth, orbital rings, a soft pool of light and three restrained dust points. On capable desktop and tablet devices it resolves into a procedural WebGL object: five violet and amber cone bands, a ceremonial base, crown, star, intersecting halos and a sparse stellar field. The 2.5D scene remains the initial frame and permanent fallback.
 
-Pointer movement introduces at most 4° pitch and 6° yaw with easing. Character previews receive a smaller perceived tilt through the same bounded mechanism. The hero image moves more slowly than the document, and supported browsers add a gentle scroll-linked approach through the world panorama. Native scroll, links and focus remain in control.
+Pointer movement introduces bounded pitch, yaw, camera drift and moving amber light. Character previews receive a smaller perceived tilt through the same mechanism. Scroll raises and turns the WebGL relic through the Cone section without pinning or replacing native page movement. The hero image moves more slowly than the document, and supported browsers add a gentle scroll-linked approach through the world panorama. Native scroll, links and focus remain in control.
 
 The conceptual reference brief suggested tactile object staging, editorial pacing and cinematic movement. Those ideas are adapted to the Cone as a ceremonial object, not copied from a reference site's layouts or assets. Peter Tarka's public portfolio was consulted for its focus on art direction and dimensional imagery; no external models, shaders or images were imported.
 
-Motion stops for reduced-motion settings or the persistent “Pause atmosphere” control. Pointer effects only run with a fine pointer; frame updates stop after interpolation settles. No WebGL context, animation framework, continuous render loop or remote font request is required. The text archive remains deliberately still.
+Motion stops for reduced-motion settings or the persistent “Pause atmosphere” control. The WebGL render loop pauses offscreen, the pixel ratio is capped, intermediate devices receive fewer particles without antialiasing, and mobile or constrained devices retain the static scene. Three.js and GSAP are loaded only when the home-page island qualifies for WebGL. No remote model, texture, font or script is required. The text archive remains deliberately still.
 
 ## Artwork catalog
 

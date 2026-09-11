@@ -118,7 +118,7 @@ if (hero) {
     );
   };
   new IntersectionObserver(([entry]) => {
-    visible = entry.isIntersecting;
+    visible = entry?.isIntersecting ?? false;
     if (visible && moving() && finePointer.matches) updateHero();
   }).observe(hero);
   window.addEventListener(
@@ -147,8 +147,10 @@ document
   .querySelectorAll<HTMLButtonElement>("[data-observation]")
   .forEach((button) =>
     button.addEventListener("click", () => {
-      const id = button.dataset.observation!;
-      if (!(id in observations)) return;
+      const id = button.dataset.observation;
+      if (!id) return;
+      const observation = observations[id];
+      if (!observation) return;
       document.querySelectorAll("[data-observation]").forEach((el) => {
         if (el instanceof HTMLButtonElement)
           el.setAttribute("aria-pressed", String(el === button));
@@ -156,6 +158,6 @@ document
       const section = document.querySelector<HTMLElement>(".cone-section");
       const output = document.querySelector("#observation-text");
       if (section) section.dataset.observation = id;
-      if (output) output.textContent = observations[id];
+      if (output) output.textContent = observation;
     }),
   );

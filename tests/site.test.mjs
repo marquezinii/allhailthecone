@@ -1,8 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir, stat } from "node:fs/promises";
-import { join, resolve, extname } from "node:path";
+import { join, resolve, extname, basename } from "node:path";
 import { createHash } from "node:crypto";
+import { gzipSync } from "node:zlib";
 
 async function filesAt(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -30,7 +31,9 @@ test("all production routes have metadata, real internal targets and local scrip
     assert.match(html, /rel="canonical" href="https:\/\/allhailthecone.com/);
     assert.match(html, /property="og:image"/);
     assert.match(html, /<html lang="en"/);
-    assert.doesNotMatch(html, /<script(?![^>]*\bsrc=)[^>]*>\s*[^<\s]/);
+    assert.match(html, /http-equiv="content-security-policy"/);
+    assert.match(html, /script-src[^;]+sha256-/);
+    assert.doesNotMatch(html, /script-src[^;]+unsafe-inline/);
     for (const [, href] of html.matchAll(/(?:href|src)="(\/[^"#?]*)/g)) {
       const target = resolve("dist", decodeURIComponent(href.slice(1)));
       const exists =
@@ -123,13 +126,34 @@ test("the public archive follows Official Lore Base v0.1", async () => {
 test("static assets remain within delivery budgets", async () => {
   const files = await filesAt("dist");
   const scripts = files.filter((f) => extname(f) === ".js");
-  const scriptBytes = (await Promise.all(scripts.map((f) => stat(f)))).reduce(
-    (sum, s) => sum + s.size,
+  const scriptFiles = await Promise.all(scripts.map((f) => readFile(f)));
+  const scriptBytes = scriptFiles.reduce(
+    (sum, contents) => sum + contents.length,
     0,
   );
+  const compressedScriptBytes = scriptFiles.reduce(
+    (sum, contents) => sum + gzipSync(contents).length,
+    0,
+  );
+  const shellScripts = scripts.filter((file) =>
+    basename(file).startsWith("Base."),
+  );
+  const shellScriptBytes = (
+    await Promise.all(shellScripts.map((file) => stat(file)))
+  ).reduce((sum, file) => sum + file.size, 0);
+
   assert.ok(
-    scriptBytes < 20_000,
-    `Client scripts grew to ${scriptBytes} bytes`,
+    shellScriptBytes < 20_000,
+    `Shared shell scripts grew to ${shellScriptBytes} bytes`,
+  );
+  assert.ok(
+    scriptBytes < 1_300_000 && compressedScriptBytes < 380_000,
+    `Lazy 3D scripts grew to ${scriptBytes} raw / ${compressedScriptBytes} gzip bytes`,
+  );
+  assert.match(await readFile("dist/index.html", "utf8"), /<astro-island/);
+  assert.doesNotMatch(
+    await readFile("dist/lore/index.html", "utf8"),
+    /<astro-island/,
   );
   for (const file of files.filter((f) => extname(f) === ".webp")) {
     assert.ok((await stat(file)).size < 700_000, `${file}: oversized image`);
@@ -140,7 +164,7 @@ test("static assets remain within delivery budgets", async () => {
     headers.some(
       (h) =>
         h.key === "Content-Security-Policy" &&
-        h.value.includes("script-src 'self'"),
+        h.value === "frame-ancestors 'none'",
     ),
   );
   assert.ok(!files.some((f) => f.includes("originals")));

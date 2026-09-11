@@ -1,9 +1,16 @@
 ---
 import Art from "./Art.astro";
-const { compact = false } = Astro.props;
+import SacredConeExperience from "./experience/SacredConeExperience";
+
+interface Props {
+  compact?: boolean;
+  immersive?: boolean;
+}
+
+const { compact = false, immersive = false } = Astro.props;
 ---
 
-<div class:list={["relic", { compact }]} data-depth>
+<div class:list={["relic", { compact, immersive }]} data-depth>
   <div class="relic-stars" aria-hidden="true"></div>
   <div class="relic-space" aria-hidden="true">
     <div class="relic-orbit orbit-one"></div>
@@ -24,6 +31,9 @@ const { compact = false } = Astro.props;
     <div class="relic-dust dust-two"></div>
     <div class="relic-dust dust-three"></div>
   </div>
+  {immersive && (
+    <SacredConeExperience client:visible={{ rootMargin: "240px" }} />
+  )}
   <div class="relic-coordinate coord-left" aria-hidden="true">
     OBJECT C–001
     <br />

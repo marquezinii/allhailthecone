@@ -114,6 +114,8 @@ test("menu supports keyboard and mobile; motion preferences and observations wor
   if (testInfo.project.name === "desktop") {
     const relic = page.locator(".relic");
     await relic.hover({ position: { x: 50, y: 60 } });
+    await expect(relic).toHaveClass(/webgl-ready/);
+    await expect(relic.locator("canvas")).toBeVisible();
     await expect
       .poll(() =>
         relic.evaluate((el) =>
@@ -160,13 +162,42 @@ test("menu supports keyboard and mobile; motion preferences and observations wor
   ).toBe("none");
 });
 
+test("the WebGL scene loads at its section and keeps the mobile fallback", async ({
+  page,
+}) => {
+  const scripts: string[] = [];
+  page.on("response", (response) => {
+    if (response.url().endsWith(".js")) scripts.push(response.url());
+  });
+
+  await page.goto("/");
+  await page.waitForLoadState("networkidle");
+  expect(scripts.join("\n")).not.toContain("SacredConeCanvas");
+
+  const relic = page.locator(".relic.immersive");
+  await relic.scrollIntoViewIfNeeded();
+  const desktopScene = await page.evaluate(() => innerWidth > 760);
+
+  if (desktopScene) {
+    await expect(relic).toHaveClass(/webgl-ready/);
+    await expect(relic.locator("canvas")).toBeVisible();
+    await expect
+      .poll(() => scripts.some((url) => url.includes("SacredConeCanvas")))
+      .toBeTruthy();
+  } else {
+    await page.waitForTimeout(300);
+    await expect(relic.locator("canvas")).toHaveCount(0);
+    expect(scripts.join("\n")).not.toContain("SacredConeCanvas");
+  }
+});
+
 test("core navigation and the archive remain usable without JavaScript", async ({
   browser,
   baseURL,
 }, testInfo) => {
   const context = await browser.newContext({
     javaScriptEnabled: false,
-    viewport: testInfo.project.use.viewport,
+    viewport: testInfo.project.use.viewport ?? null,
   });
   const page = await context.newPage();
   await page.goto(baseURL!);

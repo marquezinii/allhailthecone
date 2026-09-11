@@ -49,7 +49,7 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-Astro generates static HTML. TypeScript checks cover Astro and browser code; Prettier enforces formatting; Node checks validate routes, metadata, links, image budgets and original integrity; Playwright covers responsive navigation, filtering, motion preferences and accessibility. No database or secret is needed to run the site.
+Astro generates static HTML. A single home-page island uses React Three Fiber and Three.js for the Sacred Cone, with GSAP coordinating its scroll progression. The island loads near its section and leaves the rest of the archive framework-free in the browser. TypeScript checks cover Astro, React and browser code; Prettier enforces formatting; Node checks validate routes, metadata, links, delivery budgets and original integrity; Playwright covers responsive navigation, filtering, motion preferences and accessibility. No database or secret is needed to run the site.
 
 ## Project map
 

@@ -2,9 +2,11 @@
 
 ## Static by intention
 
-Astro 7 builds semantic HTML and local assets. There is no client framework, database, server function or WebGL dependency. CSS handles layout, scene perspective, responsive changes and ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
+Astro 7 builds semantic HTML and local assets. The 42 public routes remain static documents; React is used only as the renderer for the immersive Sacred Cone island on the home page. React Three Fiber owns that scene graph, Three.js owns WebGL rendering, and GSAP ScrollTrigger coordinates its short camera progression. CSS still handles layout, responsive changes and most ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
 
 Core navigation and gallery detail pages remain functional without JavaScript. Search and canon filters are shown only once their handlers can run. Mobile navigation expands in the normal document without JavaScript.
+
+The home page keeps the illustrated Cone as initial HTML and as the permanent fallback. The 3D island hydrates only near the section through `client:visible`; all other routes contain no React island. Reduced-motion users, narrow screens, browsers without WebGL and modest devices keep the static scene.
 
 ## Sources of truth
 
@@ -28,6 +30,18 @@ The app has no user-input server boundary. Gallery queries only toggle pre-rende
 
 Analytics readiness is documented, not activated: choose an aggregate privacy-respecting provider only when metrics have a defined purpose, update the privacy policy, narrow CSP to the exact endpoint and validate no identifiers or content queries are transmitted. Respect global privacy signals. No placeholder tracking ID or dormant script is included.
 
-## Motion budget
+## Immersive scene boundary
 
-The illustrated Cone uses CSS 3D planes and rings. Pointer interpolation requests frames only while moving toward a target. The hero scroll listener is passive and throttled to a frame, and skips offscreen work. Scroll-driven panorama animation is a CSS progressive enhancement. Reduced motion disables all ambient motion; coarse pointers omit parallax response. A persistent pause button is available.
+- `src/components/ConeScene.astro`: static scene, fallback and island boundary.
+- `src/components/experience/SacredConeExperience.tsx`: capability checks, lazy loading, motion state and GSAP lifecycle.
+- `src/components/experience/SacredConeCanvas.tsx`: one procedural R3F scene with no model or texture download.
+- `src/styles/motion.css`: cross-fade, CSS depth and all fallback states.
+- `src/scripts/experience.ts`: shared lightweight controls; it must remain independent of React.
+
+Do not turn content routes or global navigation into React components. Add another island only when an interaction needs a persistent scene graph or state that plain Astro, CSS and a small script cannot express clearly.
+
+## Motion and delivery budget
+
+The illustrated Cone uses CSS 3D planes and rings until the WebGL scene is ready. Pointer interpolation requests frames only while moving toward a target. The WebGL loop pauses offscreen and when atmosphere is paused, caps desktop DPR at 1.5, reduces particles and antialiasing on intermediate devices, and never starts on mobile or constrained hardware. The scene is procedural, so it adds no GLTF model or texture payload. GSAP is dynamically imported only after the island qualifies for WebGL.
+
+The hero scroll listener is passive and throttled to a frame, and skips offscreen work. Scroll-driven panorama animation is a CSS progressive enhancement. Reduced motion disables all ambient motion. A persistent pause button is available. Tests keep the shared shell below 20 KB raw and the complete lazy 3D path below 380 KB gzip.
