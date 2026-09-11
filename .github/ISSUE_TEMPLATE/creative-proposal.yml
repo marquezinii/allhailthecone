@@ -1,6 +1,7 @@
 name: Propose a creative contribution
 description: Stories, art, interpretations, and careful additions to the world.
 title: "[Proposal] "
+labels: ["content"]
 body:
   - type: textarea
     id: premise

@@ -1,10 +1,14 @@
 # All Hail the Cone
 
+[![Verify the archive](https://github.com/marquezinii/allhailthecone/actions/workflows/ci.yml/badge.svg)](https://github.com/marquezinii/allhailthecone/actions/workflows/ci.yml)
+[![Official archive](https://img.shields.io/badge/archive-allhailthecone.com-F2A836?labelColor=10131D)](https://allhailthecone.com)
+[![Community](https://img.shields.io/badge/community-Discord-9472D1?labelColor=10131D)](https://discord.gg/9VyUNRk7N)
+
 **A cosmic bureaucracy held together by tea, bread, potassium, and an extraordinary faith in a traffic cone.**
 
 A crowned capybara explores the floating archipelago. A pigeon keeps Bread Operations running. Small robots tend an orange cone with extraordinary care. Nobody considers any of this unusual.
 
-[Explore the official universe](https://allhailthecone.com) · [Read the canon](CANON.md) · [Join the discussions](https://github.com/marquezinii/allhailthecone/discussions)
+[Explore the official universe](https://allhailthecone.com) · [Join the Discord](https://discord.gg/9VyUNRk7N) · [Join the discussions](https://github.com/marquezinii/allhailthecone/discussions) · [Read the canon](CANON.md)
 
 The first edition is live at **[allhailthecone.vercel.app](https://allhailthecone.vercel.app)** while the official domain is being connected. See [publication status](docs/DEPLOYMENT.md).
 
@@ -83,7 +87,9 @@ No analytics tracker runs in this edition. A browser-only motion preference is t
 
 ## Contribute
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [hospitality compact](CODE_OF_CONDUCT.md). Propose new ideas through Issues or Discussions. Official status is an editorial decision, never automatic.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [hospitality compact](CODE_OF_CONDUCT.md). Ask quick community questions in the [official Discord](https://discord.gg/9VyUNRk7N), use [GitHub Discussions](https://github.com/marquezinii/allhailthecone/discussions) for durable lore conversations, and open an issue for reproducible archive defects. Official status is an editorial decision, never automatic.
+
+For a security-sensitive report, use the private process in [SECURITY.md](SECURITY.md), not a public issue. Community channels and their intended use are listed in [SUPPORT.md](SUPPORT.md).
 
 Public source is not an open-source license. Original project material is rights-reserved under [LICENSE](LICENSE); third-party packages and fonts retain their own licenses. Contributions do not automatically transfer rights.
 

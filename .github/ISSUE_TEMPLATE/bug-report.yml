@@ -1,6 +1,7 @@
 name: Report an archive problem
 description: A broken route, accessibility barrier, or incorrect record.
 title: "[Archive] "
+labels: ["bug"]
 body:
   - type: textarea
     id: problem

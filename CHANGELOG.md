@@ -7,6 +7,7 @@
 - Aligned the canon register, world atlas, factions, timeline, character dossiers, gallery metadata and public site copy.
 - Added complete static English, Portuguese, Mandarin Chinese, German and French editions with route-preserving language navigation and localized metadata.
 - Added the discreet Vemryx creator credit to the shared footer.
+- Added the official Discord community entry point to the site and repository support channels.
 
 ## 1.0.0 — 2026-09-11
 
