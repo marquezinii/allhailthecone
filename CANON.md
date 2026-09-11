@@ -1,52 +1,59 @@
-# Canon register
-
-## What the archive knows
-
-All Hail the Cone is a cosmic fantasy about a civilization held together by ordinary acts of care in extraordinary circumstances. Its inhabitants do not find their own existence unusual. The absurd never needs to justify itself completely.
-
-The first supplied image, catalogued as **The First Observance**, is the principal visual authority. The founding composition takes precedence over later concept art when appearances conflict. The names and institutions below belong to this first written edition; they are not claims about text hidden in the original image.
+# Canon Register v0.1
 
 ## Three levels of truth
 
 ### Canon
 
-Official, established facts. Changes require a documented editorial decision, an explicit continuity note and a versioned release. Canon includes the founding visual reference and the facts designated Canon in this register, the character dossiers and the world documents.
+Official, established material. A change requires an explicit editorial decision and a versioned continuity note.
 
 ### Semi-Canon
 
-Plausible field reports, disputed interpretations and developing details. They may be used in stories if clearly labelled, but can change. Repetition does not automatically promote them to Canon.
+Plausible reports, disputed interpretations and developing details. Semi-Canon may be used in stories but remains subject to change.
 
 ### Coneposting
 
-Experiments, visual possibilities, jokes and fan interpretations. A place to play without silently rewriting the world. The category describes continuity status, not artistic quality.
+Experimental ideas, visual possibilities, jokes and fan interpretations. Repetition does not automatically promote Coneposting into Canon.
 
 ## Established register
 
-- **C-001 — The Cone remains.** An orange traffic cone stands at the centre of civic and ceremonial life. It was present before the first surviving record. The record does not say how long before.
-- **C-002 — The sovereign travels.** Aurelian Stillwater is a crowned capybara astronaut. Calmness and tea are integral to his public conduct.
-- **C-003 — Bread Operations is real.** Percival Crumb is its pigeon COO. Feeding people is a central public responsibility.
-- **C-004 — Hospitality precedes explanation.** No traveller shall be asked to explain their shape before being offered a seat.
-- **C-005 — Maintenance is devotion.** The small robots of the Little Order care for the Cone and its visitors. They are not a hidden army or an inherently sinister cult.
-- **C-006 — The system is tended.** K. Musa, a banana, maintains infrastructure through the Potassium Division. Octavia Resonant, an octopus, conducts music and ceremonies through the Office of Resonance.
-- **C-007 — Worlds are connected.** Floating islands, cosmic waters and interdimensional passages exist. Travel has practical constraints and can leave people waiting.
-- **C-008 — Nobody owns the answer.** Neither a character, a narrator nor an institution has established the Cone's ultimate origin, purpose or power.
+- **C-001 — The universe is fragmented.** Worlds, floating islands, suspended cities and territories are connected by Gates and do not consistently obey ordinary reality.
+- **C-002 — The Ascension occurred.** An attempt to move a cone from a stone platform sent energy across multiple worlds, stabilized many Gates and produced a shared vision of a golden star.
+- **C-003 — The Cone guides.** The Sacred Cone occupies The Sanctuary in The First Ground. It points; it does not provide answers.
+- **C-004 — Higher Ground is a network.** It is a political, cultural and logistical civilization rather than a conventional nation or settled empire.
+- **C-005 — The King explores.** Higher Ground's unnamed capybara monarch is an astronaut, diplomat and unusually calm explorer. Tea is part of his public conduct.
+- **C-006 — The Order observes.** The Order of Guidance combines scientific study, philosophy, ritual, bureaucracy, exploration and maintenance.
+- **C-007 — The Keepers tend.** Small maintenance robots gathered around the Cone without known programming and now maintain The Sanctuary.
+- **C-008 — Bread Builds Worlds.** Bread Operations, led by the pigeon known as The COO, manages logistics, provisioning, trade, reserves and portal routes.
+- **C-009 — Potassium Fuels Progress.** The sentient banana known as The Banana directs the Potassium Division and Higher Ground's technological infrastructure.
+- **C-010 — Music Unites Worlds.** The octopus known as The Maestro operates The Resonance, which carries culture and communication through the Gates.
+- **C-011 — Ancient Gates exist.** Some predate The Ascension; their builders are unknown. The stability of most modern Gates appears connected to the Cone.
+- **C-012 — The signal repeats.** The Sanctuary has detected the words **HIGHER GROUND EXISTS** from beyond the known universe.
+- **C-013 — The symbol predates the record.** Ancient, unconnected civilizations recorded a vertical form, an orbit and a star long before the known history of the Cone.
+- **C-014 — Nobody owns the answer.** No character, institution or narrator can establish the Cone's ultimate origin or purpose.
 
-## Questions deliberately left open
+The first supplied image, catalogued as **The First Observance**, remains the principal visual authority. Later artworks are identity studies, field interpretations or possible futures according to their catalogue status. Text embedded in generated concept art is not automatically Canon.
 
-Does the Cone hold the islands together, or does gathering around it do that? Where do the great whales go? Who issued the first arrival permit? Why does the earliest ledger contain a space for tomorrow's visitor?
+## Deliberately unresolved
 
-These are invitations to stories, not puzzles with a promised final solution. The Cone must not become a vending machine for wishes, an exposition device, or an excuse to remove consequences.
+Who found the Cone? Where did The Ascension occur? Did the Keepers awaken, remember or merely resume an instruction? Who built the ancient Gates? Who transmits the signal? What would happen if the Cone stopped working?
 
-## Disputed material
+These questions create story space. They do not promise a final mechanical explanation.
 
-**S-001:** The oldest shrine step is warmer than the others, even before sunrise.
+## Continuity rules
 
-**S-002:** Octavia's crossing tones may influence the stability of portals. Their reassuring effect on travellers is established; their physical mechanism is not.
+1. Never completely explain the Cone.
+2. Treat the absurd seriously inside the world.
+3. Let humour and consequence coexist.
+4. Keep the cosmology open to expansion.
+5. Treat Higher Ground as an idea as well as a civilization: direction, hope, exploration, progress and the possibility of change.
+6. The Cone does not speak directly. Any apparent communication must remain ambiguous.
 
-**S-003:** A whale passed through the Blue Threshold without an arrival form. An unsigned harbour report says the form was subsequently enlarged.
+## Official language
 
-## How continuity changes
-
-Propose a change through the community contribution process. Identify affected record IDs, artworks and stories; label the proposed status. Maintainers review for visual consistency, tone and consequences. Accepted changes update the register, relevant dossiers and changelog together. Earlier versions remain accessible in Git.
-
-Edition **1.0**, catalogued **11 September 2026**. This date is an editorial date in our world, not an in-world calendar.
+- **ALL HAIL THE CONE**
+- **Higher Ground Awaits.**
+- **Good Tea. Better Decisions.**
+- **Bread Builds Worlds.**
+- **Potassium Fuels Progress.**
+- **Music Unites Worlds.**
+- **Guidance, not answers.**

@@ -6,6 +6,33 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/characters/aurelian-stillwater",
+      "destination": "/characters/the-king",
+      "permanent": true
+    },
+    {
+      "source": "/characters/percival-crumb",
+      "destination": "/characters/the-coo",
+      "permanent": true
+    },
+    {
+      "source": "/characters/k-musa",
+      "destination": "/characters/the-banana",
+      "permanent": true
+    },
+    {
+      "source": "/characters/the-little-order",
+      "destination": "/characters/the-keepers",
+      "permanent": true
+    },
+    {
+      "source": "/characters/octavia-resonant",
+      "destination": "/characters/the-maestro",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

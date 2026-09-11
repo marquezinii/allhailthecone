@@ -1,51 +1,63 @@
-# The floating archipelago
+# The known universe
 
-## A geography of relationships
+## Higher Ground
 
-**Canon.** The Concord inhabits floating islands linked by bridges, vessels and interdimensional passages. Its maps describe maintained connections more reliably than fixed coordinates. Local gravity permits ordinary life on an island; the space between islands is less obliging.
+**Canon.** Higher Ground is a network of worlds, cities, territories, routes, institutions and communities connected after The Ascension. It is not a conventional country and is not fully an empire. Its maps describe relationships and maintained passages more reliably than fixed borders.
 
-An island's position can change without making its residents, debts or friendships disappear. This is the practical problem beneath much of the world's bureaucracy.
+Higher Ground is also an idea: that direction, progress and hope remain possible even when the destination is unknown.
 
-## Stillwater Seat
+## The First Ground
 
-**Canon.** The inhabited island around the shrine of the Sacred Cone. Court rooms, tea rooms, public benches and landing steps surround its centre. No palace wall may prevent access to the common gathering place.
+**Canon.** The region containing The Sanctuary and the Sacred Cone. The First Ground is a place of pilgrimage, observation, scientific work and public ceremony. Its exact coordinates are not widely recorded.
 
-The Cone's immediate surroundings should retain the founding art's scale and texture: stone, moss, lights, small custodians. Monumental cone temples in later studies are possible developments, not proof that the original shrine is enormous.
+The Sanctuary is colossal, but the Cone must remain recognizable as a traffic object rather than becoming an abstract obelisk. Stone, moss, small lights and the Keepers connect the monumental structure to ordinary maintenance.
 
-## The Kindness Drift
+## Crown City
 
-**Canon as a region; individual landmarks are Semi-Canon.** Floating gardens, homes and market islands compose the most travelled part of the archipelago. Bridges are adjusted, traded routes renegotiated, and visitors fed. Hospitality is an obligation people sometimes struggle to fulfil, not a guarantee of a frictionless utopia.
+**Canon.** The administrative capital of Higher Ground. Its councils coordinate diplomacy, route policy and disputes between connected territories. Bread Operations and the Potassium Division both maintain major offices here.
 
-## The Crumb Exchange
+The city governs a network that cannot be understood from one skyline. Its authority depends on functioning relationships across the Gates.
 
-**Canon.** A logistics district connecting bakeries, granaries and dispatch offices. Bread Operations maintains public provisioning here. “The morning proof” names both a stage of breadmaking and a planning meeting; context usually helps.
+## The Floating Realms
 
-Trade uses locally accepted notes and reciprocal supply agreements. No universal currency or exact exchange rate has been established. Bread is strategic because people need to eat, not because every loaf is secretly magical.
+**Canon.** An expanse of inhabited floating islands connected by bridges, vessels and Gates. Some islands drift; others halted during The Ascension. Homes, markets, gardens and entire cities travel beneath changing skies.
 
-## The Blue Threshold
+The region known in visual field studies as **The Kindness Drift** is Semi-Canon until mapped more precisely.
 
-**Canon as a passage; the city beyond is Semi-Canon.** An ocean-lit portal visible in the later world studies. Surveyors track arrival windows and safe return routes. An underwater city may lie beyond it; its rulers and the nature of its relationship to the Concord are unknown.
+## The Deep Cities
 
-Portals do not provide unlimited instantaneous travel. A crossing requires a surveyed route, a working beacon and attention to conditions. Exceptions are story events, not a universal solution.
+**Canon.** Civilizations built within immense oceans. Some are visible through blue Gates in the visual archive. Their governments, biology and relationship with surface territories remain open.
 
-## The Resonant Reach
+## The Outer Routes
 
-**Semi-Canon.** Islands associated with Octavia's travelling ceremonies. Accounts describe unusual acoustic connections between distant shores. Whether these are caused by local physics, portal interference or excellent musicianship is unresolved.
+**Canon.** Surveyed paths used for space and interdimensional exploration. A journey requires a stable Gate, working beacons and current route information. Travel is powerful but neither effortless nor unlimited.
 
-## The Unfiled Expanse
+## The Silent Worlds
 
-**Canon as an unexplored region.** Beyond the maintained network, large entities move between worlds. The cosmic whale is a witnessed presence in the visual record. Its intelligence, origin and intentions remain unknown.
+**Canon.** Apparently abandoned planets found beyond established settlements. Empty streets and intact structures have been reported, but the cause and age of their silence remain unknown.
 
-Blank places on the map are not empty places. Exploration should encounter other ways of living, not merely resources waiting to be claimed.
+## The Far Ground
 
-## Technology and small necessities
+**Canon as an unexplored region.** The poorly charted reality beyond maintained routes. New Gates increasingly open toward its abandoned cities, immense structures and altered versions of familiar territories.
 
-The Potassium Division maintains beacons, computers, lifts and everyday infrastructure. Robotics and astronaut equipment coexist with lanterns, ceramic cups and worn upholstery. The mixed materials are intentional: advanced technology does not remove the need for comfort.
+Blank places on the map are not empty places. Exploration should encounter other histories and ways of living, not merely resources waiting to be claimed.
 
-Weather in jars and weather vending machines are **Semi-Canon** technologies. Their limits and environmental consequences need definition in the story that first uses them. They must not casually solve every disaster.
+## The Gates
 
-## Where conflict comes from
+Gates connect places that may be millions of light-years apart. Some appear artificial, some spontaneous, and some older than every known civilization. The Ascension stabilized many Gates, but not all of them.
 
-Routes drift. Supplies arrive late. Two communities need the same bridge. A new passage offers opportunity at the cost of attention to an old one. Good institutions can become rigid; good people can disagree about what care requires.
+Modern Gate stability appears linked to the Cone. Surveyors cannot determine whether the Cone powers the network, regulates it or simply indicates conditions that already exist.
 
-The Concord is not beyond failure. Its defining question is what its people do next, especially when the solution needs more than another form.
+## Technology and daily life
+
+The Potassium Division maintains computers, communications, artificial intelligence, automation, energy systems, portal infrastructure and navigation beacons. Robotics and astronaut equipment coexist with lanterns, ceramic cups and worn upholstery.
+
+Bread Operations manages transport, supply chains, trade, strategic reserves and distribution. Bread matters because civilizations need to eat. It need not be magical to build worlds.
+
+Tea is both a daily drink and an institutional pause: time reserved for decisions that should not be made at the speed of panic.
+
+## Sources of conflict
+
+Gates fail. Routes move. Supplies arrive late. Institutions compete for access and attention. New worlds challenge the assumptions of old councils. Bread Operations and the Potassium Division can disagree without either becoming villainous.
+
+The central present conflict is the appearance of unknown Gates and the repeating signal **HIGHER GROUND EXISTS**. The danger may lie in the sender, the destination or the possibility that someone else has been following the same Guidance for far longer.

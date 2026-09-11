@@ -139,9 +139,9 @@ const observations: Record<string, string> = {
   object:
     "A familiar shape. Extraordinary attention. A ceremonial view of the Cone.",
   order:
-    "The Little Order tends the shrine. Devotion is mostly an act of care.",
+    "The Keepers tend The Sanctuary. Whether this is faith or protocol remains unresolved.",
   unknown:
-    "Origin, purpose, and jurisdiction remain unrecorded. The archive is still open.",
+    "Origin, purpose, and the sender of the signal remain unrecorded. The archive is still open.",
 };
 document
   .querySelectorAll<HTMLButtonElement>("[data-observation]")

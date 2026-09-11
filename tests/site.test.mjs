@@ -84,6 +84,42 @@ test("the original archive is intact and duplicate associations are truthful", a
   }
 });
 
+test("the public archive follows Official Lore Base v0.1", async () => {
+  const lore = await readFile("dist/lore/index.html", "utf8");
+  const canon = await readFile("dist/canon/index.html", "utf8");
+  const universe = await readFile("src/data/universe.ts", "utf8");
+  const characterBlock = universe.slice(
+    universe.indexOf("export const characters"),
+    universe.indexOf("export const territories"),
+  );
+  const characterNames = [
+    ...characterBlock.matchAll(/^\s+name: "([^"]+)"/gm),
+  ].map((match) => match[1]);
+
+  for (const term of [
+    "The Ascension",
+    "Higher Ground",
+    "The Order of Guidance",
+    "The Keepers",
+    "HIGHER GROUND EXISTS",
+  ])
+    assert.ok(lore.includes(term), `lore: missing ${term}`);
+
+  assert.deepEqual(characterNames, [
+    "The King",
+    "The Sacred Cone",
+    "The COO",
+    "The Banana",
+    "The Keepers",
+    "The Maestro",
+  ]);
+  assert.ok(canon.includes("The Cone does not speak directly"));
+  assert.doesNotMatch(
+    `${lore}${canon}`,
+    /Stillwater|Aurelian|Percival|K\. Musa|Octavia/,
+  );
+});
+
 test("static assets remain within delivery budgets", async () => {
   const files = await filesAt("dist");
   const scripts = files.filter((f) => extname(f) === ".js");

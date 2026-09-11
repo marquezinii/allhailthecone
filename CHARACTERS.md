@@ -1,77 +1,67 @@
-# The court and its associates
+# The figures of Higher Ground
 
-## Aurelian Stillwater
+## The King
 
-**Canon · The unhurried sovereign · The Crown & Kettle**
+**Canon · Capybara monarch · Explorer and diplomat**
 
-A crowned capybara astronaut and the central figure of the Concord. His spacesuit is practical, his crown ceremonial, and his calm an active choice. He is a monarch who explores: unfamiliar islands are places to visit, not abstractions to administer.
+A crowned capybara astronaut and the central political figure of Higher Ground. His true name is absent from official records. He is calm without being passive, ceremonial without being distant, and willing to cross a Gate before deciding what exists beyond it.
 
-His strength is patient attention. His limitation is that patience can look like hesitation to people who are already waiting. Stories may test his judgement without making kindness foolish. Tea is a matter of state because listening is a matter of state.
+During the First Expeditions, he made contact between newly connected civilizations and helped prevent wars among worlds that had only just discovered one another. How he became king is unrecorded and rarely questioned.
 
-> There is time. Put the kettle on.
+Tea is a matter of state because listening is a matter of state.
+
+> **Good Tea. Better Decisions.**
 
 ## The Sacred Cone
 
-**Canon · The fixed point · Jurisdiction unresolved**
+**Canon · The source of Guidance · The Sanctuary**
 
-An orange traffic cone. White reflective bands. A broad base. It must remain recognisable as that object even when surrounded by monumental architecture or ceremonial light.
+An ordinary-looking traffic cone at the centre of extraordinary events. The founding visual shows orange construction, white reflective bands and a broad base. Ceremonial identity art may use violet and amber without replacing that physical appearance.
 
-The Cone has no confirmed speech, desires or viewpoint. Its centrality is established; its supernatural capabilities are not. Avoid scenes that definitively reveal a secret controller, chosen saviour or final explanation. The mystery should create possibilities, not erase stakes.
+The Cone appears indestructible, affects Gates, reacts to certain stars and confounds every attempt to establish its age. It does not speak, issue laws or offer direct answers. Its origin and final purpose must remain unresolved.
 
 > No statement has been issued.
 
-## Percival Crumb
+## The COO
 
-**Canon · Chief Operations Officer · Bread Operations**
+**Canon · Pigeon executive · Bread Operations**
 
-A pigeon in a precise suit, often carrying a briefcase. Crumb manages provisioning, reserves and portal-route logistics. “Bread Operations” is his department's actual name and must be preserved.
+A pigeon in a precise suit, usually carrying a briefcase. His personal name is not used in official records. He directs the supply chains, reserves, trade routes and portal logistics that keep Higher Ground fed.
 
-He values competent delivery over impressive promises. He can be rigid about forecasts, especially when the islands do not cooperate with them. His growth lies in learning when local knowledge deserves more weight than a perfect spreadsheet.
+He is highly competent, completely serious and intolerant of delays. His conflict with the Potassium Division is bureaucratic rather than hostile: both institutions function better because the other exists.
 
-> Bread is not a deliverable. It is the prerequisite.
+> **Bread Builds Worlds.**
 
-## K. Musa
+## The Banana
 
-**Canon · Chief of improbable infrastructure · Potassium Division**
+**Canon · Technology director · The Potassium Division**
 
-A working banana with dark glasses and a portable computer. Musa's remit includes portal beacons, lifts, public systems and tools that other departments depend on. “Potassium-powered productivity” is legitimate departmental language.
+A sentient banana with dark glasses and a portable computer. The Banana directs computing, communications, automation, artificial intelligence, energy systems and portal infrastructure. Nobody considers this unusual.
 
-Musa likes useful things to work. A tendency to solve a social problem as though it were a scheduling bug supplies friction, not villainy. Never turn the character into a disposable food gag.
+The Banana approaches work through measurable systems and potassium-powered productivity. This produces regular disagreement with Bread Operations, especially when infrastructure schedules encounter hungry populations.
 
-> Stable is a service we provide.
+> **Potassium Fuels Progress.**
 
-## The Little Order
+## The Keepers
 
-**Canon · Custodians of the Cone · Care, maintenance & observance**
+**Canon · Robotic attendants · The Sanctuary**
 
-Small, expressive robots who tend the shrine and welcome its visitors. Their faces glow with gentle cyan light, consistent with the founding image. They are curious, capable individuals united by care, not an interchangeable swarm.
+Small maintenance robots who spontaneously gathered around the Cone after The Ascension. Their faces glow with gentle cyan light, consistent with the founding image. No known program explains their behaviour.
 
-Their rituals include polishing, arranging lights, recording arrivals and finding spare chairs. Disagreement within the Order is permitted. Violence, coercion and secret malevolence are not its default narrative function.
+They maintain The Sanctuary, analyse energy, arrange lighting, preserve artefacts, provide security and perform ceremonial duties. Whether this is faith, inherited protocol or something between the two remains unresolved.
 
-**Pip-7**, the keeper of spare chairs, is a Semi-Canon individual custodian. Pip-7 leaves one chair empty for the next arrival and one for whoever that arrival may bring.
+> **Direction confirmed.**
 
-> We have polished the place where the light falls.
+## The Maestro
 
-## Octavia Resonant
+**Canon · Octopus conductor · The Resonance**
 
-**Canon · Maestra of the crossing · Office of Resonance**
+An octopus musician, broadcaster and ceremonial director. The Maestro moves between electronic decks, orchestras and interworld festivals without contradiction.
 
-An octopus musician and ceremonial conductor. She moves between headphones, electronic decks and acoustic ensembles without contradiction. A spoon orchestra deserves the same respect as a royal overture.
+Through The Resonance, music, art, news and cultural events cross the Gates. The network gives distant civilizations a way to hear one another even when their routes are unstable.
 
-Octavia treats culture as public infrastructure: separated communities need ways to hear one another. Her work can be exuberant; her personality is observant. The theory that her music physically stabilises portals remains Semi-Canon.
+> **Music Unites Worlds.**
 
-> Every arrival deserves an overture.
+## Unresolved figures
 
-## Sir Vesper
-
-**Semi-Canon · Companion of the outer route**
-
-A knight seen taking tea beside Aurelian in later visual studies. Vesper is an experienced traveller who has learned the value of sitting down. Their armour has weathered crossings; their competence does not require emotional invulnerability.
-
-Vesper's past, allegiance and exact relationship to the crown remain open. The knight is not to be retroactively inserted into the founding portrait.
-
-## The Quiet Witnesses
-
-**Semi-Canon · Unresolved identities**
-
-The crowned duck, sleeping cat, distant crowned llama and immense cosmic whale belong to the visual vocabulary. A symbol, an animal and a person need not be the same kind of participant. No common origin or secret hierarchy has been established for them.
+The armoured traveller, crowned duck, sleeping cat, distant llama and immense cosmic whale appear in visual studies. Their identities, allegiances and roles remain **Semi-Canon**. They may become characters through later editorial decisions; the images alone do not establish their histories.

@@ -1,35 +1,35 @@
-# A provisional chronology
+# The initial timeline
 
-## Before the first surviving record
+Exact dates remain unavailable. The chronology records eras and shared events rather than pretending that every world uses the same calendar.
 
-**Canon boundary.** The Cone already exists. Its arrival is not dated. No creation story is established.
+## Era Before Guidance
 
-## The First Observance
+**Canon.** Civilizations exist in isolation. Gates appear and vanish unpredictably. Cities wake beneath other skies, floating islands wander, and trade routes disappear without warning. Some ancient Gates and records of the Cone's symbol already exist.
 
-**Canon visual anchor.** The founding image brings together the crowned astronaut capybara, the Cone, the working banana, the executive pigeon, the small custodians and musical octopus imagery within a floating cosmic landscape.
+## The Ascension
 
-“First” names the first image available to the project. It does not prove the scene depicts the first ceremony ever held.
+**Canon.** Someone discovers a cone on a stone platform at an unknown location. An attempt to move it sends energy across multiple worlds. Gates stabilize, islands halt and incompatible systems begin working together. A golden star appears above the Cone to observers in many civilizations.
 
-## The Seating Agreement
+The object becomes known as **The Sacred Cone**.
 
-**Semi-Canon event.** A gathering adopts the practice of keeping room for the next traveller. Its relationship to the oldest seating plan is disputed.
+## The First Expeditions
 
-## The Concord takes shape
+**Canon.** The capybara later known as The King leads journeys through the newly stabilized Gates. Separated civilizations make first contact. Diplomacy prevents several emerging conflicts from becoming wars.
 
-**Canon institutional period.** Communities establish shared responsibilities for hospitality, provisioning, routes and records. The Crown & Kettle, Bread Operations, the Potassium Division and the Office of Resonance operate alongside the Little Order.
+## Foundation of Higher Ground
 
-No precise founding year or required order of departmental creation is established.
+**Canon.** Territories, cities, routes and communities form the network called Higher Ground. The Guidance becomes its central philosophy. The King becomes its foremost political figure by means not recorded in the official archive.
 
-## The outer crossings
+The Order of Guidance, Bread Operations, the Potassium Division and The Resonance take their modern forms. The Keepers assume their duties around The Sanctuary.
 
-**Semi-Canon story period.** Reports of the Blue Threshold and acoustic anomalies encourage new surveys. Sir Vesper appears in later scenes. The order of these journeys remains available to future stories.
+## The Age of Guidance
 
-## The open present
+**Canon.** Higher Ground expands through trade, exploration, cultural exchange and maintained Gate routes. Crown City becomes its administrative capital. The First Ground, Floating Realms, Deep Cities and Outer Routes enter the known map.
 
-**Canon setting.** The Concord is inhabited and functioning, with unfinished work and unexplored horizons. Most new stories begin here. There is no mandated apocalypse, final war or prophecy awaiting completion.
+## The Present Disturbance
 
-## The publication record
+**Canon.** Unknown Gates open toward abandoned cities, immense structures, unfamiliar signals and alternate versions of known territories. Instruments in The Sanctuary detect a repeating message from beyond the known universe:
 
-**11 September 2026 — Edition 1.0.** Twenty-five supplied files are preserved as twenty-three artwork records, including two exact duplicate pairs in the founding set. The founding image becomes the principal visual authority. The written canon, official website and contribution process begin.
+> **HIGHER GROUND EXISTS.**
 
-Publication dates are real-world editorial metadata. They do not set the pace of fictional history.
+For the first time since The Ascension, nobody knows where the Cone is pointing.

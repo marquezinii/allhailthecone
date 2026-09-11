@@ -12,11 +12,11 @@ The first edition is live at **[allhailthecone.vercel.app](https://allhailthecon
 
 ## Begin anywhere
 
-- [Lore](LORE.md): an orientation to the Stillwater Concord.
-- [Characters](CHARACTERS.md): the sovereign, the court and the Cone.
+- [Lore](LORE.md): The Ascension and the foundation of Higher Ground.
+- [Characters](CHARACTERS.md): the central figures of Higher Ground and the Cone.
 - [World](WORLD.md): maintained routes and unfiled horizons.
 - [Factions](FACTIONS.md): offices, orders and everyday responsibilities.
-- [Timeline](TIMELINE.md): a deliberately provisional chronology.
+- [Timeline](TIMELINE.md): the eras from Before Guidance to the present signal.
 - [Canon](CANON.md): Canon, Semi-Canon and Coneposting.
 - [Art guide](ART_GUIDE.md): the visual identity and official artwork catalog.
 
