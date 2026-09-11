@@ -14,6 +14,7 @@
 <p align="center">
   <a href="https://allhailthecone.com"><strong>Explore the archive</strong></a>
   · <a href="https://discord.gg/9VyUNRk7N"><strong>Join Discord</strong></a>
+  · <a href="https://ko-fi.com/allhailthecone"><strong>Support on Ko-fi</strong></a>
   · <a href="https://github.com/marquezinii/allhailthecone/discussions"><strong>Open a discussion</strong></a>
   · <a href="CANON.md"><strong>Read the canon</strong></a>
 </p>
@@ -54,16 +55,16 @@ In Higher Ground, a crowned capybara is the calmest monarch in the multiverse. A
 
 ## Start here
 
-| If you want to…                               | Start here                                                                                                                 |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Understand why the Cone matters               | [LORE.md](LORE.md)                                                                                                         |
-| Meet the people keeping reality operational   | [CHARACTERS.md](CHARACTERS.md)                                                                                             |
-| Explore territories, Gates and unknown routes | [WORLD.md](WORLD.md)                                                                                                       |
-| Read the official continuity boundaries       | [CANON.md](CANON.md)                                                                                                       |
-| Browse the visual archive                     | [Gallery](https://allhailthecone.com/gallery)                                                                              |
-| See the visual rules before making art        | [ART_GUIDE.md](ART_GUIDE.md)                                                                                               |
-| Join the community                            | [Discord](https://discord.gg/9VyUNRk7N) or [GitHub Discussions](https://github.com/marquezinii/allhailthecone/discussions) |
-| Propose a thoughtful addition                 | [CONTRIBUTING.md](CONTRIBUTING.md)                                                                                         |
+| If you want to…                               | Start here                                                                                                                                                            |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Understand why the Cone matters               | [LORE.md](LORE.md)                                                                                                                                                    |
+| Meet the people keeping reality operational   | [CHARACTERS.md](CHARACTERS.md)                                                                                                                                        |
+| Explore territories, Gates and unknown routes | [WORLD.md](WORLD.md)                                                                                                                                                  |
+| Read the official continuity boundaries       | [CANON.md](CANON.md)                                                                                                                                                  |
+| Browse the visual archive                     | [Gallery](https://allhailthecone.com/gallery)                                                                                                                         |
+| See the visual rules before making art        | [ART_GUIDE.md](ART_GUIDE.md)                                                                                                                                          |
+| Join the community or support the archive     | [Discord](https://discord.gg/9VyUNRk7N), [Ko-fi](https://ko-fi.com/allhailthecone) or [GitHub Discussions](https://github.com/marquezinii/allhailthecone/discussions) |
+| Propose a thoughtful addition                 | [CONTRIBUTING.md](CONTRIBUTING.md)                                                                                                                                    |
 
 ## What this project is
 
