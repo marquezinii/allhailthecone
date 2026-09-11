@@ -1,0 +1,37 @@
+---
+import Art from "./Art.astro";
+const { compact = false } = Astro.props;
+---
+
+<div class:list={["relic", { compact }]} data-depth>
+  <div class="relic-stars" aria-hidden="true"></div>
+  <div class="relic-space" aria-hidden="true">
+    <div class="relic-orbit orbit-one"></div>
+    <div class="relic-orbit orbit-two"></div>
+    <div class="relic-axis"></div>
+    <div class="relic-object">
+      <Art
+        id="the-sacred-signal"
+        decorative
+        sizes="(max-width: 760px) 290px, 360px"
+      />
+    </div>
+    <div class="relic-floor"></div>
+    <div class="relic-plinth">
+      <span></span>
+    </div>
+    <div class="relic-dust dust-one"></div>
+    <div class="relic-dust dust-two"></div>
+    <div class="relic-dust dust-three"></div>
+  </div>
+  <div class="relic-coordinate coord-left" aria-hidden="true">
+    OBJECT C–001
+    <br />
+    <span>ORIGIN UNRECORDED</span>
+  </div>
+  <div class="relic-coordinate coord-right" aria-hidden="true">
+    STATUS
+    <br />
+    <span>STILL HERE</span>
+  </div>
+</div>

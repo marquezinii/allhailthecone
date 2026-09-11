@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHeading from "../components/PageHeading.astro";
+import Art from "../components/Art.astro";
+import { territories } from "../data/universe";
+import { Content } from "../../WORLD.md";
+---
+
+<Base
+  title="The world"
+  description="Explore the Stillwater Concord: floating islands, Bread Operations, the Blue Threshold and the unmapped worlds beyond."
+>
+  <PageHeading
+    title="The map is still unfolding."
+    label="A traveller’s atlas"
+    description="An archipelago of floating communities, held together by maintained routes and a remarkably persistent agreement to be kind."
+  />
+  <div class="wrap">
+    <div class="world-atlas-image">
+      <Art id="the-kindness-drift" eager sizes="90vw" />
+      <span class="image-tag">The Kindness Drift · Visual field study</span>
+    </div>
+    <div class="territory-grid">
+      {territories.map((t) => (
+        <article class="territory" id={t.id}>
+          <p class="eyebrow">{t.kind}</p>
+          <h2>{t.name}</h2>
+          <p>{t.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+  <article class="wrap prose world-dossier">
+    <Content />
+  </article>
+</Base>

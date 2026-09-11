@@ -1,0 +1,241 @@
+---
+import Base from "../layouts/Base.astro";
+import Art from "../components/Art.astro";
+import ConeScene from "../components/ConeScene.astro";
+import CharacterCard from "../components/CharacterCard.astro";
+import { characters, fragments } from "../data/universe";
+---
+
+<Base>
+  <section class="hero" aria-labelledby="hero-title" data-hero>
+    <div class="hero-art">
+      <Art
+        id="the-first-observance"
+        eager
+        sizes="(max-width: 700px) 100vw, 75vw"
+      />
+      <div class="hero-art-shade"></div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true"></div>
+    <div class="hero-content wrap">
+      <p class="eyebrow hero-eyebrow">
+        <span class="status-dot"></span> A most extraordinary ordinary universe
+      </p>
+      <h1 id="hero-title">
+        ALL HAIL
+        <br />
+        THE <span>CONE.</span>
+      </h1>
+      <p class="hero-description">
+        A cosmic bureaucracy held together by tea, bread, potassium, and an
+        extraordinary faith in a traffic cone.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/lore">
+          Enter the universe <span aria-hidden="true">↗</span>
+        </a>
+        <a class="button button-quiet" href="#the-cone">
+          Meet the Cone <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+      <div class="hero-note">
+        <span class="note-rule"></span>
+        <p>
+          Good tea. Greater mysteries.
+          <br />
+          All paperwork in order. Mostly.
+        </p>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <span>
+        THE FOUNDING ARCHIVE <span class="muted">/ VOL. I</span>
+      </span>
+      <a href="#welcome">
+        Scroll to discover <span aria-hidden="true">↓</span>
+      </a>
+      <span class="hero-bottom-right">EST. IN THIS DIMENSION · 2026</span>
+    </div>
+  </section>
+  <section id="welcome" class="introduction wrap section-space">
+    <div>
+      <p class="eyebrow">Welcome to the Stillwater Concord</p>
+      <h2>
+        The universe is vast.
+        <br />
+        The kettle is on.
+      </h2>
+    </div>
+    <div class="intro-copy">
+      <p>
+        Between floating islands and politely unstable portals, a civilization
+        has found its centre.
+      </p>
+      <p>
+        Its sovereign is a capybara. Its infrastructure runs on potassium. Its
+        future rests, to an unusual extent, on a pigeon’s ability to deliver
+        bread.
+      </p>
+      <p>
+        And at the heart of it all: <em>one orange cone.</em>
+      </p>
+      <a class="text-link" href="/lore">
+        A brief orientation <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+  <section id="the-cone" class="cone-section" aria-labelledby="cone-title">
+    <div class="wrap cone-layout">
+      <div class="cone-copy">
+        <p class="eyebrow">An object of considerable significance</p>
+        <h2 id="cone-title">
+          No one remembers
+          <br />
+          who put it there.
+          <br />
+          <em>No one moves it.</em>
+        </h2>
+        <p>
+          It does not speak. It does not govern.
+          <br />
+          It has never submitted an explanation.
+        </p>
+        <p>Still, the islands gather around it.</p>
+        <a class="text-link" href="/characters/the-sacred-cone">
+          Regarding the Sacred Cone <span aria-hidden="true">↗</span>
+        </a>
+        <div class="relic-tabs" role="group" aria-label="Cone observations">
+          <button aria-pressed="true" data-observation="object">
+            The object
+          </button>
+          <button aria-pressed="false" data-observation="order">
+            The care
+          </button>
+          <button aria-pressed="false" data-observation="unknown">
+            The unknown
+          </button>
+        </div>
+        <p id="observation-text" class="observation-text" aria-live="polite">
+          A familiar shape. Extraordinary attention. A ceremonial view of the
+          Cone.
+        </p>
+      </div>
+      <ConeScene />
+    </div>
+  </section>
+  <section class="wrap section-space">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">An unlikely administration</p>
+        <h2>
+          Extraordinary beings.
+          <br />
+          Perfectly normal jobs.
+        </h2>
+      </div>
+      <a class="text-link" href="/characters">
+        Meet the entire court <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="character-grid">
+      {[characters[0], characters[2], characters[3]].map((c) => (
+        <CharacterCard character={c} />
+      ))}
+    </div>
+  </section>
+  <section class="world-window" aria-labelledby="world-title">
+    <div class="world-image">
+      <Art id="an-ordinary-afternoon" sizes="100vw" />
+    </div>
+    <div class="world-window-shade"></div>
+    <div class="world-window-content wrap">
+      <p class="eyebrow">Beyond the familiar sky</p>
+      <h2 id="world-title">
+        Some roads
+        <br />
+        lead <em>further.</em>
+      </h2>
+      <p>
+        Floating kingdoms. Uncharted crossings.
+        <br />
+        Somewhere, your tea is still warm.
+      </p>
+      <a class="button button-primary" href="/world">
+        Explore the archipelago <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <span class="world-coordinate">FIELD RECORD / THE KINDNESS DRIFT</span>
+  </section>
+  <section class="wrap section-space">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Fragments from the archive</p>
+        <h2>
+          Not everything
+          <br />
+          has an explanation.
+        </h2>
+      </div>
+      <a class="text-link" href="/canon">
+        Consult the canon <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="fragment-grid">
+      {fragments.map((f) => (
+        <article class="fragment">
+          <div class="fragment-meta">
+            <span>{f.id}</span>
+            <span
+              class:list={[
+                "status-label",
+                { "semi-canon": f.status === "Semi-Canon" },
+              ]}
+            >
+              {f.status}
+            </span>
+          </div>
+          <blockquote>“{f.text}”</blockquote>
+          <p>{f.source}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="gallery-teaser wrap">
+    <a href="/gallery" class="gallery-teaser-art">
+      <Art id="the-kindness-drift" />
+      <span class="image-tag">From the official collection ↗</span>
+    </a>
+    <div>
+      <p class="eyebrow">Evidence of the impossible</p>
+      <h2>
+        It begins
+        <br />
+        with a picture.
+      </h2>
+      <p>
+        Explore the artworks that gave this universe its shape. Every island,
+        every creature, every very important cone.
+      </p>
+      <a class="text-link" href="/gallery">
+        Open the gallery <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+  <section class="invitation wrap section-space">
+    <img src="/brand/cone-mark.svg" width="64" height="64" alt="" />
+    <p class="eyebrow">There is room at the table</p>
+    <h2>
+      A stranger today.
+      <br />
+      Part of the universe tomorrow.
+    </h2>
+    <p>
+      The archive is open. Bring your curiosity.
+      <br />
+      Bread is appreciated, but not required.
+    </p>
+    <a class="button button-primary" href="/community">
+      Join the unfolding story <span aria-hidden="true">↗</span>
+    </a>
+  </section>
+</Base>

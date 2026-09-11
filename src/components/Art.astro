@@ -1,0 +1,32 @@
+---
+import gallery from "../data/gallery.json";
+interface Props {
+  id: string;
+  class?: string;
+  eager?: boolean;
+  sizes?: string;
+  decorative?: boolean;
+}
+const {
+  id,
+  class: className,
+  eager = false,
+  sizes = "(max-width: 700px) 100vw, 50vw",
+  decorative = false,
+} = Astro.props;
+const art = gallery.find((item) => item.id === id);
+if (!art) throw new Error(`Unknown artwork: ${id}`);
+---
+
+<img
+  class={className}
+  src={`/art/${id}-960.webp`}
+  srcset={`/art/${id}-480.webp 480w, /art/${id}-960.webp 960w, /art/${id}-1600.webp ${Math.min(1600, art.width)}w`}
+  sizes={sizes}
+  width={art.width}
+  height={art.height}
+  alt={decorative ? "" : art.alt}
+  loading={eager ? "eager" : "lazy"}
+  fetchpriority={eager ? "high" : "auto"}
+  decoding="async"
+/>

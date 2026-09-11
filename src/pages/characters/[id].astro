@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import Art from "../../components/Art.astro";
+import ConeScene from "../../components/ConeScene.astro";
+import { characters } from "../../data/universe";
+export function getStaticPaths() {
+  return characters.map((character) => ({
+    params: { id: character.id },
+    props: { character },
+  }));
+}
+const { character: c } = Astro.props;
+---
+
+<Base title={c.name} description={c.summary}>
+  <div class="wrap breadcrumb">
+    <a href="/characters">The characters</a> / {c.name}
+  </div>
+  <article class="wrap character-detail">
+    {c.id === "the-sacred-cone" ? (
+      <ConeScene compact />
+    ) : (
+      <div class="portrait" style={`--focus: ${c.position}; --zoom: ${c.zoom}`}>
+        <Art id={c.image} eager sizes="100vw" />
+      </div>
+    )}
+    <div>
+      <p class="eyebrow">Canon · {c.department}</p>
+      <h1>{c.name}</h1>
+      <p class="eyebrow">{c.role}</p>
+      <p>{c.summary}</p>
+      <p>{c.detail}</p>
+      <blockquote>“{c.quote}”</blockquote>
+      <div class="profile-links">
+        <a class="text-link" href="/factions">
+          Explore the institutions ↗
+        </a>
+        <a class="text-link" href="/gallery">
+          See the visual archive ↗
+        </a>
+      </div>
+    </div>
+  </article>
+</Base>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allhailthecone.com/sitemap-index.xml

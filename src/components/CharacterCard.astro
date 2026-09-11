@@ -1,0 +1,26 @@
+---
+import Art from "./Art.astro";
+import { characters } from "../data/universe";
+interface Props {
+  character: (typeof characters)[number];
+}
+const { character: c } = Astro.props;
+---
+
+<a class="character-card" href={`/characters/${c.id}`} data-depth>
+  <div
+    class="character-image"
+    style={`--focus: ${c.position}; --zoom: ${c.zoom}`}
+  >
+    <Art id={c.image} decorative sizes="100vw" />
+    <span class="character-department">{c.department}</span>
+    <span class="character-open" aria-hidden="true">
+      ↗
+    </span>
+  </div>
+  <div class="character-caption">
+    <p class="eyebrow">{c.role}</p>
+    <h3>{c.name}</h3>
+    <p>{c.summary}</p>
+  </div>
+</a>

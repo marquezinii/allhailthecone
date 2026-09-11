@@ -1,0 +1,119 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHeading from "../../components/PageHeading.astro";
+import Art from "../../components/Art.astro";
+import gallery from "../../data/gallery.json";
+---
+
+<Base
+  title="The visual archive"
+  description="The official artworks of All Hail the Cone, from the founding portrait to possible tomorrows. Explore the collection and its canon status."
+>
+  <PageHeading
+    title="Evidence of the impossible."
+    label="The visual archive"
+    description="The pictures came first. Everything else followed. Twenty-three works, twenty-five preserved originals, and a universe still finding its edges."
+  />
+  <section class="wrap" aria-label="Art collection">
+    <div class="gallery-toolbar" id="gallery-tools" hidden>
+      <div
+        class="filter-group"
+        role="group"
+        aria-label="Filter by canon status"
+      >
+        {["All works", "Canon", "Semi-Canon", "Coneposting"].map(
+          (label, index) => (
+            <button
+              data-filter={index === 0 ? "all" : label}
+              aria-pressed={index === 0 ? "true" : "false"}
+            >
+              {label}
+            </button>
+          ),
+        )}
+      </div>
+      <label class="search-label">
+        Search the archive
+        <input
+          type="search"
+          id="gallery-search"
+          placeholder="Title, character, or category…"
+        />
+      </label>
+    </div>
+    <p id="gallery-count" class="gallery-count" role="status">
+      23 works in the archive
+    </p>
+    <div class="gallery-grid">
+      {gallery.map((a) => (
+        <article
+          class="art-card"
+          data-status={a.status}
+          data-search={`${a.title} ${a.description} ${a.characters.join(" ")} ${a.category}`.toLowerCase()}
+        >
+          <a class="art-link" href={`/gallery/${a.id}`}>
+            <Art id={a.id} />
+            <span class="image-tag">
+              {a.primary ? "The founding image" : "View artwork"} ↗
+            </span>
+          </a>
+          <div class="art-meta">
+            <span class="status-label">{a.status}</span>
+            <span>{a.category}</span>
+          </div>
+          <h2>
+            <a href={`/gallery/${a.id}`}>{a.title}</a>
+          </h2>
+          <p>{a.description}</p>
+        </article>
+      ))}
+    </div>
+    <div class="gallery-empty" id="gallery-empty" hidden>
+      <h2>No records found.</h2>
+      <p>Try a different title, character or canon level.</p>
+      <button class="button button-quiet" id="clear-search">
+        Clear filters
+      </button>
+    </div>
+  </section>
+</Base>
+<script>
+  const tools = document.querySelector<HTMLElement>("#gallery-tools")!;
+  const search = document.querySelector<HTMLInputElement>("#gallery-search")!;
+  const buttons = [
+    ...document.querySelectorAll<HTMLButtonElement>("[data-filter]"),
+  ];
+  const cards = [...document.querySelectorAll<HTMLElement>(".art-card")];
+  let filter = "all";
+  tools.hidden = false;
+  const update = () => {
+    const term = search.value.trim().toLowerCase();
+    let count = 0;
+    for (const card of cards) {
+      card.hidden = !(
+        (filter === "all" || card.dataset.status === filter) &&
+        card.dataset.search!.includes(term)
+      );
+      if (!card.hidden) count++;
+    }
+    buttons.forEach((b) =>
+      b.setAttribute("aria-pressed", String(b.dataset.filter === filter)),
+    );
+    document.querySelector("#gallery-count")!.textContent =
+      `${count} ${count === 1 ? "work" : "works"} in the archive`;
+    document.querySelector<HTMLElement>("#gallery-empty")!.hidden = count !== 0;
+  };
+  buttons.forEach((b) =>
+    b.addEventListener("click", () => {
+      filter = b.dataset.filter!;
+      update();
+    }),
+  );
+  search.addEventListener("input", update);
+  document.querySelector("#clear-search")!.addEventListener("click", () => {
+    search.value = "";
+    filter = "all";
+    update();
+    search.focus();
+  });
+</script>

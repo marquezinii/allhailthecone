@@ -1,0 +1,28 @@
+name: Propose a creative contribution
+description: Stories, art, interpretations, and careful additions to the world.
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: premise
+    attributes:
+      label: The idea
+      description: Include medium, relevant characters, and any affected canon records.
+    validations:
+      required: true
+  - type: dropdown
+    id: continuity
+    attributes:
+      label: Proposed continuity status
+      options:
+        - Coneposting
+        - Semi-Canon
+        - Canon proposal
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Sources and permission
+      description: Identify authors, generative tools, source materials, and your permission to submit. No ownership transfer is implied.
+    validations:
+      required: true

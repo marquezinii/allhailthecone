@@ -1,0 +1,19 @@
+name: Report an archive problem
+description: A broken route, accessibility barrier, or incorrect record.
+title: "[Archive] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the page, expected behaviour, and steps to reproduce. Do not include private information.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting details

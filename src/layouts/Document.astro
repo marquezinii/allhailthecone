@@ -1,0 +1,35 @@
+---
+import Base from "./Base.astro";
+import PageHeading from "../components/PageHeading.astro";
+interface Props {
+  title: string;
+  label: string;
+  description: string;
+}
+const { title, label, description } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <PageHeading title={title} label={label} description={description} />
+  <div class="document-layout wrap">
+    <aside class="document-aside">
+      <span class="eyebrow">The public archive</span>
+      <nav aria-label="Archive">
+        <a href="/lore">Lore & origins</a>
+        <a href="/canon">Canon register</a>
+        <a href="/world">World atlas</a>
+        <a href="/factions">Factions & offices</a>
+        <a href="/timeline">Timeline</a>
+        <a href="/community">Contribute</a>
+      </nav>
+      <p>
+        Issued by the Office of Continuity.
+        <br />
+        Revision 1.0 · September 2026
+      </p>
+    </aside>
+    <article class="prose">
+      <slot />
+    </article>
+  </div>
+</Base>

@@ -1,0 +1,69 @@
+---
+import Document from "../layouts/Document.astro";
+import { site } from "../data/universe";
+---
+
+<Document
+  title="There is room at the table."
+  label="The community commons"
+  description="Discuss the lore, share a Coneposting experiment, propose a story or help maintain the official All Hail the Cone archive."
+>
+  <h2>A place to begin</h2>
+  <p>
+    The community begins in the official GitHub repository. Bring an
+    observation, a drawing, a story, or a useful correction. You do not need to
+    know everything in the archive to take part.
+  </p>
+  <p>
+    <a class="button button-primary" href={`${site.repo}/discussions`}>
+      Enter the discussions ↗
+    </a>
+  </p>
+  <h2>Three ways to contribute</h2>
+  <h3>Explore the world</h3>
+  <p>
+    Discuss a character, ask about a crossing, or offer an interpretation. Label
+    theories as theories. A popular explanation does not become canon by
+    repetition.
+  </p>
+  <h3>Make something</h3>
+  <p>
+    Share a story, image or experiment using the{" "}
+    <a href={`${site.repo}/issues/new?template=creative-proposal.yml`}>
+      creative proposal form
+    </a>
+    . Include your sources, how it was made, and the permission you hold to
+    submit it. Fan work begins as Coneposting unless an editorial decision says
+    otherwise.
+  </p>
+  <h3>Improve the archive</h3>
+  <p>
+    Report broken pages, accessibility barriers and inconsistent records using
+    the{" "}
+    <a href={`${site.repo}/issues/new?template=bug-report.yml`}>issue form</a>.
+    Code and content improvements can be proposed through a pull request.
+  </p>
+  <h2>Hospitality is a practice</h2>
+  <p>
+    Be kind to people, precise about disagreements and respectful of boundaries.
+    No harassment, hate, impersonation, spam, exposed private information or
+    stolen work. Critique a contribution without demeaning its creator.
+  </p>
+  <p>
+    Maintainers may label, move, close or remove contributions that violate
+    these rules. Report a concern using GitHub’s reporting tools; do not repost
+    private information in a public issue.
+  </p>
+  <h2>How an idea becomes official</h2>
+  <p>
+    A maintainer reviews tone, visual consistency, provenance and the effect on
+    existing stories. Acceptance is explicit and recorded. Submission is not
+    automatic acceptance, a transfer of ownership, or a promise of compensation.
+  </p>
+  <p>
+    Read the{" "}
+    <a href={`${site.repo}/blob/main/CONTRIBUTING.md`}>contribution guide</a>{" "}
+    and <a href={`${site.repo}/blob/main/ART_GUIDE.md`}>art guide</a> before
+    preparing a larger contribution.
+  </p>
+</Document>
