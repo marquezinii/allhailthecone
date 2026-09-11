@@ -73,7 +73,7 @@ test("gallery combines canon filters and search, recovers from empty results, an
     page.getByRole("heading", { name: "No records found." }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Clear filters" }).click();
-  await expect(page.locator(".art-card:visible")).toHaveCount(23);
+  await expect(page.locator(".art-card:visible")).toHaveCount(31);
   await page.getByRole("searchbox").fill("kindness");
   await expect(page.locator(".art-card:visible")).toHaveCount(1);
   await page
@@ -83,7 +83,7 @@ test("gallery combines canon filters and search, recovers from empty results, an
   await expect(page).toHaveURL(/\/gallery\/the-kindness-drift$/);
   await expect(page.locator(".art-detail-image img")).toBeVisible();
   await page.getByRole("link", { name: "Back to the archive" }).click();
-  await expect(page.locator(".art-card:visible")).toHaveCount(23);
+  await expect(page.locator(".art-card:visible")).toHaveCount(31);
 });
 
 test("menu supports keyboard and mobile; motion preferences and observations work", async ({
@@ -208,7 +208,7 @@ test("core navigation and the archive remain usable without JavaScript", async (
     .getByRole("navigation", { name: "Main navigation" })
     .getByRole("link", { name: "Gallery", exact: true })
     .click();
-  await expect(page.locator(".art-card")).toHaveCount(23);
+  await expect(page.locator(".art-card")).toHaveCount(31);
   await expect(page.locator("#gallery-tools")).toBeHidden();
   await context.close();
 });
