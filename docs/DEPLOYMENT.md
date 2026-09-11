@@ -23,4 +23,12 @@ Promote the last verified Vercel deployment, or rebuild the previous Git tag. No
 
 ## Current publication status
 
-Publication verification will be recorded here after the first production release. No deployment should be inferred from the existence of this configuration alone.
+Verified on 2026-09-11: **https://allhailthecone.vercel.app** is publicly accessible. Home, `/lore` and `/gallery` match the local production HTML byte for byte. HTTPS root/deep routes and sitemap return 200; unknown routes return the custom 404 with HTTP 404. Security headers are present. Browser checks pass on the public deployment.
+
+The published application was built from commit `8efc6e2` through the authenticated Vercel connector. Its 4 MB file-upload limit required a small build wrapper that fetches that exact Git commit, runs `npm ci` and `npm run build`, and serves the resulting `dist`. The optimized artwork remains on Vercel; visitors do not fetch it from GitHub. This is a one-off publication path, not an automatic Git deployment integration.
+
+The connector reported deployment `dpl_5LWVXEe6ec1FWQ6NWFGdMBWLv8sg`, but subsequent project/deployment queries returned 404 and the team project list was empty. The reported generated preview aliases redirect to Vercel SSO. The public URL above was independently verified over HTTP and in Chromium; no dashboard ownership or automatic deployment linkage is inferred from that response.
+
+**Remaining: associate the official domain and enable normal Git deployments in an authenticated Vercel dashboard.** CLI and browser Vercel authentication were unavailable. In the intended project, connect `marquezinii/allhailthecone`, select Astro, Node 24, `npm run build`, and `dist`; then add `allhailthecone.com` under Domains. The checked-in alias expresses the intended domain but did not establish an active association.
+
+Cloudflare zone `allhailthecone.com` is active and its record list was empty when checked. No DNS records or nameservers were changed. After Vercel accepts the domain, add its exact displayed apex DNS target with proxy disabled, then verify HTTPS and the application response. Do not point DNS at an unassociated deployment. The official-domain canonical URLs and sitemap are already prepared; SEO indexing on that domain depends on completing this step.

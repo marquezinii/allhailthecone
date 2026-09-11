@@ -6,6 +6,8 @@ A crowned capybara explores the floating archipelago. A pigeon keeps Bread Opera
 
 [Explore the official universe](https://allhailthecone.com) · [Read the canon](CANON.md) · [Join the discussions](https://github.com/marquezinii/allhailthecone/discussions)
 
+The first edition is live at **[allhailthecone.vercel.app](https://allhailthecone.vercel.app)** while the official domain is being connected. See [publication status](docs/DEPLOYMENT.md).
+
 ![The First Observance — founding visual reference](public/art/the-first-observance-960.webp)
 
 ## Begin anywhere

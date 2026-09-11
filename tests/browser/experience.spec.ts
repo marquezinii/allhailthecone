@@ -162,13 +162,14 @@ test("menu supports keyboard and mobile; motion preferences and observations wor
 
 test("core navigation and the archive remain usable without JavaScript", async ({
   browser,
+  baseURL,
 }, testInfo) => {
   const context = await browser.newContext({
     javaScriptEnabled: false,
     viewport: testInfo.project.use.viewport,
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4321/");
+  await page.goto(baseURL!);
   await expect(
     page.getByRole("navigation", { name: "Main navigation" }),
   ).toBeVisible();
