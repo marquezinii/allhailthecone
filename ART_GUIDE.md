@@ -4,7 +4,7 @@
 
 The original **The First Observance** (`assets/originals/ChatGPT Image 11 de set. de 2026, 13_50_58.png`) is the principal canonical visual reference. Preserve the crowned capybara astronaut, recognisable orange traffic cone, small benevolent robots, executive pigeon, working banana and musical octopus vocabulary. Later supplied images expand possibilities without overriding the original.
 
-All twenty-five supplied files remain byte-for-byte intact. The seven founding files are joined by eighteen identity studies. `assets/catalog/provenance.json` records their SHA-256 hashes, dimensions and artwork associations. Two duplicate pairs share gallery entries. Rebuild delivery derivatives with `npm run assets`; do not edit originals. The original files are intentionally held outside the website's public directory.
+All thirty-three supplied files remain byte-for-byte intact. The seven founding files are joined by eighteen identity studies and eight First Observer studies. `assets/catalog/provenance.json` records their SHA-256 hashes, dimensions and artwork associations. Two duplicate pairs share gallery entries. Rebuild delivery derivatives with `npm run assets`; do not edit originals. The original files are intentionally held outside the website's public directory.
 
 ## Colour system
 

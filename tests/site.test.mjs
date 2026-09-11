@@ -19,7 +19,7 @@ async function filesAt(dir) {
 test("all production routes have metadata, real internal targets and local scripts", async () => {
   const files = await filesAt("dist");
   const pages = files.filter((f) => f.endsWith(".html"));
-  assert.equal(pages.length, 206);
+  assert.equal(pages.length, 251);
   const canonicals = new Set();
   for (const page of pages) {
     const html = await readFile(page, "utf8");
@@ -144,8 +144,8 @@ test("the original archive is intact and duplicate associations are truthful", a
     await readFile("assets/catalog/provenance.json", "utf8"),
   );
   const gallery = JSON.parse(await readFile("src/data/gallery.json", "utf8"));
-  assert.equal(provenance.length, 25);
-  assert.equal(new Set(provenance.map((x) => x.sha256)).size, 23);
+  assert.equal(provenance.length, 33);
+  assert.equal(new Set(provenance.map((x) => x.sha256)).size, 31);
   assert.equal(gallery.filter((a) => a.primary).length, 1);
   assert.equal(
     gallery.find((a) => a.primary).source,
@@ -194,6 +194,7 @@ test("the public archive follows Official Lore Base v0.1", async () => {
     "The Banana",
     "The Keepers",
     "The Maestro",
+    "The First Observer",
   ]);
   assert.ok(canon.includes("The Cone does not speak directly"));
   assert.doesNotMatch(

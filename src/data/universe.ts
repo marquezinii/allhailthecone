@@ -11,6 +11,7 @@ export const site = {
 export const characters = [
   {
     id: "the-king",
+    status: "Canon",
     name: "The King",
     role: "The calmest monarch in the multiverse",
     department: "Higher Ground",
@@ -25,6 +26,7 @@ export const characters = [
   },
   {
     id: "the-sacred-cone",
+    status: "Canon",
     name: "The Sacred Cone",
     role: "The source of Guidance",
     department: "The Sanctuary",
@@ -39,6 +41,7 @@ export const characters = [
   },
   {
     id: "the-coo",
+    status: "Canon",
     name: "The COO",
     role: "Chief Operations Officer",
     department: "Bread Operations",
@@ -53,6 +56,7 @@ export const characters = [
   },
   {
     id: "the-banana",
+    status: "Canon",
     name: "The Banana",
     role: "Director of technological infrastructure",
     department: "The Potassium Division",
@@ -67,6 +71,7 @@ export const characters = [
   },
   {
     id: "the-keepers",
+    status: "Canon",
     name: "The Keepers",
     role: "Robotic attendants of the Cone",
     department: "The Sanctuary",
@@ -81,6 +86,7 @@ export const characters = [
   },
   {
     id: "the-maestro",
+    status: "Canon",
     name: "The Maestro",
     role: "Conductor between worlds",
     department: "The Resonance",
@@ -92,6 +98,21 @@ export const characters = [
     image: "an-ordinary-afternoon",
     detail:
       "The Maestro moves between electronic decks, orchestras and ceremonial transmissions. The Resonance gives distant civilizations a way to hear one another across unstable routes.",
+  },
+  {
+    id: "the-first-observer",
+    status: "Semi-Canon",
+    name: "The First Observer",
+    role: "Witness of the paths left off the map",
+    department: "The Uncharted Observatory",
+    quote: "The Cone points the way. Not everyone has arrived yet.",
+    summary:
+      "A human traveller with a black mug and a notebook of possibilities, found wherever a route, a name or a story risks being erased.",
+    position: "50% 30%",
+    zoom: 1.25,
+    image: "the-first-observer",
+    detail:
+      "His origin is unverified. He works alongside the Order of Guidance, the Keepers and the institutions of Higher Ground without claiming authority over any of them. After the Omitted Harbor, he learned that observation does not remove responsibility: a map can be complete and still leave someone behind.",
   },
 ] as const;
 

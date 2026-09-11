@@ -53,6 +53,13 @@ const characterCopy: Record<
       detail:
         "The Maestro transita entre mesas eletrônicas, orquestras e transmissões cerimoniais. The Resonance permite que civilizações distantes se escutem através de rotas instáveis.",
     },
+    "the-first-observer": {
+      role: "Testemunha dos caminhos deixados fora do mapa",
+      summary:
+        "Um viajante humano com uma caneca preta e um caderno de possibilidades, encontrado quando uma rota, um nome ou uma história corre o risco de ser apagada.",
+      detail:
+        "Sua origem não foi comprovada. Ele trabalha com a Order of Guidance, os Keepers e as instituições de Higher Ground sem reivindicar autoridade sobre elas. Depois do Porto Omitido, aprendeu que observar não elimina responsabilidade: um mapa pode estar completo e ainda deixar alguém para trás.",
+    },
   },
   zh: {
     "the-king": {
@@ -96,6 +103,13 @@ const characterCopy: Record<
         "一只章鱼，主持节庆并运营通过 Gates 传播音乐、艺术与新闻的文化网络。",
       detail:
         "The Maestro 穿梭于电子乐台、管弦乐团和仪式广播之间。The Resonance 让遥远文明能够跨越不稳定的路线彼此聆听。",
+    },
+    "the-first-observer": {
+      role: "被地图遗忘的道路见证者",
+      summary:
+        "一位带着黑色杯子与可能性笔记本的人类旅者，总会在一条路线、一个名字或一段故事即将被抹去时出现。",
+      detail:
+        "他的来历未获证实。他与 The Order of Guidance、Keepers 及 Higher Ground 的机构合作，却不宣称拥有任何权威。经历 The Omitted Harbor 后，他明白观察不能免除责任：一幅完整的地图依然可能把某个人落在身后。",
     },
   },
   de: {
@@ -141,6 +155,13 @@ const characterCopy: Record<
       detail:
         "The Maestro bewegt sich zwischen elektronischen Pulten, Orchestern und zeremoniellen Übertragungen. The Resonance lässt entfernte Zivilisationen einander über instabile Routen hören.",
     },
+    "the-first-observer": {
+      role: "Zeuge der Wege außerhalb der Karte",
+      summary:
+        "Ein menschlicher Reisender mit schwarzer Tasse und einem Notizbuch der Möglichkeiten, der auftaucht, wenn eine Route, ein Name oder eine Geschichte zu verschwinden droht.",
+      detail:
+        "Seine Herkunft ist unbestätigt. Er arbeitet mit dem Order of Guidance, den Keepers und den Institutionen von Higher Ground, ohne Autorität über sie zu beanspruchen. Nach dem Omitted Harbor lernte er, dass Beobachtung nicht von Verantwortung befreit: Eine Karte kann vollständig sein und dennoch jemanden zurücklassen.",
+    },
   },
   fr: {
     "the-king": {
@@ -184,6 +205,13 @@ const characterCopy: Record<
         "Une pieuvre qui dirige festivals et réseau culturel, transportant musique, art et nouvelles à travers les Gates.",
       detail:
         "The Maestro passe des platines électroniques aux orchestres et aux transmissions cérémonielles. The Resonance permet aux civilisations lointaines de s’entendre malgré des routes instables.",
+    },
+    "the-first-observer": {
+      role: "Témoin des routes laissées hors de la carte",
+      summary:
+        "Un voyageur humain avec une tasse noire et un carnet de possibilités, aperçu lorsqu’une route, un nom ou une histoire risque d’être effacé.",
+      detail:
+        "Son origine n’est pas établie. Il travaille avec l’Order of Guidance, les Keepers et les institutions de Higher Ground sans revendiquer d’autorité sur eux. Après le Omitted Harbor, il a compris qu’observer n’efface pas la responsabilité : une carte peut être complète et pourtant laisser quelqu’un derrière elle.",
     },
   },
 };

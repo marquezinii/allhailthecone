@@ -198,5 +198,69 @@
     "sha256": "079b9d355131c26235d0356e35d2676ab2622ab68050694dae105a7cb8355f33",
     "width": 1672,
     "height": 941
+  },
+  {
+    "file": "first-observer-portrait.png",
+    "artwork": "the-first-observer",
+    "bytes": 2661020,
+    "sha256": "50d1d01df04fee0d54958c77fd42e2cb6866953f95dcc09550448ca96ff170bf",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "first-observer-silent-origin.png",
+    "artwork": "the-silent-origin",
+    "bytes": 2863507,
+    "sha256": "c1bb82fa7374ba81dd73094acfa14979fac60784906acac4dba67e71070b73dd",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "first-observer-full-portrait.png",
+    "artwork": "the-observer-in-full",
+    "bytes": 2288673,
+    "sha256": "ae143cdf26e48884c15f2e4205a807e6bb4a0a356480d6e289019f3bd5ac15f5",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "file": "first-observer-uncharted-observatory.png",
+    "artwork": "the-uncharted-observatory",
+    "bytes": 2556906,
+    "sha256": "72ee34ee1e5d2a2415a8c40322fef6c40be2133edbc524fbc66a17aec2f67776",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "first-observer-first-ground.png",
+    "artwork": "the-first-ground-revisited",
+    "bytes": 2922595,
+    "sha256": "7e2aa2a06ab581785cd0022d2b4077d3489f792355aee0ebaab32b996d35d542",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "first-observer-isolated.png",
+    "artwork": "a-field-note-in-violet",
+    "bytes": 1476646,
+    "sha256": "2d8c69ab4e3300bca0d13ad772385b286a4457d04b3e620d6bfd4104e46dfdf8",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "file": "first-observer-outer-route.png",
+    "artwork": "the-margin-at-dusk",
+    "bytes": 3026261,
+    "sha256": "9fd131f2ed0dc840cf230ddc843ab19093069c2e0ddfbc319c999f9bb7c40159",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "file": "first-observer-overlook.png",
+    "artwork": "the-balcony-of-unwritten-routes",
+    "bytes": 2873184,
+    "sha256": "381cd979268d3c76c6bf54aecf783e0587ed4bbf1fce026f8525b1aa3f0b372f",
+    "width": 1122,
+    "height": 1402
   }
 ]

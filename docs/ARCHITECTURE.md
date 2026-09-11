@@ -2,7 +2,7 @@
 
 ## Static by intention
 
-Astro 7 builds semantic HTML and local assets. The 206 public pages remain static documents: English uses unprefixed URLs, while Portuguese, Mandarin Chinese, German and French use `/pt`, `/zh`, `/de` and `/fr`. React is used only as the renderer for the immersive Sacred Cone island on the home page. React Three Fiber owns that scene graph, Three.js owns WebGL rendering, and GSAP ScrollTrigger coordinates its short camera progression. CSS still handles layout, responsive changes and most ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
+Astro 7 builds semantic HTML and local assets. The 251 public pages remain static documents: English uses unprefixed URLs, while Portuguese, Mandarin Chinese, German and French use `/pt`, `/zh`, `/de` and `/fr`. React is used only as the renderer for the immersive Sacred Cone island on the home page. React Three Fiber owns that scene graph, Three.js owns WebGL rendering, and GSAP ScrollTrigger coordinates its short camera progression. CSS still handles layout, responsive changes and most ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
 
 Core navigation and gallery detail pages remain functional without JavaScript. Search and canon filters are shown only once their handlers can run. Mobile navigation expands in the normal document without JavaScript.
 

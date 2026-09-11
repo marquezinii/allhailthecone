@@ -62,6 +62,18 @@ Through The Resonance, music, art, news and cultural events cross the Gates. The
 
 > **Music Unites Worlds.**
 
+## The First Observer
+
+**Semi-Canon · Witness of lost routes · The Uncharted Observatory**
+
+A human traveller who appears in records from places that, according to the map, should not exist. He carries a black mug, a notebook of possibilities and a concern for names, communities and routes that disappear between one version of an archive and the next.
+
+His origin is deliberately unverified. He is not the creator of the Cone, the hidden sovereign of Higher Ground or a shortcut around anyone else's agency. He works beside The King, the Order of Guidance, the Keepers, Bread Operations and the Potassium Division when an omission becomes a practical danger.
+
+The Omitted Harbor is the central uncertainty in his dossier: an unrecognised port lost its connection after an intervention came too late. The Observer does not promise what he cannot prove. He keeps the report open.
+
+> **The Cone points the way. Not everyone has arrived yet.**
+
 ## Unresolved figures
 
 The armoured traveller, crowned duck, sleeping cat, distant llama and immense cosmic whale appear in visual studies. Their identities, allegiances and roles remain **Semi-Canon**. They may become characters through later editorial decisions; the images alone do not establish their histories.

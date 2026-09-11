@@ -11,6 +11,7 @@ const categoryCopy: Record<Locale, Record<string, string>> = {
     "World study": "Estudo de mundo",
     "Concept collection": "Coleção conceitual",
     "Brand system": "Sistema de marca",
+    "Character study": "Estudo de personagem",
   },
   zh: {
     "Founding image": "创世图像",
@@ -18,6 +19,7 @@ const categoryCopy: Record<Locale, Record<string, string>> = {
     "World study": "世界研究",
     "Concept collection": "概念合集",
     "Brand system": "品牌系统",
+    "Character study": "角色研究",
   },
   de: {
     "Founding image": "Gründungsbild",
@@ -25,6 +27,7 @@ const categoryCopy: Record<Locale, Record<string, string>> = {
     "World study": "Weltstudie",
     "Concept collection": "Konzeptsammlung",
     "Brand system": "Markensystem",
+    "Character study": "Figurenstudie",
   },
   fr: {
     "Founding image": "Image fondatrice",
@@ -32,6 +35,7 @@ const categoryCopy: Record<Locale, Record<string, string>> = {
     "World study": "Étude du monde",
     "Concept collection": "Collection conceptuelle",
     "Brand system": "Système de marque",
+    "Character study": "Étude de personnage",
   },
 };
 
@@ -178,23 +182,30 @@ const genericDescription: Record<
       "Um estudo oficial da identidade cerimonial, da geometria orbital e da presença visual do Cone.",
     "Brand system":
       "Um estudo oficial do sistema de marca, mostrando como o Cone, a tipografia e os motivos orbitais funcionam juntos.",
+    "Character study":
+      "Um estudo visual semi-canônico de uma figura de Higher Ground.",
   },
   zh: {
     "Identity study": "对交通锥仪式性视觉、轨道几何与品牌形象的官方研究。",
     "Brand system":
       "对品牌系统的官方研究，展示交通锥、字体与轨道图案如何共同运作。",
+    "Character study": "Higher Ground 人物的半正史视觉研究。",
   },
   de: {
     "Identity study":
       "Eine offizielle Studie der zeremoniellen Identität, der orbitalen Geometrie und der visuellen Präsenz des Kegels.",
     "Brand system":
       "Eine offizielle Studie des Markensystems und des Zusammenspiels von Kegel, Typografie und orbitalen Motiven.",
+    "Character study":
+      "Eine halbkanonische visuelle Studie einer Figur von Higher Ground.",
   },
   fr: {
     "Identity study":
       "Une étude officielle de l’identité cérémonielle, de la géométrie orbitale et de la présence visuelle du Cône.",
     "Brand system":
       "Une étude officielle du système de marque et de l’accord entre Cône, typographie et motifs orbitaux.",
+    "Character study":
+      "Une étude visuelle semi-canonique d’une figure de Higher Ground.",
   },
 };
 
@@ -212,7 +223,7 @@ export const getGalleryArt = (
     ...art,
     title: featured?.title ?? art.title,
     description,
-    alt: featured?.alt ?? description,
+    alt: featured?.alt ?? art.alt,
     category: categoryCopy[locale][art.category] ?? art.category,
   };
 };
