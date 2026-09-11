@@ -106,18 +106,27 @@ const languagePath = noindex ? "/" : basePath;
             {label}
           </a>
         ))}
-        <span class="language-switch" aria-label={copy.language}>
-          {locales.map((code) => (
-            <a
-              href={localizePath(languagePath, code)}
-              lang={localeMeta[code].html}
-              hreflang={localeMeta[code].html}
-              aria-current={locale === code ? "true" : undefined}
-            >
-              {localeMeta[code].label}
-            </a>
-          ))}
-        </span>
+        <details class="language-switch">
+          <summary aria-label={`${copy.language}: ${localeMeta[locale].name}`}>
+            <span class="language-orbit" aria-hidden="true"></span>
+            <span>{localeMeta[locale].label}</span>
+            <span class="language-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="language-menu">
+            <span class="language-menu-label">{copy.language}</span>
+            {locales.map((code) => (
+              <a
+                href={localizePath(languagePath, code)}
+                lang={localeMeta[code].html}
+                hreflang={localeMeta[code].html}
+                aria-current={locale === code ? "page" : undefined}
+              >
+                <span>{localeMeta[code].name}</span>
+                <small>{localeMeta[code].label}</small>
+              </a>
+            ))}
+          </div>
+        </details>
       </nav>
       <a
         class="header-about"

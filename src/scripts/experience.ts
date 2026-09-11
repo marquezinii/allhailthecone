@@ -1,5 +1,7 @@
 const menu = document.querySelector<HTMLButtonElement>(".menu-toggle");
 const nav = document.querySelector<HTMLElement>("#main-nav");
+const languageSwitch =
+  document.querySelector<HTMLDetailsElement>(".language-switch");
 if (menu && nav) {
   document.documentElement.classList.add("js-nav");
   menu.hidden = false;
@@ -15,10 +17,12 @@ if (menu && nav) {
     document.body.classList.toggle("menu-open", open);
   });
   document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      menu.getAttribute("aria-expanded") === "true"
-    ) {
+    if (event.key !== "Escape") return;
+    if (languageSwitch?.open) {
+      event.preventDefault();
+      languageSwitch.open = false;
+      languageSwitch.querySelector("summary")?.focus();
+    } else if (menu.getAttribute("aria-expanded") === "true") {
       closeMenu();
       menu.focus();
     }
@@ -27,6 +31,13 @@ if (menu && nav) {
     if ((event.target as HTMLElement).closest("a")) closeMenu();
   });
   matchMedia("(min-width: 601px)").addEventListener("change", closeMenu);
+}
+
+if (languageSwitch) {
+  document.addEventListener("pointerdown", (event) => {
+    if (languageSwitch.open && !languageSwitch.contains(event.target as Node))
+      languageSwitch.open = false;
+  });
 }
 
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");

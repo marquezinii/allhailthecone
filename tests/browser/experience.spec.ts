@@ -219,6 +219,14 @@ test("language switch keeps the current route in all five locales", async ({
   await page.goto("/world");
   if (testInfo.project.name === "mobile")
     await page.getByRole("button", { name: "Menu" }).click();
+  await page.locator(".language-switch summary").click();
+  await expect(page.locator(".language-switch")).toHaveAttribute("open", "");
+  await page.keyboard.press("Escape");
+  await expect(page.locator(".language-switch")).not.toHaveAttribute(
+    "open",
+    "",
+  );
+  await page.locator(".language-switch summary").click();
   await page.locator('.language-switch a[lang="pt-BR"]').click();
   await expect(page).toHaveURL(/\/pt\/world$/);
   await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");

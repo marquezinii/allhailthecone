@@ -3,13 +3,13 @@ export type Locale = (typeof locales)[number];
 
 export const localeMeta: Record<
   Locale,
-  { label: string; html: string; og: string }
+  { label: string; name: string; html: string; og: string }
 > = {
-  en: { label: "EN", html: "en", og: "en_US" },
-  pt: { label: "PT", html: "pt-BR", og: "pt_BR" },
-  zh: { label: "中文", html: "zh-CN", og: "zh_CN" },
-  de: { label: "DE", html: "de", og: "de_DE" },
-  fr: { label: "FR", html: "fr", og: "fr_FR" },
+  en: { label: "EN", name: "English", html: "en", og: "en_US" },
+  pt: { label: "PT", name: "Português", html: "pt-BR", og: "pt_BR" },
+  zh: { label: "中", name: "中文", html: "zh-CN", og: "zh_CN" },
+  de: { label: "DE", name: "Deutsch", html: "de", og: "de_DE" },
+  fr: { label: "FR", name: "Français", html: "fr", og: "fr_FR" },
 };
 
 export const getLocale = (pathname: string): Locale => {
