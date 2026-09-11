@@ -1,31 +1,105 @@
 ---
 import Base from "./Base.astro";
 import PageHeading from "../components/PageHeading.astro";
+import { getLocale, localizePath } from "../i18n";
 interface Props {
   title: string;
   label: string;
   description: string;
 }
 const { title, label, description } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const copy = {
+  en: {
+    archive: "The public archive",
+    links: [
+      "Lore & origins",
+      "Canon register",
+      "World atlas",
+      "Factions & offices",
+      "Timeline",
+      "Contribute",
+    ],
+    issued: "Issued by the Office of Continuity.",
+    version: "Archive v0.1 · September 2026",
+  },
+  pt: {
+    archive: "O arquivo público",
+    links: [
+      "Lore e origens",
+      "Registro do cânone",
+      "Atlas do mundo",
+      "Facções e instituições",
+      "Linha do tempo",
+      "Contribuir",
+    ],
+    issued: "Emitido pelo Office of Continuity.",
+    version: "Arquivo v0.1 · Setembro de 2026",
+  },
+  zh: {
+    archive: "公共档案",
+    links: [
+      "设定与起源",
+      "正史记录",
+      "世界图集",
+      "派系与机构",
+      "时间线",
+      "参与贡献",
+    ],
+    issued: "由 Office of Continuity 发布。",
+    version: "档案 v0.1 · 2026 年 9 月",
+  },
+  de: {
+    archive: "Das öffentliche Archiv",
+    links: [
+      "Lore & Ursprünge",
+      "Kanonregister",
+      "Weltatlas",
+      "Fraktionen & Ämter",
+      "Zeitleiste",
+      "Mitwirken",
+    ],
+    issued: "Herausgegeben vom Office of Continuity.",
+    version: "Archiv v0.1 · September 2026",
+  },
+  fr: {
+    archive: "Les archives publiques",
+    links: [
+      "Récit et origines",
+      "Registre du canon",
+      "Atlas du monde",
+      "Factions et services",
+      "Chronologie",
+      "Contribuer",
+    ],
+    issued: "Publié par l’Office of Continuity.",
+    version: "Archives v0.1 · Septembre 2026",
+  },
+}[locale];
+const href = (path: string) => localizePath(path, locale);
 ---
 
 <Base title={title} description={description}>
   <PageHeading title={title} label={label} description={description} />
   <div class="document-layout wrap">
     <aside class="document-aside">
-      <span class="eyebrow">The public archive</span>
+      <span class="eyebrow">{copy.archive}</span>
       <nav aria-label="Archive">
-        <a href="/lore">Lore & origins</a>
-        <a href="/canon">Canon register</a>
-        <a href="/world">World atlas</a>
-        <a href="/factions">Factions & offices</a>
-        <a href="/timeline">Timeline</a>
-        <a href="/community">Contribute</a>
+        {[
+          ["/lore", 0],
+          ["/canon", 1],
+          ["/world", 2],
+          ["/factions", 3],
+          ["/timeline", 4],
+          ["/community", 5],
+        ].map(([path, index]) => (
+          <a href={href(String(path))}>{copy.links[Number(index)]}</a>
+        ))}
       </nav>
       <p>
-        Issued by the Office of Continuity.
+        {copy.issued}
         <br />
-        Archive v0.1 · September 2026
+        {copy.version}
       </p>
     </aside>
     <article class="prose">

@@ -1,0 +1,69 @@
+---
+import Home from "../index.astro";
+import About from "../about.astro";
+import Canon from "../canon.astro";
+import Community from "../community.astro";
+import Factions from "../factions.astro";
+import Identity from "../identity.astro";
+import Lore from "../lore.astro";
+import Privacy from "../privacy.astro";
+import Timeline from "../timeline.astro";
+import World from "../world.astro";
+import Characters from "../characters/index.astro";
+import Character from "../characters/[id].astro";
+import Gallery from "../gallery/index.astro";
+import Artwork from "../gallery/[id].astro";
+import gallery from "../../data/gallery.json";
+import { characters } from "../../data/universe";
+import { locales } from "../../i18n";
+
+export function getStaticPaths() {
+  const staticRoutes = [
+    "",
+    "about",
+    "canon",
+    "community",
+    "factions",
+    "identity",
+    "lore",
+    "privacy",
+    "timeline",
+    "world",
+    "characters",
+    "gallery",
+  ] as const;
+  return locales
+    .filter((locale) => locale !== "en")
+    .flatMap((lang) => [
+      ...staticRoutes.map((route) => ({
+        params: { lang, slug: route || undefined },
+        props: { route },
+      })),
+      ...characters.map((character) => ({
+        params: { lang, slug: `characters/${character.id}` },
+        props: { route: "character", character },
+      })),
+      ...gallery.map((art) => ({
+        params: { lang, slug: `gallery/${art.id}` },
+        props: { route: "artwork", art },
+      })),
+    ]);
+}
+
+const { route, character, art } = Astro.props;
+---
+
+{route === "" && <Home />}
+{route === "about" && <About />}
+{route === "canon" && <Canon />}
+{route === "community" && <Community />}
+{route === "factions" && <Factions />}
+{route === "identity" && <Identity />}
+{route === "lore" && <Lore />}
+{route === "privacy" && <Privacy />}
+{route === "timeline" && <Timeline />}
+{route === "world" && <World />}
+{route === "characters" && <Characters />}
+{route === "character" && <Character character={character!} />}
+{route === "gallery" && <Gallery />}
+{route === "artwork" && <Artwork art={art!} />}

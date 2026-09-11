@@ -2,7 +2,7 @@
 
 ## Static by intention
 
-Astro 7 builds semantic HTML and local assets. The 42 public routes remain static documents; React is used only as the renderer for the immersive Sacred Cone island on the home page. React Three Fiber owns that scene graph, Three.js owns WebGL rendering, and GSAP ScrollTrigger coordinates its short camera progression. CSS still handles layout, responsive changes and most ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
+Astro 7 builds semantic HTML and local assets. The 206 public pages remain static documents: English uses unprefixed URLs, while Portuguese, Mandarin Chinese, German and French use `/pt`, `/zh`, `/de` and `/fr`. React is used only as the renderer for the immersive Sacred Cone island on the home page. React Three Fiber owns that scene graph, Three.js owns WebGL rendering, and GSAP ScrollTrigger coordinates its short camera progression. CSS still handles layout, responsive changes and most ambient motion. Small TypeScript modules progressively enhance navigation, gallery filtering, motion preferences and pointer interaction.
 
 Core navigation and gallery detail pages remain functional without JavaScript. Search and canon filters are shown only once their handlers can run. Mobile navigation expands in the normal document without JavaScript.
 
@@ -11,6 +11,8 @@ The home page keeps the illustrated Cone as initial HTML and as the permanent fa
 ## Sources of truth
 
 - Root canon Markdown files: long-form continuity; directly imported by archive routes.
+- `src/i18n`: locale routing plus localized interface, universe and gallery copy.
+- `src/content/{locale}`: localized long-form canon documents; canonical names and statuses remain stable across editions.
 - `src/data/universe.ts`: typed card summaries and stable character/territory IDs. Keep summaries consistent with the root dossiers.
 - `src/data/gallery.json`: artwork metadata and original-file associations.
 - `assets/originals`: unmodified source files.
@@ -39,6 +41,8 @@ Analytics readiness is documented, not activated: choose an aggregate privacy-re
 - `src/scripts/experience.ts`: shared lightweight controls; it must remain independent of React.
 
 Do not turn content routes or global navigation into React components. Add another island only when an interaction needs a persistent scene graph or state that plain Astro, CSS and a small script cannot express clearly.
+
+Locale routing is also static. `src/pages/[lang]/[...slug].astro` delegates to the same page components used by English, so translations do not fork layout or interaction code. Every edition emits its own canonical URL, language metadata and alternate links; adding a locale requires translated content and one locale registry entry, not another page tree.
 
 ## Motion and delivery budget
 

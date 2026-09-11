@@ -1,39 +1,122 @@
 ---
 import Document from "../layouts/Document.astro";
+import { getLocale } from "../i18n";
+const locale = getLocale(Astro.url.pathname);
+const copy = {
+  en: {
+    title: "A quiet visit.",
+    label: "Privacy",
+    description:
+      "How this site handles your visit: no analytics scripts, no advertising cookies, and one optional local motion preference.",
+    sections: [
+      [
+        "What this site stores",
+        "This edition has no accounts, contact forms, advertising scripts or analytics trackers. Pausing the atmosphere stores one preference in your browser: cone-motion. It stays on your device.",
+      ],
+      [
+        "Hosting and external services",
+        "The hosting provider processes requests needed to serve and protect the site. Links to GitHub open a separate service with its own privacy practices. Fonts and gallery images are served locally.",
+      ],
+      [
+        "Future changes",
+        "Any future analytics or community accounts will require an updated policy before activation. The current site does not load a dormant tracker.",
+      ],
+    ],
+    date: "Last updated: 11 September 2026",
+  },
+  pt: {
+    title: "Uma visita tranquila.",
+    label: "Privacidade",
+    description:
+      "Como este site trata sua visita: sem scripts de analytics, cookies de publicidade e apenas uma preferência local opcional de movimento.",
+    sections: [
+      [
+        "O que este site armazena",
+        "Esta edição não possui contas, formulários, publicidade ou rastreadores. Pausar a atmosfera salva uma preferência no navegador: cone-motion. Ela permanece no seu dispositivo.",
+      ],
+      [
+        "Hospedagem e serviços externos",
+        "O provedor de hospedagem processa as solicitações necessárias para servir e proteger o site. Links para o GitHub abrem outro serviço com suas próprias práticas. Fontes e imagens são servidas localmente.",
+      ],
+      [
+        "Mudanças futuras",
+        "Qualquer analytics ou conta comunitária futura exigirá uma política atualizada antes de ser ativada. O site atual não carrega rastreadores inativos.",
+      ],
+    ],
+    date: "Última atualização: 11 de setembro de 2026",
+  },
+  zh: {
+    title: "一次安静的访问。",
+    label: "隐私",
+    description:
+      "本站如何处理你的访问：无分析脚本、无广告 Cookie，仅保存一个可选的本地动画偏好。",
+    sections: [
+      [
+        "本站保存的内容",
+        "本版没有账户、联系表单、广告脚本或分析追踪器。暂停氛围动画时，浏览器只会保存 cone-motion 偏好，且仅留在你的设备上。",
+      ],
+      [
+        "托管与外部服务",
+        "托管服务商会处理提供和保护网站所需的请求。GitHub 链接会打开具有独立隐私政策的外部服务。字体与画廊图像均由本站提供。",
+      ],
+      [
+        "未来变化",
+        "未来若启用分析或社区账户，必须先更新本政策。当前网站不会加载休眠的追踪器。",
+      ],
+    ],
+    date: "最后更新：2026 年 9 月 11 日",
+  },
+  de: {
+    title: "Ein ruhiger Besuch.",
+    label: "Datenschutz",
+    description:
+      "So behandelt diese Website deinen Besuch: keine Analyseskripte, keine Werbe-Cookies und nur eine optionale lokale Bewegungseinstellung.",
+    sections: [
+      [
+        "Was diese Website speichert",
+        "Diese Ausgabe hat keine Konten, Formulare, Werbung oder Analysedienste. Beim Pausieren der Atmosphäre wird nur cone-motion im Browser gespeichert; die Einstellung bleibt auf deinem Gerät.",
+      ],
+      [
+        "Hosting und externe Dienste",
+        "Der Hostinganbieter verarbeitet Anfragen, die zum Ausliefern und Schützen der Website nötig sind. GitHub-Links öffnen einen eigenen Dienst mit eigener Datenschutzpraxis. Schriften und Bilder werden lokal ausgeliefert.",
+      ],
+      [
+        "Zukünftige Änderungen",
+        "Künftige Analysen oder Gemeinschaftskonten erfordern vor der Aktivierung eine aktualisierte Richtlinie. Die aktuelle Website lädt keinen inaktiven Tracker.",
+      ],
+    ],
+    date: "Zuletzt aktualisiert: 11. September 2026",
+  },
+  fr: {
+    title: "Une visite tranquille.",
+    label: "Confidentialité",
+    description:
+      "Comment ce site traite votre visite : aucun script d’analyse, aucun cookie publicitaire et une seule préférence locale facultative pour le mouvement.",
+    sections: [
+      [
+        "Ce que le site enregistre",
+        "Cette édition ne comporte ni compte, formulaire, publicité ni outil de suivi. Suspendre l’atmosphère enregistre uniquement cone-motion dans votre navigateur ; cette préférence reste sur votre appareil.",
+      ],
+      [
+        "Hébergement et services externes",
+        "L’hébergeur traite les requêtes nécessaires au service et à la protection du site. Les liens GitHub ouvrent un service distinct avec ses propres pratiques. Polices et images sont servies localement.",
+      ],
+      [
+        "Évolutions futures",
+        "Tout futur outil d’analyse ou compte communautaire exigera une politique mise à jour avant activation. Le site actuel ne charge aucun traceur dormant.",
+      ],
+    ],
+    date: "Dernière mise à jour : 11 septembre 2026",
+  },
+}[locale];
 ---
 
-<Document
-  title="A quiet visit."
-  label="Privacy"
-  description="How this site handles your visit: no analytics scripts, no advertising cookies, and one optional local motion preference."
->
-  <h2>What this site stores</h2>
-  <p>
-    This edition has no accounts, contact forms, advertising scripts or
-    analytics trackers. If you pause the atmosphere, the site stores one
-    preference in your browser: <code>cone-motion</code>. It stays on your
-    device and is not sent to a project database.
-  </p>
-  <p>
-    The site respects your device’s reduced-motion preference. If browser
-    storage is blocked, the motion control still works for the current page.
-  </p>
-  <h2>Hosting and external services</h2>
-  <p>
-    Our hosting provider processes requests to serve and protect the site. Those
-    requests may include technical information such as IP address, browser
-    details and requested page. This edition does not copy those logs into an
-    analytics service.
-  </p>
-  <p>
-    Links to GitHub take you to a separate service with its own privacy
-    practices. Your activity there is governed by that service and your account
-    settings. Fonts and gallery images are served from this website.
-  </p>
-  <h2>Future changes</h2>
-  <p>
-    Any future analytics or community accounts will require an updated policy
-    before activation. The current site does not load a dormant tracker.
-  </p>
-  <p class="privacy-date">Last updated: 11 September 2026</p>
+<Document title={copy.title} label={copy.label} description={copy.description}>
+  {copy.sections.map(([heading, body]) => (
+    <>
+      <h2>{heading}</h2>
+      <p>{body}</p>
+    </>
+  ))}
+  <p class="privacy-date">{copy.date}</p>
 </Document>

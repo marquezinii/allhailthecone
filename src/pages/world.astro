@@ -2,23 +2,68 @@
 import Base from "../layouts/Base.astro";
 import PageHeading from "../components/PageHeading.astro";
 import Art from "../components/Art.astro";
-import { territories } from "../data/universe";
-import { Content } from "../../WORLD.md";
+import { Content as En } from "../../WORLD.md";
+import { Content as Pt } from "../content/pt/WORLD.md";
+import { Content as Zh } from "../content/zh/WORLD.md";
+import { Content as De } from "../content/de/WORLD.md";
+import { Content as Fr } from "../content/fr/WORLD.md";
+import { getLocale } from "../i18n";
+import { getTerritories } from "../i18n/universe";
+const locale = getLocale(Astro.url.pathname);
+const Content = { en: En, pt: Pt, zh: Zh, de: De, fr: Fr }[locale];
+const territories = getTerritories(locale);
+const copy = (
+  {
+    en: [
+      "The world",
+      "Explore Higher Ground: The First Ground, Crown City, floating realms, deep cities and the unknown Gates beyond.",
+      "The map is still unfolding.",
+      "A traveller’s atlas",
+      "A fragmented universe connected by Gates, maintained routes and one direction whose destination remains unknown.",
+      "The Floating Realms · Visual field study",
+    ],
+    pt: [
+      "O mundo",
+      "Explore Higher Ground: The First Ground, Crown City, reinos flutuantes, cidades profundas e os Gates desconhecidos além.",
+      "O mapa ainda está se revelando.",
+      "Um atlas para viajantes",
+      "Um universo fragmentado conectado por Gates, rotas mantidas e uma direção cujo destino permanece desconhecido.",
+      "The Floating Realms · Estudo visual de campo",
+    ],
+    zh: [
+      "世界",
+      "探索 Higher Ground：The First Ground、Crown City、漂浮群岛、深海城市，以及更远处未知的 Gates。",
+      "地图仍在展开。",
+      "旅行者图集",
+      "一个由 Gates、维护路线和未知目的地方向连接起来的碎片宇宙。",
+      "The Floating Realms · 视觉实地研究",
+    ],
+    de: [
+      "Die Welt",
+      "Erkunde Higher Ground: The First Ground, Crown City, schwebende Reiche, tiefe Städte und die unbekannten Gates dahinter.",
+      "Die Karte entfaltet sich noch.",
+      "Ein Atlas für Reisende",
+      "Ein fragmentiertes Universum, verbunden durch Gates, gepflegte Routen und eine Richtung mit unbekanntem Ziel.",
+      "The Floating Realms · Visuelle Feldstudie",
+    ],
+    fr: [
+      "Le monde",
+      "Explorez Higher Ground : The First Ground, Crown City, les royaumes flottants, les villes profondes et les Gates inconnus au-delà.",
+      "La carte se déploie encore.",
+      "Un atlas du voyageur",
+      "Un univers fragmenté relié par des Gates, des routes entretenues et une direction dont la destination reste inconnue.",
+      "The Floating Realms · Étude visuelle de terrain",
+    ],
+  } as const
+)[locale];
 ---
 
-<Base
-  title="The world"
-  description="Explore Higher Ground: The First Ground, Crown City, floating realms, deep cities and the unknown Gates beyond."
->
-  <PageHeading
-    title="The map is still unfolding."
-    label="A traveller’s atlas"
-    description="A fragmented universe connected by Gates, maintained routes and one direction whose destination remains unknown."
-  />
+<Base title={copy[0]} description={copy[1]}>
+  <PageHeading title={copy[2]} label={copy[3]} description={copy[4]} />
   <div class="wrap">
     <div class="world-atlas-image">
       <Art id="the-kindness-drift" eager sizes="90vw" />
-      <span class="image-tag">The Floating Realms · Visual field study</span>
+      <span class="image-tag">{copy[5]}</span>
     </div>
     <div class="territory-grid">
       {territories.map((t) => (

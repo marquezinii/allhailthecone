@@ -1,13 +1,27 @@
 ---
 import Art from "./Art.astro";
-import { characters } from "../data/universe";
+import { getLocale, localizePath } from "../i18n";
 interface Props {
-  character: (typeof characters)[number];
+  character: {
+    id: string;
+    name: string;
+    role: string;
+    department: string;
+    summary: string;
+    position: string;
+    zoom: number;
+    image: string;
+  };
 }
 const { character: c } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
 ---
 
-<a class="character-card" href={`/characters/${c.id}`} data-depth>
+<a
+  class="character-card"
+  href={localizePath(`/characters/${c.id}`, locale)}
+  data-depth
+>
   <div
     class="character-image"
     style={`--focus: ${c.position}; --zoom: ${c.zoom}`}

@@ -1,61 +1,213 @@
 ---
 import Document from "../layouts/Document.astro";
 import { site } from "../data/universe";
+import { getLocale, localizePath } from "../i18n";
+const locale = getLocale(Astro.url.pathname);
+const copy = {
+  en: {
+    title: "A universe, quite by accident.",
+    label: "About All Hail the Cone",
+    description:
+      "An independent creative universe born from surreal imagery. A serious home for impossible places, ordinary kindness and one sacred traffic cone.",
+    sections: [
+      [
+        "The pictures came first",
+        "All Hail the Cone began with surreal, AI-generated images: a crowned astronaut capybara, a working banana, a pigeon executive, devoted robots and an orange cone. Their strange consistency suggested a place.",
+        "This is that place’s first public archive. The project is independently developed by marquezinii. The supplied artwork forms its visual foundation; its names, institutions and written continuity were developed for this edition.",
+      ],
+      [
+        "The absurd does not need permission",
+        "Inside this universe, nobody is surprised that a banana has a job or that a pigeon runs Bread Operations. The humour comes from taking those responsibilities seriously.",
+        "The Cone remains a traffic cone. Explaining it completely would make the world smaller.",
+      ],
+      [
+        "A long horizon",
+        "The archive can grow into stories, comics, animation, maps, games and community interpretations. This edition establishes a place to begin, not a list of promised releases.",
+        "Official continuity, tentative ideas and open experimentation each have a place.",
+      ],
+      [
+        "Made in the open",
+        "The website and documentation are available in the official repository. Public source makes the project inspectable; licensing and contribution terms still apply.",
+        "",
+      ],
+      [
+        "Start wherever you like",
+        "Read the orientation, meet the central figures, wander through the visual archive or find your way to the community. There is no required order.",
+        "",
+      ],
+    ],
+  },
+  pt: {
+    title: "Um universo, quase por acidente.",
+    label: "Sobre All Hail the Cone",
+    description:
+      "Um universo criativo independente nascido de imagens surrealistas. Um lar sério para lugares impossíveis, gentileza cotidiana e um cone de trânsito sagrado.",
+    sections: [
+      [
+        "As imagens vieram primeiro",
+        "All Hail the Cone começou com imagens surreais geradas por IA: uma capivara astronauta coroada, uma banana trabalhando, um pombo executivo, robôs devotos e um cone laranja. A estranha coerência entre elas sugeria um lugar.",
+        "Este é o primeiro arquivo público desse lugar. O projeto é desenvolvido de forma independente por marquezinii. As obras fornecidas formam sua base visual; nomes, instituições e continuidade escrita foram desenvolvidos para esta edição.",
+      ],
+      [
+        "O absurdo não precisa de permissão",
+        "Neste universo, ninguém se surpreende com uma banana empregada ou um pombo comandando Bread Operations. O humor nasce da seriedade dessas responsabilidades.",
+        "O Cone continua sendo um cone de trânsito. Explicá-lo por completo tornaria o mundo menor.",
+      ],
+      [
+        "Um horizonte longo",
+        "O arquivo pode crescer em histórias, quadrinhos, animações, mapas, jogos e interpretações da comunidade. Esta edição estabelece um ponto de partida.",
+        "Continuidade oficial, ideias provisórias e experimentação aberta têm lugares distintos.",
+      ],
+      [
+        "Feito abertamente",
+        "O site e a documentação estão no repositório oficial. O código público torna o projeto verificável; licenças e regras de contribuição continuam válidas.",
+        "",
+      ],
+      [
+        "Comece onde quiser",
+        "Leia a orientação, conheça as figuras centrais, percorra o arquivo visual ou encontre a comunidade. Não existe uma ordem obrigatória.",
+        "",
+      ],
+    ],
+  },
+  zh: {
+    title: "一个近乎偶然诞生的宇宙。",
+    label: "关于 All Hail the Cone",
+    description:
+      "一个诞生于超现实图像的独立创意宇宙：认真容纳不可能之地、日常善意与一枚神圣交通锥。",
+    sections: [
+      [
+        "图像最先出现",
+        "All Hail the Cone 始于一组 AI 生成的超现实图像：王冠宇航员水豚、工作的香蕉、鸽子高管、虔诚机器人和橙色交通锥。它们奇异的一致性指向了一个世界。",
+        "这里是那个世界的第一座公共档案馆。项目由 marquezinii 独立开发；用户提供的作品构成视觉基础，名称、机构与文字连续性则为本版建立。",
+      ],
+      [
+        "荒诞无需许可",
+        "在这个宇宙里，没有人会惊讶香蕉拥有工作，或鸽子领导 Bread Operations。幽默来自所有人对责任的认真态度。",
+        "交通锥依然只是交通锥。彻底解释它，只会让世界变小。",
+      ],
+      [
+        "漫长的地平线",
+        "档案未来可以扩展为故事、漫画、动画、地图、游戏与社区诠释。本版只建立起点，并非发布承诺清单。",
+        "官方连续性、暂定想法与开放实验各有位置。",
+      ],
+      [
+        "公开创作",
+        "网站与文档均位于官方代码仓库。公开源码便于审查，但许可与贡献条款仍然适用。",
+        "",
+      ],
+      [
+        "从任何地方开始",
+        "阅读世界指引、认识核心角色、漫游视觉档案，或前往社区。这里没有规定顺序。",
+        "",
+      ],
+    ],
+  },
+  de: {
+    title: "Ein Universum, eher zufällig.",
+    label: "Über All Hail the Cone",
+    description:
+      "Ein unabhängiges Kreativuniversum aus surrealen Bildern. Ein ernstes Zuhause für unmögliche Orte, alltägliche Güte und einen heiligen Verkehrskegel.",
+    sections: [
+      [
+        "Die Bilder kamen zuerst",
+        "All Hail the Cone begann mit surrealen, KI-generierten Bildern: einem gekrönten Astronauten-Wasserschwein, einer arbeitenden Banane, einer Führungstaube, hingebungsvollen Robotern und einem orangefarbenen Kegel. Ihre seltsame Stimmigkeit deutete auf einen Ort.",
+        "Dies ist das erste öffentliche Archiv dieses Ortes. Das Projekt wird unabhängig von marquezinii entwickelt. Die bereitgestellten Werke bilden die visuelle Grundlage; Namen, Institutionen und Kontinuität entstanden für diese Ausgabe.",
+      ],
+      [
+        "Das Absurde braucht keine Erlaubnis",
+        "Hier wundert sich niemand über eine Banane mit Beruf oder eine Taube an der Spitze von Bread Operations. Der Humor entsteht aus dem Ernst dieser Aufgaben.",
+        "Der Kegel bleibt ein Verkehrskegel. Eine vollständige Erklärung würde die Welt kleiner machen.",
+      ],
+      [
+        "Ein weiter Horizont",
+        "Das Archiv kann zu Geschichten, Comics, Animationen, Karten, Spielen und Deutungen der Gemeinschaft wachsen. Diese Ausgabe schafft einen Anfang.",
+        "Offizielle Kontinuität, vorläufige Ideen und offenes Experimentieren haben jeweils ihren Platz.",
+      ],
+      [
+        "Offen entwickelt",
+        "Website und Dokumentation befinden sich im offiziellen Repository. Öffentlicher Quellcode macht das Projekt prüfbar; Lizenz- und Beitragsregeln gelten weiterhin.",
+        "",
+      ],
+      [
+        "Beginne, wo du möchtest",
+        "Lies die Orientierung, triff die zentralen Figuren, durchstreife das Bildarchiv oder finde zur Gemeinschaft. Es gibt keine vorgeschriebene Reihenfolge.",
+        "",
+      ],
+    ],
+  },
+  fr: {
+    title: "Un univers, presque par accident.",
+    label: "À propos de All Hail the Cone",
+    description:
+      "Un univers créatif indépendant né d’images surréalistes. Un foyer sérieux pour les lieux impossibles, la bonté ordinaire et un cône de signalisation sacré.",
+    sections: [
+      [
+        "Les images sont venues d’abord",
+        "All Hail the Cone est né d’images surréalistes générées par IA : un capybara astronaute couronné, une banane au travail, un pigeon cadre, des robots dévoués et un cône orange. Leur étrange cohérence suggérait un lieu.",
+        "Voici les premières archives publiques de ce lieu. Le projet est développé indépendamment par marquezinii. Les œuvres fournies forment sa base visuelle ; les noms, institutions et la continuité écrite ont été créés pour cette édition.",
+      ],
+      [
+        "L’absurde n’a pas besoin de permission",
+        "Dans cet univers, personne ne s’étonne qu’une banane ait un emploi ou qu’un pigeon dirige Bread Operations. L’humour naît du sérieux accordé à ces responsabilités.",
+        "Le Cône reste un cône de signalisation. L’expliquer entièrement rendrait le monde plus petit.",
+      ],
+      [
+        "Un long horizon",
+        "Les archives peuvent devenir récits, bandes dessinées, animations, cartes, jeux et interprétations communautaires. Cette édition pose un point de départ.",
+        "Continuité officielle, idées provisoires et expérimentation ouverte ont chacune leur place.",
+      ],
+      [
+        "Créé au grand jour",
+        "Le site et sa documentation sont disponibles dans le dépôt officiel. Le code public rend le projet vérifiable ; licences et règles de contribution restent applicables.",
+        "",
+      ],
+      [
+        "Commencez où vous voulez",
+        "Lisez l’orientation, rencontrez les figures centrales, parcourez les archives visuelles ou rejoignez la communauté. Aucun ordre n’est imposé.",
+        "",
+      ],
+    ],
+  },
+}[locale];
+const links = [
+  { section: 0, text: "marquezinii", href: "https://github.com/marquezinii" },
+  {
+    section: 3,
+    text:
+      locale === "pt"
+        ? "repositório oficial"
+        : locale === "zh"
+          ? "官方代码仓库"
+          : locale === "de"
+            ? "offiziellen Repository"
+            : locale === "fr"
+              ? "dépôt officiel"
+              : "official repository",
+    href: site.repo,
+  },
+];
 ---
 
-<Document
-  title="A universe, quite by accident."
-  label="About All Hail the Cone"
-  description="An independent creative universe born from surreal imagery. A serious home for impossible places, ordinary kindness and one sacred traffic cone."
->
-  <h2>The pictures came first</h2>
+<Document title={copy.title} label={copy.label} description={copy.description}>
+  {copy.sections.map(([heading, first, second], index) => (
+    <>
+      <h2>{heading}</h2>
+      <p>{first}</p>
+      {second && <p>{second}</p>}
+      {links
+        .filter((link) => link.section === index)
+        .map((link) => (
+          <p>
+            <a href={link.href}>{link.text} ↗</a>
+          </p>
+        ))}
+    </>
+  ))}
   <p>
-    All Hail the Cone began with a group of surreal, AI-generated images: a
-    crowned astronaut capybara, a working banana, a pigeon executive, small
-    devoted robots and an orange cone. Their strange consistency suggested more
-    than a collection of pictures. They suggested a place.
-  </p>
-  <p>
-    This is that place’s first public archive. The project is independently
-    developed by <a href="https://github.com/marquezinii">marquezinii</a>. The
-    original supplied artwork forms its visual foundation; the names,
-    institutions and written continuity were developed for this first edition.
-  </p>
-  <h2>The absurd does not need permission</h2>
-  <p>
-    Inside this universe, nobody is surprised that a banana has a job or that a
-    pigeon runs Bread Operations. The humour comes from taking these
-    responsibilities seriously. Stories can be funny, warm, strange, uncertain
-    and consequential at the same time.
-  </p>
-  <p>
-    The Cone remains a traffic cone. Explaining it completely would make the
-    world smaller.
-  </p>
-  <h2>A long horizon</h2>
-  <p>
-    The archive is designed to grow into stories, comics, animation, maps, games
-    and community interpretations. This first edition establishes a place to
-    begin, not a list of promised releases.
-  </p>
-  <p>
-    Official continuity, tentative ideas and open experimentation each have a
-    place. See the <a href="/canon">canon register</a> before adding a new truth
-    to the world.
-  </p>
-  <h2>Made in the open</h2>
-  <p>
-    The website and documentation are available in the{" "}
-    <a href={site.repo}>official repository</a>. Public source makes the project
-    inspectable; it does not automatically grant commercial rights to its art,
-    name or stories. The repository’s license and contribution guide describe
-    the current terms.
-  </p>
-  <h2>Start wherever you like</h2>
-  <p>
-    Read the <a href="/lore">orientation</a>, meet the{" "}
-    <a href="/characters">central figures</a>, wander through the{" "}
-    <a href="/gallery">visual archive</a>, or find your way to the{" "}
-    <a href="/community">community</a>. There is no required order.
+    <a href={localizePath("/lore", locale)}>Lore</a> ·{" "}
+    <a href={localizePath("/characters", locale)}>Characters</a> ·{" "}
+    <a href={localizePath("/gallery", locale)}>Gallery</a> ·{" "}
+    <a href={localizePath("/community", locale)}>Community</a>
   </p>
 </Document>

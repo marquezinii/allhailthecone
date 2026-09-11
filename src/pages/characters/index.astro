@@ -2,33 +2,84 @@
 import Base from "../../layouts/Base.astro";
 import PageHeading from "../../components/PageHeading.astro";
 import CharacterCard from "../../components/CharacterCard.astro";
-import { characters } from "../../data/universe";
+import { getLocale, localizePath } from "../../i18n";
+import { getCharacters } from "../../i18n/universe";
+const locale = getLocale(Astro.url.pathname);
+const characters = getCharacters(locale);
+const copy = (
+  {
+    en: [
+      "The characters",
+      "Meet The King, The COO, The Banana, The Maestro, the Keepers and the Sacred Cone.",
+      "An unlikely administration.",
+      "The figures of Higher Ground",
+      "A sovereign who listens. A pigeon who delivers. A banana who keeps the lights on. No one here finds any of this remarkable.",
+      "Beyond the inner circle · Semi-Canon",
+      "The armoured traveller & the quiet witnesses",
+      "In later visual records, an armoured traveller shares tea with The King. A crowned duck watches. A cat sleeps through matters of considerable importance. Their places in the story are still unfolding.",
+      "Understand their place in the canon",
+    ],
+    pt: [
+      "Os personagens",
+      "Conheça The King, The COO, The Banana, The Maestro, os Keepers e o Cone Sagrado.",
+      "Uma administração improvável.",
+      "As figuras de Higher Ground",
+      "Um soberano que escuta. Um pombo que entrega. Uma banana que mantém as luzes acesas. Ninguém aqui considera isso extraordinário.",
+      "Além do círculo central · Semi-Canon",
+      "O viajante de armadura e as testemunhas silenciosas",
+      "Em registros posteriores, um viajante de armadura divide o chá com The King. Um pato coroado observa. Um gato dorme durante assuntos de grande importância. Seus lugares na história ainda estão se revelando.",
+      "Entenda seu lugar no cânone",
+    ],
+    zh: [
+      "角色",
+      "认识 The King、The COO、The Banana、The Maestro、Keepers 与圣锥。",
+      "一个不太可能的行政体系。",
+      "Higher Ground 的核心角色",
+      "一位善于倾听的君主，一只负责交付的鸽子，一根维持照明的香蕉。这里没有人觉得这很特别。",
+      "核心圈之外 · Semi-Canon",
+      "铠甲旅人与沉默的见证者",
+      "在后来的视觉记录中，一位铠甲旅人与 The King 共饮茶水。王冠鸭在旁注视，一只猫则在重大事务中安然入睡。他们在故事中的位置仍待展开。",
+      "了解他们在正史中的位置",
+    ],
+    de: [
+      "Die Figuren",
+      "Lerne The King, The COO, The Banana, The Maestro, die Keepers und den Heiligen Kegel kennen.",
+      "Eine unwahrscheinliche Verwaltung.",
+      "Die Figuren von Higher Ground",
+      "Ein Souverän, der zuhört. Eine Taube, die liefert. Eine Banane, die das Licht erhält. Niemand hier findet das bemerkenswert.",
+      "Jenseits des inneren Kreises · Semi-Canon",
+      "Der gepanzerte Reisende & die stillen Zeugen",
+      "In späteren Bildaufzeichnungen trinkt ein gepanzerter Reisender Tee mit The King. Eine gekrönte Ente schaut zu. Eine Katze verschläft Angelegenheiten von großer Bedeutung. Ihre Rollen entfalten sich noch.",
+      "Ihre Stellung im Kanon verstehen",
+    ],
+    fr: [
+      "Les personnages",
+      "Rencontrez The King, The COO, The Banana, The Maestro, les Keepers et le Cône sacré.",
+      "Une administration improbable.",
+      "Les figures de Higher Ground",
+      "Un souverain qui écoute. Un pigeon qui livre. Une banane qui maintient la lumière. Personne ici n’y voit rien d’étonnant.",
+      "Au-delà du premier cercle · Semi-Canon",
+      "Le voyageur en armure et les témoins silencieux",
+      "Dans des archives visuelles ultérieures, un voyageur en armure partage le thé avec The King. Un canard couronné observe. Un chat dort pendant des affaires d’une importance considérable. Leur place dans l’histoire se précise encore.",
+      "Comprendre leur place dans le canon",
+    ],
+  } as const
+)[locale];
 ---
 
-<Base
-  title="The characters"
-  description="Meet The King, The COO, The Banana, The Maestro, the Keepers and the Sacred Cone."
->
-  <PageHeading
-    title="An unlikely administration."
-    label="The figures of Higher Ground"
-    description="A sovereign who listens. A pigeon who delivers. A banana who keeps the lights on. No one here finds any of this remarkable."
-  />
+<Base title={copy[0]} description={copy[1]}>
+  <PageHeading title={copy[2]} label={copy[3]} description={copy[4]} />
   <div class="wrap character-grid all-characters">
     {characters.map((c) => (
       <CharacterCard character={c} />
     ))}
   </div>
   <section class="wrap world-dossier">
-    <p class="eyebrow">Beyond the inner circle · Semi-Canon</p>
-    <h2>The armoured traveller & the quiet witnesses</h2>
-    <p>
-      In later visual records, an armoured traveller shares tea with The King. A
-      crowned duck watches. A cat sleeps through matters of considerable
-      importance. Their places in the story are still unfolding.
-    </p>
-    <a class="text-link" href="/canon">
-      Understand their place in the canon ↗
+    <p class="eyebrow">{copy[5]}</p>
+    <h2>{copy[6]}</h2>
+    <p>{copy[7]}</p>
+    <a class="text-link" href={localizePath("/canon", locale)}>
+      {copy[8]} ↗
     </a>
   </section>
 </Base>

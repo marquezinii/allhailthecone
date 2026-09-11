@@ -22,6 +22,8 @@ The first edition is live at **[allhailthecone.vercel.app](https://allhailthecon
 
 The first supplied image is the primary canonical visual reference. Twenty-five original files are preserved as twenty-three unique artwork records; original hashes and dimensions are in `assets/catalog/provenance.json`. The original images were supplied as AI-generated artworks. New writing and provisional interface marks were developed for this edition.
 
+English is the primary edition at `/`. Complete static editions are also published at `/pt`, `/zh`, `/de` and `/fr`; the language switch preserves the visitor's current route.
+
 ## Run locally
 
 Use Node **24** and npm. Dependencies are locked in `package-lock.json`.
@@ -60,6 +62,8 @@ public/art/             Optimized delivery images and public catalog
 public/brand/           Provisional interface symbol
 src/components/         Art, character previews and CSS 3D Cone scene
 src/data/               Typed summaries and gallery metadata
+src/i18n/               Shared locale routing and translated interface copy
+src/content/            Localized long-form canon documents
 src/layouts/            Shared shell and archive layout
 src/pages/              Static pages and generated detail routes
 src/scripts/            Progressive browser interactions

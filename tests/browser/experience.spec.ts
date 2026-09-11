@@ -212,3 +212,27 @@ test("core navigation and the archive remain usable without JavaScript", async (
   await expect(page.locator("#gallery-tools")).toBeHidden();
   await context.close();
 });
+
+test("language switch keeps the current route in all five locales", async ({
+  page,
+}, testInfo) => {
+  await page.goto("/world");
+  if (testInfo.project.name === "mobile")
+    await page.getByRole("button", { name: "Menu" }).click();
+  await page.locator('.language-switch a[lang="pt-BR"]').click();
+  await expect(page).toHaveURL(/\/pt\/world$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+  await expect(
+    page.getByRole("heading", { name: "O mapa ainda está se revelando." }),
+  ).toBeVisible();
+
+  for (const [path, lang] of [
+    ["/zh/world", "zh-CN"],
+    ["/de/world", "de"],
+    ["/fr/world", "fr"],
+  ] as const) {
+    await page.goto(path);
+    await expect(page.locator("html")).toHaveAttribute("lang", lang);
+    await expect(page.getByText(/Vemryx/)).toHaveCount(1);
+  }
+});

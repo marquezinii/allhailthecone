@@ -3,18 +3,34 @@ import Base from "../../layouts/Base.astro";
 import Art from "../../components/Art.astro";
 import ConeScene from "../../components/ConeScene.astro";
 import { characters } from "../../data/universe";
+import { getLocale, localizePath } from "../../i18n";
+import { getCharacters } from "../../i18n/universe";
 export function getStaticPaths() {
   return characters.map((character) => ({
     params: { id: character.id },
     props: { character },
   }));
 }
-const { character: c } = Astro.props;
+const { character } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const c =
+  getCharacters(locale).find((item) => item.id === character.id) ?? character;
+const copy = {
+  en: ["The characters", "Explore the institutions", "See the visual archive"],
+  pt: ["Os personagens", "Explore as instituições", "Veja o arquivo visual"],
+  zh: ["角色", "探索各个机构", "查看视觉档案"],
+  de: ["Die Figuren", "Die Institutionen erkunden", "Das Bildarchiv ansehen"],
+  fr: [
+    "Les personnages",
+    "Explorer les institutions",
+    "Voir les archives visuelles",
+  ],
+}[locale];
 ---
 
 <Base title={c.name} description={c.summary}>
   <div class="wrap breadcrumb">
-    <a href="/characters">The characters</a> / {c.name}
+    <a href={localizePath("/characters", locale)}>{copy[0]}</a> / {c.name}
   </div>
   <article class="wrap character-detail">
     {c.id === "the-sacred-cone" ? (
@@ -32,11 +48,11 @@ const { character: c } = Astro.props;
       <p>{c.detail}</p>
       <blockquote>“{c.quote}”</blockquote>
       <div class="profile-links">
-        <a class="text-link" href="/factions">
-          Explore the institutions ↗
+        <a class="text-link" href={localizePath("/factions", locale)}>
+          {copy[1]} ↗
         </a>
-        <a class="text-link" href="/gallery">
-          See the visual archive ↗
+        <a class="text-link" href={localizePath("/gallery", locale)}>
+          {copy[2]} ↗
         </a>
       </div>
     </div>

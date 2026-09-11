@@ -1,12 +1,17 @@
 ---
 import Document from "../layouts/Document.astro";
-import { Content } from "../../LORE.md";
+import { Content as En } from "../../LORE.md";
+import { Content as Pt } from "../content/pt/LORE.md";
+import { Content as Zh } from "../content/zh/LORE.md";
+import { Content as De } from "../content/de/LORE.md";
+import { Content as Fr } from "../content/fr/LORE.md";
+import { getLocale } from "../i18n";
+import { documentCopy } from "../i18n/content";
+const locale = getLocale(Astro.url.pathname);
+const Content = { en: En, pt: Pt, zh: Zh, de: De, fr: Fr }[locale];
+const [title, label, description] = documentCopy.lore[locale];
 ---
 
-<Document
-  title="An orientation to the impossible"
-  label="Official lore base · v0.1"
-  description="The Ascension, Higher Ground and the repeating signal beyond the known universe. Begin with the official foundation of All Hail the Cone."
->
+<Document {title} {label} {description}>
   <Content />
 </Document>

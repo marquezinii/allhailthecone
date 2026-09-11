@@ -1,69 +1,185 @@
 ---
 import Document from "../layouts/Document.astro";
 import { site } from "../data/universe";
+import { getLocale } from "../i18n";
+const locale = getLocale(Astro.url.pathname);
+const copy = {
+  en: {
+    title: "There is room at the table.",
+    label: "The community commons",
+    description:
+      "Discuss the lore, share a Coneposting experiment, propose a story or help maintain the official archive.",
+    start: "A place to begin",
+    intro:
+      "The community begins in the official GitHub repository. Bring an observation, drawing, story or useful correction. You do not need to know everything to take part.",
+    enter: "Enter the discussions",
+    ways: "Three ways to contribute",
+    sections: [
+      [
+        "Explore the world",
+        "Discuss a character, ask about a crossing or offer an interpretation. Label theories as theories.",
+      ],
+      [
+        "Make something",
+        "Share a story, image or experiment. Include your sources, how it was made and the permission you hold to submit it.",
+      ],
+      [
+        "Improve the archive",
+        "Report broken pages, accessibility barriers and inconsistent records. Propose code and content improvements through a pull request.",
+      ],
+    ],
+    welcome: "Hospitality is a practice",
+    conduct:
+      "Be kind to people, precise about disagreements and respectful of boundaries. No harassment, hate, impersonation, spam, exposed private information or stolen work.",
+    official: "How an idea becomes official",
+    review:
+      "Maintainers review tone, visual consistency, provenance and effects on existing stories. Acceptance is explicit and recorded; submission alone does not make an idea canon.",
+  },
+  pt: {
+    title: "Há lugar à mesa.",
+    label: "O espaço da comunidade",
+    description:
+      "Discuta a lore, compartilhe um experimento de Coneposting, proponha uma história ou ajude a manter o arquivo oficial.",
+    start: "Um lugar para começar",
+    intro:
+      "A comunidade começa no repositório oficial do GitHub. Traga uma observação, desenho, história ou correção útil. Você não precisa conhecer todo o arquivo para participar.",
+    enter: "Entrar nas discussões",
+    ways: "Três formas de contribuir",
+    sections: [
+      [
+        "Explore o mundo",
+        "Discuta um personagem, pergunte sobre uma travessia ou ofereça uma interpretação. Identifique teorias como teorias.",
+      ],
+      [
+        "Crie algo",
+        "Compartilhe uma história, imagem ou experimento. Inclua as fontes, como foi criado e a permissão que você possui para enviá-lo.",
+      ],
+      [
+        "Melhore o arquivo",
+        "Reporte páginas quebradas, barreiras de acessibilidade e registros inconsistentes. Proponha melhorias de código e conteúdo por pull request.",
+      ],
+    ],
+    welcome: "Hospitalidade é uma prática",
+    conduct:
+      "Seja gentil com as pessoas, preciso nas discordâncias e respeitoso com limites. Assédio, ódio, personificação, spam, exposição de dados privados e trabalho roubado não são aceitos.",
+    official: "Como uma ideia se torna oficial",
+    review:
+      "A manutenção avalia tom, consistência visual, proveniência e efeitos sobre histórias existentes. A aceitação é explícita e registrada; o envio por si só não torna uma ideia canônica.",
+  },
+  zh: {
+    title: "桌边仍有位置。",
+    label: "社区空间",
+    description:
+      "讨论世界设定、分享 Coneposting 实验、提出故事，或帮助维护官方档案。",
+    start: "从这里开始",
+    intro:
+      "社区从官方 GitHub 仓库开始。欢迎带来观察、绘画、故事或有效修正。参与并不要求你了解整座档案。",
+    enter: "进入讨论区",
+    ways: "三种参与方式",
+    sections: [
+      ["探索世界", "讨论角色、询问某次穿越，或提出诠释。请明确标注理论。"],
+      [
+        "创作内容",
+        "分享故事、图像或实验。请注明来源、制作方式以及你拥有的提交授权。",
+      ],
+      [
+        "完善档案",
+        "报告失效页面、无障碍问题和不一致记录。代码与内容改进可通过 pull request 提交。",
+      ],
+    ],
+    welcome: "好客是一种实践",
+    conduct:
+      "善待他人，准确表达分歧，并尊重界限。禁止骚扰、仇恨、冒充、垃圾信息、泄露私人信息或盗用作品。",
+    official: "一个想法如何成为官方内容",
+    review:
+      "维护者会审查语气、视觉一致性、来源及其对现有故事的影响。接受必须明确记录；提交本身不会使内容成为正史。",
+  },
+  de: {
+    title: "Am Tisch ist noch Platz.",
+    label: "Der Gemeinschaftsraum",
+    description:
+      "Diskutiere die Lore, teile ein Coneposting-Experiment, schlage eine Geschichte vor oder hilf beim offiziellen Archiv.",
+    start: "Ein Ort zum Beginnen",
+    intro:
+      "Die Gemeinschaft beginnt im offiziellen GitHub-Repository. Bring eine Beobachtung, Zeichnung, Geschichte oder nützliche Korrektur mit. Vollständiges Archivwissen ist nicht nötig.",
+    enter: "Zu den Diskussionen",
+    ways: "Drei Arten mitzuwirken",
+    sections: [
+      [
+        "Die Welt erkunden",
+        "Diskutiere eine Figur, frage nach einem Übergang oder biete eine Deutung an. Kennzeichne Theorien als solche.",
+      ],
+      [
+        "Etwas erschaffen",
+        "Teile eine Geschichte, ein Bild oder Experiment. Nenne Quellen, Entstehungsweise und deine Berechtigung zur Einreichung.",
+      ],
+      [
+        "Das Archiv verbessern",
+        "Melde defekte Seiten, Barrieren und widersprüchliche Einträge. Schlage Code- und Inhaltsverbesserungen per Pull Request vor.",
+      ],
+    ],
+    welcome: "Gastfreundschaft ist Praxis",
+    conduct:
+      "Sei freundlich, präzise bei Meinungsverschiedenheiten und respektiere Grenzen. Belästigung, Hass, Identitätsmissbrauch, Spam, private Daten und gestohlene Werke sind nicht erlaubt.",
+    official: "Wie eine Idee offiziell wird",
+    review:
+      "Die Maintainer prüfen Ton, visuelle Konsistenz, Herkunft und Auswirkungen auf bestehende Geschichten. Annahme wird ausdrücklich festgehalten; eine Einreichung allein wird nicht zum Kanon.",
+  },
+  fr: {
+    title: "Il reste une place à table.",
+    label: "L’espace communautaire",
+    description:
+      "Discutez du récit, partagez une expérience de Coneposting, proposez une histoire ou aidez à maintenir les archives officielles.",
+    start: "Un point de départ",
+    intro:
+      "La communauté commence dans le dépôt GitHub officiel. Apportez une observation, un dessin, une histoire ou une correction utile. Il n’est pas nécessaire de tout connaître pour participer.",
+    enter: "Accéder aux discussions",
+    ways: "Trois façons de contribuer",
+    sections: [
+      [
+        "Explorer le monde",
+        "Discutez d’un personnage, posez une question sur une traversée ou proposez une interprétation. Identifiez clairement les théories.",
+      ],
+      [
+        "Créer quelque chose",
+        "Partagez une histoire, une image ou une expérience. Indiquez vos sources, la méthode de création et les droits permettant la soumission.",
+      ],
+      [
+        "Améliorer les archives",
+        "Signalez pages défectueuses, obstacles d’accessibilité et fiches incohérentes. Proposez les améliorations par pull request.",
+      ],
+    ],
+    welcome: "L’hospitalité est une pratique",
+    conduct:
+      "Soyez bienveillant, précis dans les désaccords et respectueux des limites. Harcèlement, haine, usurpation, spam, données privées et œuvres volées sont interdits.",
+    official: "Comment une idée devient officielle",
+    review:
+      "Les responsables examinent le ton, la cohérence visuelle, la provenance et l’effet sur les récits existants. L’acceptation est explicite et consignée ; une soumission seule ne devient pas canon.",
+  },
+}[locale];
 ---
 
-<Document
-  title="There is room at the table."
-  label="The community commons"
-  description="Discuss the lore, share a Coneposting experiment, propose a story or help maintain the official All Hail the Cone archive."
->
-  <h2>A place to begin</h2>
+<Document title={copy.title} label={copy.label} description={copy.description}>
+  <h2>{copy.start}</h2>
+  <p>{copy.intro}</p>
   <p>
-    The community begins in the official GitHub repository. Bring an
-    observation, a drawing, a story, or a useful correction. You do not need to
-    know everything in the archive to take part.
-  </p>
-  <p>
-    <a class="button button-primary" href={`${site.repo}/discussions`}>
-      Enter the discussions ↗
+    <a class="button button-primary" href={site.repo + "/discussions"}>
+      {copy.enter} ↗
     </a>
   </p>
-  <h2>Three ways to contribute</h2>
-  <h3>Explore the world</h3>
+  <h2>{copy.ways}</h2>
+  {copy.sections.map(([heading, body]) => (
+    <>
+      <h3>{heading}</h3>
+      <p>{body}</p>
+    </>
+  ))}
+  <h2>{copy.welcome}</h2>
+  <p>{copy.conduct}</p>
+  <h2>{copy.official}</h2>
+  <p>{copy.review}</p>
   <p>
-    Discuss a character, ask about a crossing, or offer an interpretation. Label
-    theories as theories. A popular explanation does not become canon by
-    repetition.
-  </p>
-  <h3>Make something</h3>
-  <p>
-    Share a story, image or experiment using the{" "}
-    <a href={`${site.repo}/issues/new?template=creative-proposal.yml`}>
-      creative proposal form
-    </a>
-    . Include your sources, how it was made, and the permission you hold to
-    submit it. Fan work begins as Coneposting unless an editorial decision says
-    otherwise.
-  </p>
-  <h3>Improve the archive</h3>
-  <p>
-    Report broken pages, accessibility barriers and inconsistent records using
-    the{" "}
-    <a href={`${site.repo}/issues/new?template=bug-report.yml`}>issue form</a>.
-    Code and content improvements can be proposed through a pull request.
-  </p>
-  <h2>Hospitality is a practice</h2>
-  <p>
-    Be kind to people, precise about disagreements and respectful of boundaries.
-    No harassment, hate, impersonation, spam, exposed private information or
-    stolen work. Critique a contribution without demeaning its creator.
-  </p>
-  <p>
-    Maintainers may label, move, close or remove contributions that violate
-    these rules. Report a concern using GitHub’s reporting tools; do not repost
-    private information in a public issue.
-  </p>
-  <h2>How an idea becomes official</h2>
-  <p>
-    A maintainer reviews tone, visual consistency, provenance and the effect on
-    existing stories. Acceptance is explicit and recorded. Submission is not
-    automatic acceptance, a transfer of ownership, or a promise of compensation.
-  </p>
-  <p>
-    Read the{" "}
-    <a href={`${site.repo}/blob/main/CONTRIBUTING.md`}>contribution guide</a>{" "}
-    and <a href={`${site.repo}/blob/main/ART_GUIDE.md`}>art guide</a> before
-    preparing a larger contribution.
+    <a href={site.repo + "/blob/main/CONTRIBUTING.md"}>CONTRIBUTING.md</a> ·{" "}
+    <a href={site.repo + "/blob/main/ART_GUIDE.md"}>ART_GUIDE.md</a>
   </p>
 </Document>

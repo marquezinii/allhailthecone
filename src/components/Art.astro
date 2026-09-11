@@ -1,5 +1,7 @@
 ---
 import gallery from "../data/gallery.json";
+import { getLocale } from "../i18n";
+import { getGalleryArt } from "../i18n/gallery";
 interface Props {
   id: string;
   class?: string;
@@ -14,7 +16,8 @@ const {
   sizes = "(max-width: 700px) 100vw, 50vw",
   decorative = false,
 } = Astro.props;
-const art = gallery.find((item) => item.id === id);
+const sourceArt = gallery.find((item) => item.id === id);
+const art = getGalleryArt(sourceArt, getLocale(Astro.url.pathname));
 if (!art) throw new Error(`Unknown artwork: ${id}`);
 ---
 

@@ -1,6 +1,7 @@
 ---
 import Art from "./Art.astro";
 import SacredConeExperience from "./experience/SacredConeExperience";
+import { getLocale } from "../i18n";
 
 interface Props {
   compact?: boolean;
@@ -8,6 +9,14 @@ interface Props {
 }
 
 const { compact = false, immersive = false } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const copy = {
+  en: ["ORIGIN UNRECORDED", "STATUS", "STILL HERE"],
+  pt: ["ORIGEM NÃO REGISTRADA", "STATUS", "AINDA AQUI"],
+  zh: ["起源未记录", "状态", "仍在此处"],
+  de: ["URSPRUNG NICHT VERZEICHNET", "STATUS", "NOCH HIER"],
+  fr: ["ORIGINE NON CONSIGNÉE", "STATUT", "TOUJOURS ICI"],
+}[locale];
 ---
 
 <div class:list={["relic", { compact, immersive }]} data-depth>
@@ -37,11 +46,11 @@ const { compact = false, immersive = false } = Astro.props;
   <div class="relic-coordinate coord-left" aria-hidden="true">
     OBJECT C–001
     <br />
-    <span>ORIGIN UNRECORDED</span>
+    <span>{copy[0]}</span>
   </div>
   <div class="relic-coordinate coord-right" aria-hidden="true">
-    STATUS
+    {copy[1]}
     <br />
-    <span>STILL HERE</span>
+    <span>{copy[2]}</span>
   </div>
 </div>

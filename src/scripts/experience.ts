@@ -33,6 +33,27 @@ const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
 const motionButton =
   document.querySelector<HTMLButtonElement>("#motion-toggle");
+const locale = document.documentElement.dataset.locale ?? "en";
+const motionCopy: Record<string, readonly [string, string, string]> = {
+  en: ["Reduced motion respected", "Resume atmosphere", "Pause atmosphere"],
+  pt: [
+    "Preferência de movimento reduzido respeitada",
+    "Retomar atmosfera",
+    "Pausar atmosfera",
+  ],
+  zh: ["已遵循减少动态效果设置", "恢复氛围动画", "暂停氛围动画"],
+  de: [
+    "Reduzierte Bewegung wird berücksichtigt",
+    "Atmosphäre fortsetzen",
+    "Atmosphäre pausieren",
+  ],
+  fr: [
+    "Préférence de mouvement réduit respectée",
+    "Reprendre l’atmosphère",
+    "Suspendre l’atmosphère",
+  ],
+};
+const motionLabels = motionCopy[locale] ?? motionCopy.en!;
 let paused = false;
 try {
   paused = localStorage.getItem("cone-motion") === "paused";
@@ -52,10 +73,10 @@ const applyMotion = () => {
     motionButton.hidden = false;
     motionButton.setAttribute("aria-pressed", String(!moving()));
     motionButton.textContent = reduced.matches
-      ? "Reduced motion respected"
+      ? motionLabels[0]
       : paused
-        ? "Resume atmosphere"
-        : "Pause atmosphere";
+        ? motionLabels[1]
+        : motionLabels[2];
     motionButton.disabled = reduced.matches;
   }
 };
@@ -135,13 +156,38 @@ if (hero) {
   );
 }
 
-const observations: Record<string, string> = {
-  object:
+const observationSets: Record<string, readonly [string, string, string]> = {
+  en: [
     "A familiar shape. Extraordinary attention. A ceremonial view of the Cone.",
-  order:
     "The Keepers tend The Sanctuary. Whether this is faith or protocol remains unresolved.",
-  unknown:
     "Origin, purpose, and the sender of the signal remain unrecorded. The archive is still open.",
+  ],
+  pt: [
+    "Uma forma familiar. Atenção extraordinária. Uma visão cerimonial do Cone.",
+    "Os Keepers cuidam do Sanctuary. Se isso é fé ou protocolo continua sem resposta.",
+    "A origem, o propósito e quem envia o sinal permanecem sem registro. O arquivo continua aberto.",
+  ],
+  zh: [
+    "熟悉的形状，非凡的关注。这是交通锥的仪式性视图。",
+    "Keepers 照料着 Sanctuary。那究竟是信仰还是协议，仍无定论。",
+    "起源、目的以及信号发送者均未记录。档案仍然开放。",
+  ],
+  de: [
+    "Eine vertraute Form. Außergewöhnliche Aufmerksamkeit. Eine zeremonielle Ansicht des Kegels.",
+    "Die Keepers pflegen The Sanctuary. Ob dies Glaube oder Protokoll ist, bleibt offen.",
+    "Ursprung, Zweck und Absender des Signals sind nicht verzeichnet. Das Archiv bleibt offen.",
+  ],
+  fr: [
+    "Une forme familière. Une attention extraordinaire. Une vue cérémonielle du Cône.",
+    "Les Keepers entretiennent The Sanctuary. Foi ou protocole : la question reste ouverte.",
+    "L’origine, le but et l’émetteur du signal restent inconnus. Les archives demeurent ouvertes.",
+  ],
+};
+const observationList = observationSets[locale] ?? observationSets.en!;
+const observations: Record<string, string> = {
+  object: observationList[0],
+  order: observationList[1],
+  unknown: observationList[2],
 };
 document
   .querySelectorAll<HTMLButtonElement>("[data-observation]")

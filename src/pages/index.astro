@@ -3,7 +3,14 @@ import Base from "../layouts/Base.astro";
 import Art from "../components/Art.astro";
 import ConeScene from "../components/ConeScene.astro";
 import CharacterCard from "../components/CharacterCard.astro";
-import { characters, fragments } from "../data/universe";
+import { getCharacters, getFragments } from "../i18n/universe";
+import { getLocale, localizePath } from "../i18n";
+import { homeCopy } from "../i18n/content";
+const locale = getLocale(Astro.url.pathname);
+const copy = homeCopy[locale];
+const characters = getCharacters(locale);
+const fragments = getFragments(locale);
+const href = (path: string) => localizePath(path, locale);
 ---
 
 <Base>
@@ -19,105 +26,92 @@ import { characters, fragments } from "../data/universe";
     <div class="hero-orbit" aria-hidden="true"></div>
     <div class="hero-content wrap">
       <p class="eyebrow hero-eyebrow">
-        <span class="status-dot"></span> A most extraordinary ordinary universe
+        <span class="status-dot"></span> {copy.heroEyebrow}
       </p>
       <h1 id="hero-title">
         ALL HAIL
         <br />
         THE <span>CONE.</span>
       </h1>
-      <p class="hero-description">
-        A cosmic bureaucracy held together by tea, bread, potassium, and an
-        extraordinary faith in a traffic cone.
-      </p>
+      <p class="hero-description">{copy.heroDescription}</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="/lore">
-          Enter the universe <span aria-hidden="true">↗</span>
+        <a class="button button-primary" href={href("/lore")}>
+          {copy.enter} <span aria-hidden="true">↗</span>
         </a>
         <a class="button button-quiet" href="#the-cone">
-          Meet the Cone <span aria-hidden="true">↓</span>
+          {copy.meetCone} <span aria-hidden="true">↓</span>
         </a>
       </div>
       <div class="hero-note">
         <span class="note-rule"></span>
         <p>
-          Good tea. Greater mysteries.
+          {copy.note[0]}
           <br />
-          All paperwork in order. Mostly.
+          {copy.note[1]}
         </p>
       </div>
     </div>
     <div class="hero-bottom">
-      <span>
-        THE FOUNDING ARCHIVE <span class="muted">/ VOL. I</span>
-      </span>
+      <span>{copy.founding}</span>
       <a href="#welcome">
-        Scroll to discover <span aria-hidden="true">↓</span>
+        {copy.scroll} <span aria-hidden="true">↓</span>
       </a>
-      <span class="hero-bottom-right">EST. IN THIS DIMENSION · 2026</span>
+      <span class="hero-bottom-right">{copy.established}</span>
     </div>
   </section>
   <section id="welcome" class="introduction wrap section-space">
     <div>
-      <p class="eyebrow">Welcome to Higher Ground</p>
+      <p class="eyebrow">{copy.welcome}</p>
       <h2>
-        The universe is vast.
+        {copy.vast[0]}
         <br />
-        The kettle is on.
+        {copy.vast[1]}
       </h2>
     </div>
     <div class="intro-copy">
+      <p>{copy.intro[0]}</p>
+      <p>{copy.intro[1]}</p>
       <p>
-        After The Ascension, scattered worlds discovered the same direction.
-        Their Gates stabilized. Their horizons did not.
+        <em>{copy.intro[2]}</em>
       </p>
-      <p>
-        Its sovereign is a capybara. Its infrastructure runs on potassium. Its
-        future rests, to an unusual extent, on a pigeon’s ability to keep the
-        portal routes supplied.
-      </p>
-      <p>
-        And at the heart of it all: <em>one orange cone.</em>
-      </p>
-      <a class="text-link" href="/lore">
-        A brief orientation <span aria-hidden="true">↗</span>
+      <a class="text-link" href={href("/lore")}>
+        {copy.orientation} <span aria-hidden="true">↗</span>
       </a>
     </div>
   </section>
   <section id="the-cone" class="cone-section" aria-labelledby="cone-title">
     <div class="wrap cone-layout">
       <div class="cone-copy">
-        <p class="eyebrow">An object of considerable significance</p>
+        <p class="eyebrow">{copy.coneEyebrow}</p>
         <h2 id="cone-title">
-          It does not answer.
+          {copy.coneTitle[0]}
           <br />
-          It points.
+          {copy.coneTitle[1]}
           <br />
-          <em>The direction continues.</em>
+          <em>{copy.coneTitle[2]}</em>
         </h2>
         <p>
-          It does not speak. It does not govern.
+          {copy.coneBody[0]}
           <br />
-          It stabilized worlds and submitted no explanation.
+          {copy.coneBody[1]}
         </p>
-        <p>Higher Ground gathered around what followed.</p>
-        <a class="text-link" href="/characters/the-sacred-cone">
-          Regarding the Sacred Cone <span aria-hidden="true">↗</span>
+        <p>{copy.coneBody[2]}</p>
+        <a class="text-link" href={href("/characters/the-sacred-cone")}>
+          {copy.regarding} <span aria-hidden="true">↗</span>
         </a>
-        <div class="relic-tabs" role="group" aria-label="Cone observations">
+        <div class="relic-tabs" role="group" aria-label={copy.observations}>
           <button aria-pressed="true" data-observation="object">
-            The object
+            {copy.observationTabs[0]}
           </button>
           <button aria-pressed="false" data-observation="order">
-            The care
+            {copy.observationTabs[1]}
           </button>
           <button aria-pressed="false" data-observation="unknown">
-            The unknown
+            {copy.observationTabs[2]}
           </button>
         </div>
         <p id="observation-text" class="observation-text" aria-live="polite">
-          A familiar shape. Extraordinary attention. A ceremonial view of the
-          Cone.
+          {copy.observationText[0]}
         </p>
       </div>
       <ConeScene immersive />
@@ -126,15 +120,15 @@ import { characters, fragments } from "../data/universe";
   <section class="wrap section-space">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">The administration of Higher Ground</p>
+        <p class="eyebrow">{copy.administration}</p>
         <h2>
-          Extraordinary beings.
+          {copy.beings[0]}
           <br />
-          Perfectly normal jobs.
+          {copy.beings[1]}
         </h2>
       </div>
-      <a class="text-link" href="/characters">
-        Meet the central figures <span aria-hidden="true">↗</span>
+      <a class="text-link" href={href("/characters")}>
+        {copy.meetFigures} <span aria-hidden="true">↗</span>
       </a>
     </div>
     <div class="character-grid">
@@ -149,35 +143,35 @@ import { characters, fragments } from "../data/universe";
     </div>
     <div class="world-window-shade"></div>
     <div class="world-window-content wrap">
-      <p class="eyebrow">Beyond the familiar sky</p>
+      <p class="eyebrow">{copy.beyond}</p>
       <h2 id="world-title">
-        Some roads
+        {copy.roads[0]}
         <br />
-        lead <em>further.</em>
+        <em>{copy.roads[1]}</em>
       </h2>
       <p>
-        Floating kingdoms. Uncharted crossings.
+        {copy.floating[0]}
         <br />
-        Somewhere, your tea is still warm.
+        {copy.floating[1]}
       </p>
-      <a class="button button-primary" href="/world">
-        Explore the known universe <span aria-hidden="true">↗</span>
+      <a class="button button-primary" href={href("/world")}>
+        {copy.explore} <span aria-hidden="true">↗</span>
       </a>
     </div>
-    <span class="world-coordinate">FIELD RECORD / THE FLOATING REALMS</span>
+    <span class="world-coordinate">{copy.fieldRecord}</span>
   </section>
   <section class="wrap section-space">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Fragments from the archive</p>
+        <p class="eyebrow">{copy.fragments}</p>
         <h2>
-          Not everything
+          {copy.explanation[0]}
           <br />
-          has an explanation.
+          {copy.explanation[1]}
         </h2>
       </div>
-      <a class="text-link" href="/canon">
-        Consult the canon <span aria-hidden="true">↗</span>
+      <a class="text-link" href={href("/canon")}>
+        {copy.consult} <span aria-hidden="true">↗</span>
       </a>
     </div>
     <div class="fragment-grid">
@@ -201,41 +195,38 @@ import { characters, fragments } from "../data/universe";
     </div>
   </section>
   <section class="gallery-teaser wrap">
-    <a href="/gallery" class="gallery-teaser-art">
+    <a href={href("/gallery")} class="gallery-teaser-art">
       <Art id="the-kindness-drift" />
-      <span class="image-tag">From the official collection ↗</span>
+      <span class="image-tag">{copy.collection} ↗</span>
     </a>
     <div>
-      <p class="eyebrow">Evidence of the impossible</p>
+      <p class="eyebrow">{copy.evidence}</p>
       <h2>
-        It begins
+        {copy.picture[0]}
         <br />
-        with a picture.
+        {copy.picture[1]}
       </h2>
-      <p>
-        Explore the artworks that gave this universe its shape. Every island,
-        every creature, every very important cone.
-      </p>
-      <a class="text-link" href="/gallery">
-        Open the gallery <span aria-hidden="true">↗</span>
+      <p>{copy.galleryBody}</p>
+      <a class="text-link" href={href("/gallery")}>
+        {copy.openGallery} <span aria-hidden="true">↗</span>
       </a>
     </div>
   </section>
   <section class="invitation wrap section-space">
     <img src="/brand/cone-mark.svg" width="64" height="64" alt="" />
-    <p class="eyebrow">There is room at the table</p>
+    <p class="eyebrow">{copy.room}</p>
     <h2>
-      A stranger today.
+      {copy.stranger[0]}
       <br />
-      Part of the universe tomorrow.
+      {copy.stranger[1]}
     </h2>
     <p>
-      The archive is open. Bring your curiosity.
+      {copy.invitation[0]}
       <br />
-      Bread is appreciated, but not required.
+      {copy.invitation[1]}
     </p>
-    <a class="button button-primary" href="/community">
-      Join the unfolding story <span aria-hidden="true">↗</span>
+    <a class="button button-primary" href={href("/community")}>
+      {copy.join} <span aria-hidden="true">↗</span>
     </a>
   </section>
 </Base>

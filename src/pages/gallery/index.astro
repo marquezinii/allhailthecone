@@ -2,47 +2,142 @@
 import Base from "../../layouts/Base.astro";
 import PageHeading from "../../components/PageHeading.astro";
 import Art from "../../components/Art.astro";
-import gallery from "../../data/gallery.json";
+import { getLocale, localizePath } from "../../i18n";
+import { getGallery } from "../../i18n/gallery";
+const locale = getLocale(Astro.url.pathname);
+const gallery = getGallery(locale);
+const copy = (
+  {
+    en: [
+      "The visual archive",
+      "The official artworks of All Hail the Cone, from the founding portrait to possible tomorrows. Explore the collection and its canon status.",
+      "Evidence of the impossible.",
+      "The visual archive",
+      "The pictures came first. Everything else followed. Twenty-three works, twenty-five preserved originals, and a universe still finding its edges.",
+      "Art collection",
+      "Filter by canon status",
+      "All works",
+      "Search the archive",
+      "Title, character, or category…",
+      "works in the archive",
+      "work",
+      "The founding image",
+      "View artwork",
+      "No records found.",
+      "Try a different title, character or canon level.",
+      "Clear filters",
+    ],
+    pt: [
+      "O arquivo visual",
+      "As obras oficiais de All Hail the Cone, do retrato fundador aos amanhãs possíveis. Explore a coleção e seu status no cânone.",
+      "Evidências do impossível.",
+      "O arquivo visual",
+      "As imagens vieram primeiro. Todo o resto veio depois. Vinte e três obras, vinte e cinco originais preservados e um universo ainda encontrando seus limites.",
+      "Coleção de arte",
+      "Filtrar por status no cânone",
+      "Todas as obras",
+      "Pesquisar no arquivo",
+      "Título, personagem ou categoria…",
+      "obras no arquivo",
+      "obra",
+      "A imagem fundadora",
+      "Ver obra",
+      "Nenhum registro encontrado.",
+      "Tente outro título, personagem ou nível de cânone.",
+      "Limpar filtros",
+    ],
+    zh: [
+      "视觉档案",
+      "All Hail the Cone 的官方作品，从创世肖像到可能的明天。探索收藏及其正史状态。",
+      "不可能之事的证据。",
+      "视觉档案",
+      "图像最先出现，其他一切随之而来。二十三件作品、二十五份保存的原件，以及一个仍在寻找边界的宇宙。",
+      "艺术收藏",
+      "按正史状态筛选",
+      "全部作品",
+      "搜索档案",
+      "标题、角色或类别…",
+      "件档案作品",
+      "件作品",
+      "创世图像",
+      "查看作品",
+      "未找到记录。",
+      "请尝试其他标题、角色或正史级别。",
+      "清除筛选",
+    ],
+    de: [
+      "Das Bildarchiv",
+      "Die offiziellen Werke von All Hail the Cone, vom Gründungsporträt bis zu möglichen Zukünften. Entdecke Sammlung und Kanonstatus.",
+      "Belege des Unmöglichen.",
+      "Das Bildarchiv",
+      "Die Bilder kamen zuerst. Alles andere folgte. Dreiundzwanzig Werke, fünfundzwanzig erhaltene Originale und ein Universum, das noch seine Grenzen findet.",
+      "Kunstsammlung",
+      "Nach Kanonstatus filtern",
+      "Alle Werke",
+      "Archiv durchsuchen",
+      "Titel, Figur oder Kategorie…",
+      "Werke im Archiv",
+      "Werk",
+      "Das Gründungsbild",
+      "Werk ansehen",
+      "Keine Einträge gefunden.",
+      "Versuche einen anderen Titel, eine Figur oder Kanonstufe.",
+      "Filter löschen",
+    ],
+    fr: [
+      "Les archives visuelles",
+      "Les œuvres officielles de All Hail the Cone, du portrait fondateur aux futurs possibles. Explorez la collection et son statut canonique.",
+      "Preuves de l’impossible.",
+      "Les archives visuelles",
+      "Les images sont venues en premier. Tout le reste a suivi. Vingt-trois œuvres, vingt-cinq originaux préservés et un univers qui cherche encore ses limites.",
+      "Collection d’art",
+      "Filtrer par statut canonique",
+      "Toutes les œuvres",
+      "Rechercher dans les archives",
+      "Titre, personnage ou catégorie…",
+      "œuvres dans les archives",
+      "œuvre",
+      "L’image fondatrice",
+      "Voir l’œuvre",
+      "Aucun document trouvé.",
+      "Essayez un autre titre, personnage ou niveau canonique.",
+      "Effacer les filtres",
+    ],
+  } as const
+)[locale];
 ---
 
-<Base
-  title="The visual archive"
-  description="The official artworks of All Hail the Cone, from the founding portrait to possible tomorrows. Explore the collection and its canon status."
->
-  <PageHeading
-    title="Evidence of the impossible."
-    label="The visual archive"
-    description="The pictures came first. Everything else followed. Twenty-three works, twenty-five preserved originals, and a universe still finding its edges."
-  />
-  <section class="wrap" aria-label="Art collection">
+<Base title={copy[0]} description={copy[1]}>
+  <PageHeading title={copy[2]} label={copy[3]} description={copy[4]} />
+  <section
+    class="wrap"
+    aria-label={copy[5]}
+    data-gallery-singular={copy[11]}
+    data-gallery-plural={copy[10]}
+  >
     <div class="gallery-toolbar" id="gallery-tools" hidden>
-      <div
-        class="filter-group"
-        role="group"
-        aria-label="Filter by canon status"
-      >
-        {["All works", "Canon", "Semi-Canon", "Coneposting"].map(
-          (label, index) => (
-            <button
-              data-filter={index === 0 ? "all" : label}
-              aria-pressed={index === 0 ? "true" : "false"}
-            >
-              {label}
-            </button>
-          ),
-        )}
+      <div class="filter-group" role="group" aria-label={copy[6]}>
+        {[
+          [copy[7], "all"],
+          ["Canon", "Canon"],
+          ["Semi-Canon", "Semi-Canon"],
+          ["Coneposting", "Coneposting"],
+        ].map(([label, value], index) => (
+          <button
+            data-filter={value}
+            aria-pressed={index === 0 ? "true" : "false"}
+          >
+            {label}
+          </button>
+        ))}
       </div>
       <label class="search-label">
-        Search the archive
-        <input
-          type="search"
-          id="gallery-search"
-          placeholder="Title, character, or category…"
-        />
+        {copy[8]}
+        <input type="search" id="gallery-search" placeholder={copy[9]} />
       </label>
     </div>
     <p id="gallery-count" class="gallery-count" role="status">
-      23 works in the archive
+      23 {copy[10]}
     </p>
     <div class="gallery-grid">
       {gallery.map((a) => (
@@ -51,28 +146,26 @@ import gallery from "../../data/gallery.json";
           data-status={a.status}
           data-search={`${a.title} ${a.description} ${a.characters.join(" ")} ${a.category}`.toLowerCase()}
         >
-          <a class="art-link" href={`/gallery/${a.id}`}>
+          <a class="art-link" href={localizePath(`/gallery/${a.id}`, locale)}>
             <Art id={a.id} />
-            <span class="image-tag">
-              {a.primary ? "The founding image" : "View artwork"} ↗
-            </span>
+            <span class="image-tag">{a.primary ? copy[12] : copy[13]} ↗</span>
           </a>
           <div class="art-meta">
             <span class="status-label">{a.status}</span>
             <span>{a.category}</span>
           </div>
           <h2>
-            <a href={`/gallery/${a.id}`}>{a.title}</a>
+            <a href={localizePath(`/gallery/${a.id}`, locale)}>{a.title}</a>
           </h2>
           <p>{a.description}</p>
         </article>
       ))}
     </div>
     <div class="gallery-empty" id="gallery-empty" hidden>
-      <h2>No records found.</h2>
-      <p>Try a different title, character or canon level.</p>
+      <h2>{copy[14]}</h2>
+      <p>{copy[15]}</p>
       <button class="button button-quiet" id="clear-search">
-        Clear filters
+        {copy[16]}
       </button>
     </div>
   </section>
@@ -84,6 +177,9 @@ import gallery from "../../data/gallery.json";
     ...document.querySelectorAll<HTMLButtonElement>("[data-filter]"),
   ];
   const cards = [...document.querySelectorAll<HTMLElement>(".art-card")];
+  const gallerySection = document.querySelector<HTMLElement>(
+    "[data-gallery-plural]",
+  )!;
   let filter = "all";
   tools.hidden = false;
   const update = () => {
@@ -100,7 +196,7 @@ import gallery from "../../data/gallery.json";
       b.setAttribute("aria-pressed", String(b.dataset.filter === filter)),
     );
     document.querySelector("#gallery-count")!.textContent =
-      `${count} ${count === 1 ? "work" : "works"} in the archive`;
+      `${count} ${count === 1 ? gallerySection.dataset.gallerySingular : gallerySection.dataset.galleryPlural}`;
     document.querySelector<HTMLElement>("#gallery-empty")!.hidden = count !== 0;
   };
   buttons.forEach((b) =>

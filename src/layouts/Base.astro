@@ -5,29 +5,34 @@ import "@fontsource/dm-sans/latin-400.css";
 import "@fontsource/dm-sans/latin-500.css";
 import "../styles/global.css";
 import { site } from "../data/universe";
+import {
+  commonCopy,
+  getLocale,
+  localeMeta,
+  locales,
+  localizePath,
+  stripLocale,
+} from "../i18n";
 interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
 }
-const { title, description = site.description, noindex = false } = Astro.props;
+const locale = getLocale(Astro.url.pathname);
+const copy = commonCopy[locale];
+const { title, description = copy.description, noindex = false } = Astro.props;
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
-const links = [
-  ["The lore", "/lore"],
-  ["The characters", "/characters"],
-  ["The world", "/world"],
-  ["Gallery", "/gallery"],
-  ["Canon", "/canon"],
-] as const;
+const basePath = stripLocale(path);
+const languagePath = noindex ? "/" : basePath;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={localeMeta[locale].html} data-locale={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#10131d" />
-    <title>{title ? `${title} — ${site.name}` : `${site.name} — A cosmic bureaucracy`}</title>
+    <title>{title ? `${title} — ${site.name}` : `${site.name} — ${copy.defaultTitle}`}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={new URL(path, site.url)} />
     <meta property="og:type" content="website" />
@@ -38,17 +43,30 @@ const links = [
     />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={new URL(path, site.url)} />
+    <meta property="og:locale" content={localeMeta[locale].og} />
     <meta property="og:image" content={`${site.url}/og-image.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="The crowned capybara and the founding figures of Higher Ground."
-    />
+    <meta property="og:image:alt" content={copy.ogAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {!noindex &&
+      locales.map((code) => (
+        <link
+          rel="alternate"
+          hreflang={localeMeta[code].html}
+          href={new URL(localizePath(basePath, code), site.url)}
+        />
+      ))}
+    {!noindex && (
+      <link
+        rel="alternate"
+        hreflang="x-default"
+        href={new URL(basePath, site.url)}
+      />
+    )}
     <link
       rel="alternate"
       type="application/json"
@@ -58,10 +76,14 @@ const links = [
   </head>
   <body>
     <a class="skip-link" href="#main">
-      Skip to content
+      {copy.skip}
     </a>
     <header class="site-header">
-      <a class="wordmark" href="/" aria-label="All Hail the Cone — home">
+      <a
+        class="wordmark"
+        href={localizePath("/", locale)}
+        aria-label={copy.homeLabel}
+      >
         <img src="/brand/cone-mark.svg" alt="" width="38" height="38" />
         <span>
           ALL HAIL<span>THE CONE</span>
@@ -73,24 +95,36 @@ const links = [
         aria-controls="main-nav"
         hidden
       >
-        Menu <span aria-hidden="true">＋</span>
+        {copy.menu} <span aria-hidden="true">＋</span>
       </button>
-      <nav id="main-nav" aria-label="Main navigation">
-        {links.map(([label, href]) => (
+      <nav id="main-nav" aria-label={copy.navigation}>
+        {copy.links.map(([label, href]) => (
           <a
-            href={href}
-            aria-current={path.startsWith(href) ? "page" : undefined}
+            href={localizePath(href, locale)}
+            aria-current={basePath.startsWith(href) ? "page" : undefined}
           >
             {label}
           </a>
         ))}
+        <span class="language-switch" aria-label={copy.language}>
+          {locales.map((code) => (
+            <a
+              href={localizePath(languagePath, code)}
+              lang={localeMeta[code].html}
+              hreflang={localeMeta[code].html}
+              aria-current={locale === code ? "true" : undefined}
+            >
+              {localeMeta[code].label}
+            </a>
+          ))}
+        </span>
       </nav>
       <a
         class="header-about"
-        href="/about"
-        aria-current={path === "/about" ? "page" : undefined}
+        href={localizePath("/about", locale)}
+        aria-current={basePath === "/about" ? "page" : undefined}
       >
-        The project <span aria-hidden="true">↗</span>
+        {copy.project} <span aria-hidden="true">↗</span>
       </a>
     </header>
     <main id="main">
@@ -98,34 +132,38 @@ const links = [
     </main>
     <footer class="site-footer">
       <div class="footer-top">
-        <a class="wordmark" href="/">
+        <a class="wordmark" href={localizePath("/", locale)}>
           <img src="/brand/cone-mark.svg" alt="" width="42" height="42" />
           <span>
             ALL HAIL<span>THE CONE</span>
           </span>
         </a>
         <p>
-          Different creatures.
-          <br />
-          Same inexplicable direction.
+          {copy.footerLine.split("\n").map((line) => (
+            <>
+              {line}
+              <br />
+            </>
+          ))}
         </p>
-        <a class="text-link" href="/community">
-          Find your place in the cosmos <span aria-hidden="true">↗</span>
+        <a class="text-link" href={localizePath("/community", locale)}>
+          {copy.community} <span aria-hidden="true">↗</span>
         </a>
       </div>
       <div class="footer-bottom">
         <span>© 2026 All Hail the Cone</span>
-        <nav aria-label="Footer navigation">
-          <a href="/about">About</a>
+        <nav aria-label={copy.footerNavigation}>
+          <a href={localizePath("/about", locale)}>{copy.footerLinks[0]}</a>
           <a href={site.repo}>GitHub ↗</a>
-          <a href="/identity">Identity</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/canon">Canon v0.1</a>
+          <a href={localizePath("/identity", locale)}>{copy.footerLinks[1]}</a>
+          <a href={localizePath("/privacy", locale)}>{copy.footerLinks[2]}</a>
+          <a href={localizePath("/canon", locale)}>{copy.canon} v0.1</a>
         </nav>
         <button id="motion-toggle" aria-pressed="false" hidden>
-          Pause atmosphere
+          {copy.pause}
         </button>
-        <span class="footer-motto">THE CONE REMAINS.</span>
+        <span class="footer-motto">{copy.motto}</span>
+        <span class="creator-credit">{copy.creator}</span>
       </div>
     </footer>
     <script src="../scripts/experience.ts"></script>

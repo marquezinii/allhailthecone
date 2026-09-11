@@ -1,12 +1,17 @@
 ---
 import Document from "../layouts/Document.astro";
-import { Content } from "../../TIMELINE.md";
+import { Content as En } from "../../TIMELINE.md";
+import { Content as Pt } from "../content/pt/TIMELINE.md";
+import { Content as Zh } from "../content/zh/TIMELINE.md";
+import { Content as De } from "../content/de/TIMELINE.md";
+import { Content as Fr } from "../content/fr/TIMELINE.md";
+import { getLocale } from "../i18n";
+import { documentCopy } from "../i18n/content";
+const locale = getLocale(Astro.url.pathname);
+const Content = { en: En, pt: Pt, zh: Zh, de: De, fr: Fr }[locale];
+const [title, label, description] = documentCopy.timeline[locale];
 ---
 
-<Document
-  title="The initial chronology"
-  label="The historical record"
-  description="From the Era Before Guidance through The Ascension and the First Expeditions to the signal now crossing the Gates."
->
+<Document {title} {label} {description}>
   <Content />
 </Document>
