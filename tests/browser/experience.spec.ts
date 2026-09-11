@@ -244,3 +244,17 @@ test("language switch keeps the current route in all five locales", async ({
     await expect(page.getByText(/Vemryx/)).toHaveCount(1);
   }
 });
+
+test("official Discord links are present in the community and shared footer", async ({
+  page,
+}) => {
+  await page.goto("/community");
+  const discord = "https://discord.gg/9VyUNRk7N";
+  await expect(
+    page.getByRole("link", { name: "Join the official Discord" }),
+  ).toHaveAttribute("href", discord);
+  await expect(page.locator(".site-footer .discord-link")).toHaveAttribute(
+    "href",
+    discord,
+  );
+});

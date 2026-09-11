@@ -843,6 +843,42 @@ p {
   display: flex;
   gap: 22px;
 }
+.footer-bottom .discord-link,
+.community-actions .discord-link {
+  align-items: center;
+  gap: 7px;
+}
+.footer-bottom .discord-link {
+  display: inline-flex;
+}
+.discord-mark {
+  width: 15px;
+  height: 15px;
+  color: var(--violet);
+  filter: drop-shadow(
+    0 0 5px color-mix(in srgb, var(--violet), transparent 45%)
+  );
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+.discord-link:hover .discord-mark {
+  color: var(--gold);
+  transform: translateY(-1px) rotate(-4deg);
+}
+.community-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 42px;
+}
+.community-actions .button {
+  gap: 11px;
+}
+.community-actions .discord-mark {
+  width: 18px;
+  height: 18px;
+}
 .footer-bottom button {
   font-size: 10px;
   background: none;

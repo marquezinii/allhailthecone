@@ -2,6 +2,7 @@ export const site = {
   name: "All Hail the Cone",
   url: "https://allhailthecone.com",
   repo: "https://github.com/marquezinii/allhailthecone",
+  discord: "https://discord.gg/9VyUNRk7N",
   description:
     "A cosmic bureaucracy held together by tea, bread, potassium, and an extraordinary faith in a traffic cone.",
 };
