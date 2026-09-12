@@ -14,7 +14,12 @@ const href = (path: string) => localizePath(path, locale);
 ---
 
 <Base>
-  <section class="hero" aria-labelledby="hero-title" data-hero>
+  <section
+    class="hero"
+    aria-labelledby="hero-title"
+    data-hero
+    data-home-experience
+  >
     <div class="hero-art">
       <Art
         id="the-first-observance"
@@ -24,17 +29,24 @@ const href = (path: string) => localizePath(path, locale);
       <div class="hero-art-shade"></div>
     </div>
     <div class="hero-orbit" aria-hidden="true"></div>
+    <div class="hero-signal" aria-hidden="true">
+      <span class="hero-signal-orbit hero-signal-orbit-one"></span>
+      <span class="hero-signal-orbit hero-signal-orbit-two"></span>
+      <span class="hero-signal-star"></span>
+    </div>
     <div class="hero-content wrap">
-      <p class="eyebrow hero-eyebrow">
+      <p class="eyebrow hero-eyebrow" data-hero-reveal>
         <span class="status-dot"></span> {copy.heroEyebrow}
       </p>
-      <h1 id="hero-title">
+      <h1 id="hero-title" data-hero-reveal>
         ALL HAIL
         <br />
         THE <span>CONE.</span>
       </h1>
-      <p class="hero-description">{copy.heroDescription}</p>
-      <div class="hero-actions">
+      <p class="hero-description" data-hero-reveal>
+        {copy.heroDescription}
+      </p>
+      <div class="hero-actions" data-hero-reveal>
         <a class="button button-primary" href={href("/lore")}>
           {copy.enter} <span aria-hidden="true">↗</span>
         </a>
@@ -42,7 +54,7 @@ const href = (path: string) => localizePath(path, locale);
           {copy.meetCone} <span aria-hidden="true">↓</span>
         </a>
       </div>
-      <div class="hero-note">
+      <div class="hero-note" data-hero-reveal>
         <span class="note-rule"></span>
         <p>
           {copy.note[0]}
@@ -59,7 +71,7 @@ const href = (path: string) => localizePath(path, locale);
       <span class="hero-bottom-right">{copy.established}</span>
     </div>
   </section>
-  <section id="welcome" class="introduction wrap section-space">
+  <section id="welcome" class="introduction wrap section-space" data-cinematic>
     <div>
       <p class="eyebrow">{copy.welcome}</p>
       <h2>
@@ -79,7 +91,12 @@ const href = (path: string) => localizePath(path, locale);
       </a>
     </div>
   </section>
-  <section id="the-cone" class="cone-section" aria-labelledby="cone-title">
+  <section
+    id="the-cone"
+    class="cone-section"
+    aria-labelledby="cone-title"
+    data-cinematic
+  >
     <div class="wrap cone-layout">
       <div class="cone-copy">
         <p class="eyebrow">{copy.coneEyebrow}</p>
@@ -137,12 +154,12 @@ const href = (path: string) => localizePath(path, locale);
       ))}
     </div>
   </section>
-  <section class="world-window" aria-labelledby="world-title">
-    <div class="world-image">
+  <section class="world-window" aria-labelledby="world-title" data-cinematic>
+    <div class="world-image" data-cinematic-art>
       <Art id="an-ordinary-afternoon" sizes="100vw" />
     </div>
     <div class="world-window-shade"></div>
-    <div class="world-window-content wrap">
+    <div class="world-window-content wrap" data-cinematic-copy>
       <p class="eyebrow">{copy.beyond}</p>
       <h2 id="world-title">
         {copy.roads[0]}
@@ -194,12 +211,12 @@ const href = (path: string) => localizePath(path, locale);
       ))}
     </div>
   </section>
-  <section class="gallery-teaser wrap">
-    <a href={href("/gallery")} class="gallery-teaser-art">
+  <section class="gallery-teaser wrap" data-cinematic>
+    <a href={href("/gallery")} class="gallery-teaser-art" data-cinematic-art>
       <Art id="the-kindness-drift" />
       <span class="image-tag">{copy.collection} ↗</span>
     </a>
-    <div>
+    <div data-cinematic-copy>
       <p class="eyebrow">{copy.evidence}</p>
       <h2>
         {copy.picture[0]}

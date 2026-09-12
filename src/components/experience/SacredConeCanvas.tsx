@@ -86,6 +86,68 @@ function GuidanceStar() {
   );
 }
 
+const gates = [
+  { position: [-2.4, 1.2, -1.4], color: PURPLE, scale: 0.17 },
+  { position: [2.35, 0.55, -1.8], color: AMBER, scale: 0.13 },
+  { position: [-1.8, -1.45, -1.15], color: AMBER, scale: 0.11 },
+  { position: [1.95, -1.1, -1.4], color: PURPLE, scale: 0.15 },
+] as const;
+
+function GateNetwork({
+  active,
+  lowFidelity,
+  progress,
+}: Pick<SceneProps, "active" | "lowFidelity" | "progress">) {
+  const network = useRef<THREE.Group>(null);
+
+  useFrame((state, delta) => {
+    if (!network.current || !active) return;
+    const damping = Math.min(delta, 0.05);
+    network.current.rotation.y = THREE.MathUtils.damp(
+      network.current.rotation.y,
+      -0.18 + state.pointer.x * 0.12 + progress.current * 0.18,
+      2.5,
+      damping,
+    );
+    network.current.rotation.x = THREE.MathUtils.damp(
+      network.current.rotation.x,
+      state.pointer.y * -0.05,
+      2.5,
+      damping,
+    );
+  });
+
+  return (
+    <group ref={network} position={[0, 0, -1.2]}>
+      <mesh rotation={[Math.PI / 2.7, 0.42, -0.22]}>
+        <torusGeometry args={[2.8, 0.008, 6, 96]} />
+        <meshBasicMaterial color={PURPLE} transparent opacity={0.34} />
+      </mesh>
+      <mesh rotation={[Math.PI / 2.25, -0.58, 0.36]}>
+        <torusGeometry args={[2.55, 0.009, 6, 96]} />
+        <meshBasicMaterial color={AMBER} transparent opacity={0.28} />
+      </mesh>
+      {gates.map((gate, index) => (
+        <group key={gate.position.join("-")} position={gate.position}>
+          <mesh scale={gate.scale} rotation={[0.4, 0.1, Math.PI / 4]}>
+            <octahedronGeometry args={[1, 0]} />
+            <meshStandardMaterial
+              color={gate.color}
+              emissive={gate.color}
+              emissiveIntensity={1.1}
+              metalness={0.75}
+              roughness={0.18}
+            />
+          </mesh>
+          {!lowFidelity && index < 2 && (
+            <pointLight color={gate.color} intensity={3} distance={1.2} />
+          )}
+        </group>
+      ))}
+    </group>
+  );
+}
+
 function ConeRelic({ active, progress }: Omit<SceneProps, "lowFidelity">) {
   const assembly = useRef<THREE.Group>(null);
   const cone = useRef<THREE.Group>(null);
@@ -258,6 +320,11 @@ function SanctuaryScene(props: SceneProps) {
       <ambientLight color="#6f5ca7" intensity={1.35} />
       <directionalLight position={[3, 5, 5]} color="#fff0cf" intensity={2.1} />
       <StarField lowFidelity={props.lowFidelity} />
+      <GateNetwork
+        active={props.active}
+        lowFidelity={props.lowFidelity}
+        progress={props.progress}
+      />
       <ConeRelic active={props.active} progress={props.progress} />
       <mesh position={[0, -2.12, -0.1]} rotation={[-Math.PI / 2, 0, 0]}>
         <circleGeometry args={[3.15, 72]} />

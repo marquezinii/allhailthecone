@@ -165,6 +165,142 @@ if (hero) {
     },
     { passive: true },
   );
+
+  let pointerFrame = 0;
+  let pointerX = 0;
+  let pointerY = 0;
+  const updateHeroPointer = () => {
+    hero.style.setProperty("--hero-x", `${pointerX * 14}px`);
+    hero.style.setProperty("--hero-y", `${pointerY * 10}px`);
+    hero.style.setProperty("--signal-x", `${50 + pointerX * 16}%`);
+    hero.style.setProperty("--signal-y", `${45 + pointerY * 12}%`);
+    pointerFrame = 0;
+  };
+  hero.addEventListener("pointermove", (event) => {
+    if (!moving() || !finePointer.matches) return;
+    const box = hero.getBoundingClientRect();
+    pointerX = (event.clientX - box.left) / box.width - 0.5;
+    pointerY = (event.clientY - box.top) / box.height - 0.5;
+    if (!pointerFrame) pointerFrame = requestAnimationFrame(updateHeroPointer);
+  });
+  hero.addEventListener("pointerleave", () => {
+    pointerX = pointerY = 0;
+    if (!pointerFrame && moving())
+      pointerFrame = requestAnimationFrame(updateHeroPointer);
+  });
+}
+
+const homeExperience = document.querySelector<HTMLElement>(
+  "[data-home-experience]",
+);
+if (homeExperience) {
+  let disposed = false;
+  let revert: (() => void) | undefined;
+  const cinematicCapable = () =>
+    moving() && finePointer.matches && innerWidth > 760;
+
+  const mountChoreography = () => {
+    if (disposed || !cinematicCapable() || revert) return;
+    void Promise.all([import("gsap"), import("gsap/ScrollTrigger")])
+      .then(([gsapModule, triggerModule]) => {
+        if (disposed || !cinematicCapable() || revert) return;
+        const gsap = gsapModule.gsap;
+        const ScrollTrigger = triggerModule.ScrollTrigger;
+        gsap.registerPlugin(ScrollTrigger);
+        const context = gsap.context(() => {
+          const heroParts =
+            homeExperience.querySelectorAll("[data-hero-reveal]");
+          gsap.fromTo(
+            heroParts,
+            { autoAlpha: 0, y: 26 },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.9,
+              stagger: 0.09,
+              ease: "power3.out",
+              delay: 0.12,
+            },
+          );
+
+          gsap.utils
+            .toArray<HTMLElement>("[data-cinematic]")
+            .forEach((section) => {
+              const art = section.querySelector<HTMLElement>(
+                "[data-cinematic-art]",
+              );
+              const copy = section.querySelector<HTMLElement>(
+                "[data-cinematic-copy]",
+              );
+              if (art) {
+                gsap.fromTo(
+                  art,
+                  { scale: 1.11, yPercent: -4 },
+                  {
+                    scale: 1.01,
+                    yPercent: 4,
+                    ease: "none",
+                    scrollTrigger: {
+                      trigger: section,
+                      start: "top bottom",
+                      end: "bottom top",
+                      scrub: 0.7,
+                    },
+                  },
+                );
+              }
+              if (copy) {
+                gsap.fromTo(
+                  copy,
+                  { autoAlpha: 0, y: 30 },
+                  {
+                    autoAlpha: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                      trigger: section,
+                      start: "top 72%",
+                      toggleActions: "play none none reverse",
+                    },
+                  },
+                );
+              }
+            });
+        });
+        revert = () => context.revert();
+      })
+      .catch(() => {
+        /* The archive stays complete when optional cinematic motion is unavailable. */
+      });
+  };
+
+  const syncChoreography = () => {
+    if (cinematicCapable()) mountChoreography();
+    else {
+      revert?.();
+      revert = undefined;
+    }
+  };
+  const motionObserver = new MutationObserver(syncChoreography);
+  motionObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-motion"],
+  });
+  finePointer.addEventListener("change", syncChoreography);
+  addEventListener("resize", syncChoreography, { passive: true });
+  window.setTimeout(syncChoreography, 120);
+  addEventListener(
+    "pagehide",
+    () => {
+      disposed = true;
+      motionObserver.disconnect();
+      finePointer.removeEventListener("change", syncChoreography);
+      removeEventListener("resize", syncChoreography);
+      revert?.();
+    },
+    { once: true },
+  );
 }
 
 const observationSets: Record<string, readonly [string, string, string]> = {

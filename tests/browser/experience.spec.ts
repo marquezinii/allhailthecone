@@ -90,6 +90,9 @@ test("menu supports keyboard and mobile; motion preferences and observations wor
   page,
 }, testInfo) => {
   await page.goto("/");
+  if (testInfo.project.name === "mobile") {
+    await expect(page.locator("#hero-title")).toHaveCSS("opacity", "1");
+  }
   await page.keyboard.press("Tab");
   await expect(
     page.getByRole("link", { name: "Skip to content" }),
