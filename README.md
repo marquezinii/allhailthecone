@@ -212,8 +212,8 @@ The supplied image **The First Observance** is the principal canonical visual re
 
 | Record                   | Current edition                  |
 | ------------------------ | -------------------------------- |
-| Original supplied files  | 25                               |
-| Unique artwork records   | 23                               |
+| Original supplied files  | 33                               |
+| Unique artwork records   | 31                               |
 | Primary visual reference | `the-first-observance`           |
 | Source archive           | `assets/originals/`              |
 | Provenance and hashes    | `assets/catalog/provenance.json` |

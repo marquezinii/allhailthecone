@@ -167,7 +167,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       "O arquivo está aberto. Traga sua curiosidade.",
       "Pão é bem-vindo, mas não obrigatório.",
     ],
-    join: "Faça parte da história",
+    join: "Entre na história em curso",
   },
   zh: {
     heroEyebrow: "一个极不寻常的寻常宇宙",

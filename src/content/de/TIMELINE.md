@@ -1,35 +1,35 @@
-# Die anfängliche Zeitleiste
+# Die erste Chronologie
 
-Genaue Daten sind noch nicht verfügbar. Die Chronologie zeichnet Epochen und gemeinsame Ereignisse auf, anstatt so zu tun, als würde jede Welt denselben Kalender verwenden.
+Genaue Daten bleiben unbekannt. Die Chronologie verzeichnet Epochen und gemeinsame Ereignisse, statt so zu tun, als benutzten alle Welten denselben Kalender.
 
 ## Era Before Guidance
 
-**Canon.** Zivilisationen existieren isoliert. Gates erscheinen und verschwinden unvorhersehbar. Städte erwachen unter anderen Himmeln, schwimmende Inseln wandern umher und Handelsrouten verschwinden ohne Vorwarnung. Es gibt bereits einige alte Gates und Aufzeichnungen über das Symbol des Kegels.
+**Canon.** Zivilisationen leben isoliert. Gates erscheinen und verschwinden unvorhersehbar. Städte erwachen unter fremden Himmeln, schwebende Inseln treiben umher, und Handelsrouten verschwinden ohne Vorwarnung. Einige uralte Gates und erste Aufzeichnungen des Kegelsymbols bestehen bereits.
 
 ## The Ascension
 
-**Canon.** Jemand entdeckt einen Kegel auf einer Steinplattform an einem unbekannten Ort. Der Versuch, es zu bewegen, sendet Energie durch mehrere Welten. Gates stabilisiert sich, Inseln kommen zum Stillstand und inkompatible Systeme beginnen zusammenzuarbeiten. Für Beobachter vieler Zivilisationen erscheint über dem Kegel ein goldener Stern.
+**Canon.** Jemand entdeckt an einem unbekannten Ort einen Kegel auf einer Steinplattform. Der Versuch, ihn zu bewegen, sendet Energie durch mehrere Welten. Gates stabilisieren sich, Inseln kommen zum Stillstand, und unvereinbare Systeme beginnen zusammenzuarbeiten. Beobachtern vieler Zivilisationen erscheint ein goldener Stern über dem Kegel.
 
-Das Objekt wird als **The Sacred Cone** bezeichnet.
+Das Objekt wird bekannt als **The Sacred Cone**.
 
 ## The First Expeditions
 
-**Canon.** Das Wasserschwein, später bekannt als The King, leitet Reisen durch das neu stabilisierte Gates. Getrennte Zivilisationen nehmen ersten Kontakt auf. Diplomatie verhindert, dass mehrere aufkommende Konflikte zu Kriegen werden.
+**Canon.** Das Wasserschwein, das später als The King bekannt wird, führt Reisen durch die neu stabilisierten Gates. Getrennte Zivilisationen treten erstmals in Kontakt. Diplomatie verhindert, dass mehrere aufkeimende Konflikte zu Kriegen werden.
 
 ## Foundation of Higher Ground
 
-**Canon.** Gebiete, Städte, Routen und Gemeinden bilden das Netzwerk namens Higher Ground. The Guidance wird zu seiner zentralen Philosophie. The King wird zu seiner bedeutendsten politischen Figur durch Mittel, die nicht im offiziellen Archiv verzeichnet sind.
+**Canon.** Territorien, Städte, Routen und Gemeinschaften bilden das Netz namens Higher Ground. The Guidance wird zu seiner zentralen Philosophie. The King wird seine wichtigste politische Figur, auf Wegen, die das offizielle Archiv nicht festhält.
 
-The Order of Guidance, Bread Operations, die Potassium Division und The Resonance nehmen ihre modernen Formen an. The Keepers übernehmen ihre Aufgaben rund um The Sanctuary.
+The Order of Guidance, Bread Operations, die Potassium Division und The Resonance nehmen ihre heutige Gestalt an. Die Keepers übernehmen ihre Aufgaben rund um The Sanctuary.
 
 ## The Age of Guidance
 
-**Canon.** Higher Ground expandiert durch Handel, Erkundung, kulturellen Austausch und gepflegte Gate-Routen. Crown City wird seine Verwaltungshauptstadt. The First Ground, Floating Realms, Deep Cities und Outer Routes betreten die bekannte Karte.
+**Canon.** Higher Ground wächst durch Handel, Erkundung, kulturellen Austausch und gepflegte Gate-Routen. Crown City wird zur Verwaltungshauptstadt. The First Ground, The Floating Realms, The Deep Cities und The Outer Routes treten in die bekannte Karte ein.
 
 ## The Present Disturbance
 
-**Canon.** Unbekannt Gates offen für verlassene Städte, riesige Bauwerke, unbekannte Signale und alternative Versionen bekannter Gebiete. Instrumente in The Sanctuary erkennen eine sich wiederholende Nachricht von außerhalb des bekannten Universums:
+**Canon.** Unbekannte Gates öffnen sich zu verlassenen Städten, gewaltigen Bauwerken, fremden Signalen und alternativen Fassungen bekannter Territorien. Instrumente in The Sanctuary empfangen eine wiederkehrende Botschaft von jenseits des bekannten Universums:
 
 > **HIGHER GROUND EXISTS.**
 
-Zum ersten Mal seit The Ascension weiß niemand, wohin der Kegel zeigt.
+Zum ersten Mal seit The Ascension weiß niemand, wohin der Kegel weist.

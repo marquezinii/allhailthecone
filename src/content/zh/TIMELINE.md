@@ -1,35 +1,35 @@
-# 最初的时间线
+# 初始时间线
 
-确切的日期尚不清楚。年表记录时代和共享事件，而不是假装每个世界都使用相同的日历。
+确切日期仍无从获得。这份年表记录的是各个时代与共同事件，而不假装所有世界都使用同一套历法。
 
 ## Era Before Guidance
 
-**Canon.** 文明是孤立存在的。 Gates 的出现和消失是不可预测的。城市在其他天空下苏醒，漂浮的岛屿徘徊，贸易路线毫无征兆地消失。一些古老的 Gates 和锥体符号的记录已经存在。
+**Canon.** 各文明彼此隔绝。Gates 以无法预测的方式出现又消失。城市在别的天空下醒来，浮岛四处漂流，贸易航线毫无征兆地消失。此时已经存在一些古老的 Gates，以及若干关于交通锥符号的记录。
 
 ## The Ascension
 
-**Canon。** 有人在未知位置的石台上发现了一个交通锥。试图移动它会向多个世界发送能量。 Gates 稳定，孤岛停止，不兼容的系统开始协同工作。对于许多文明的观察者来说，一颗金色的星星出现在锥体上方。
+**Canon.** 在一个无名之地，有人发现石台上放着一个交通锥。搬动它的尝试，让能量穿越了多个世界。Gates 稳定下来，岛屿停止漂流，互不兼容的系统开始协同运转。在许多文明的观察者眼中，一颗金色星辰出现在交通锥上方。
 
-该对象被称为 **The Sacred Cone**。
+此后，这件物体被称为 **The Sacred Cone**。
 
 ## The First Expeditions
 
-**Canon。** 后来被称为 The King 的水豚引领着新稳定的 Gates 的旅程。不同的文明首次接触。外交可以防止一些新出现的冲突演变成战争。
+**Canon.** 后来被称为 The King 的那只水豚，率队穿越刚刚稳定下来的 Gates。彼此隔绝的文明首次接触。外交手段阻止了数场正在成形的冲突演变为战争。
 
 ## Foundation of Higher Ground
 
-**Canon.** 领土、城市、路线和社区形成了称为“Higher Ground”的网络。 The Guidance 成为其核心理念。 The King 通过官方档案中未记录的方式成为其最重要的政治人物。
+**Canon.** 领地、城市、航线与社群组成了名为 Higher Ground 的网络。The Guidance 成为其核心理念。The King 成为其最重要的政治人物，而官方档案并未记录这一过程。
 
-The Order of Guidance、Bread Operations、钾部和 The Resonance 采用现代形式。 The Keepers 围绕 The Sanctuary 承担其职责。
+The Order of Guidance、Bread Operations、The Potassium Division 与 The Resonance 形成了各自如今的形态。The Keepers 承担起 The Sanctuary 周围的职责。
 
 ## The Age of Guidance
 
-**Canon。** Higher Ground通过贸易、探索、文化交流进行扩张，并维护 Gate 路线。 Crown City成为其行政首都。 The First Ground、The Floating Realms、The Deep Cities、The Outer Routes进入已知地图。
+**Canon.** Higher Ground 通过贸易、探索、文化交流与被维护的 Gate 航线不断扩展。Crown City 成为行政首府。The First Ground、The Floating Realms、The Deep Cities 与 The Outer Routes 进入已知地图。
 
 ## The Present Disturbance
 
-**Canon。** 未知的 Gates 向废弃的城市、巨大的建筑、不熟悉的信号和已知领土的替代版本开放。 The Sanctuary 中的仪器检测到来自已知宇宙之外的重复消息：
+**Canon.** 未知的 Gates 朝着废弃的城市、巨大的构造、陌生的信号，以及已知领地的另一种版本敞开。The Sanctuary 内的仪器接收到一段来自已知宇宙之外的重复讯息：
 
-> **HIGHER GROUND EXISTS。**
+> **HIGHER GROUND EXISTS.**
 
-自 The Ascension 以来，第一次没有人知道锥体指向哪里。
+自 The Ascension 以来第一次，没有人知道交通锥正指向何方。

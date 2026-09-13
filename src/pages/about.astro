@@ -1,8 +1,15 @@
 ---
 import Document from "../layouts/Document.astro";
 import { site } from "../data/universe";
-import { getLocale, localizePath } from "../i18n";
+import { commonCopy, getLocale, localizePath } from "../i18n";
 const locale = getLocale(Astro.url.pathname);
+const community = {
+  en: "Community",
+  pt: "Comunidade",
+  zh: "社区",
+  de: "Gemeinschaft",
+  fr: "Communauté",
+}[locale];
 const copy = {
   en: {
     title: "A universe, quite by accident.",
@@ -187,6 +194,12 @@ const links = [
     href: site.repo,
   },
 ];
+const trail: readonly (readonly [string, string])[] = [
+  ...commonCopy[locale].links.filter(([, path]) =>
+    ["/lore", "/characters", "/gallery"].includes(path),
+  ),
+  [community, "/community"],
+];
 ---
 
 <Document title={copy.title} label={copy.label} description={copy.description}>
@@ -205,9 +218,11 @@ const links = [
     </>
   ))}
   <p>
-    <a href={localizePath("/lore", locale)}>Lore</a> ·{" "}
-    <a href={localizePath("/characters", locale)}>Characters</a> ·{" "}
-    <a href={localizePath("/gallery", locale)}>Gallery</a> ·{" "}
-    <a href={localizePath("/community", locale)}>Community</a>
+    {trail.map(([label, path], index) => (
+      <>
+        {index > 0 && " · "}
+        <a href={localizePath(path, locale)}>{label}</a>
+      </>
+    ))}
   </p>
 </Document>

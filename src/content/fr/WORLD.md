@@ -1,63 +1,63 @@
-# L'univers connu
+# L’univers connu
 
-## Terrain plus élevé
+## Higher Ground
 
-**Canon.** Higher Ground est un réseau de mondes, de villes, de territoires, d'itinéraires, d'institutions et de communautés connectés après The Ascension. Ce n’est pas un pays conventionnel et ce n’est pas pleinement un empire. Ses cartes décrivent les relations et les passages entretenus de manière plus fiable que les frontières fixes.
+**Canon.** Higher Ground est un réseau de mondes, de villes, de territoires, de routes, d’institutions et de communautés reliés après The Ascension. Ce n’est pas un pays classique et pas tout à fait un empire. Ses cartes décrivent des relations et des passages entretenus avec plus de fiabilité que des frontières fixes.
 
-Higher Ground est aussi une idée : cette direction, ce progrès et cet espoir restent possibles même lorsque la destination est inconnue.
+Higher Ground est aussi une idée : celle que la direction, le progrès et l’espoir restent possibles même quand la destination est inconnue.
 
 ## The First Ground
 
-**Canon.** La région contenant The Sanctuary et le Cône Sacré. The First Ground est un lieu de pèlerinage, d'observation, de travail scientifique et de cérémonie publique. Ses coordonnées exactes ne sont pas largement enregistrées.
+**Canon.** La région qui abrite The Sanctuary et le Cône sacré. The First Ground est un lieu de pèlerinage, d’observation, de travail scientifique et de cérémonie publique. Ses coordonnées exactes sont peu consignées.
 
-The Sanctuary est colossal, mais le Cône doit rester reconnaissable comme un objet de circulation plutôt que de devenir un obélisque abstrait. La pierre, la mousse, les petites lumières et les gardiens relient la structure monumentale à l'entretien ordinaire.
+The Sanctuary est colossal, mais le Cône doit rester reconnaissable comme objet de signalisation plutôt que devenir un obélisque abstrait. La pierre, la mousse, les petites lumières et les Keepers relient la structure monumentale à l’entretien ordinaire.
 
 ## Crown City
 
-**Canon.** La capitale administrative de Higher Ground. Ses conseils coordonnent la diplomatie, la politique des routes et les conflits entre territoires connectés. Bread Operations et la division Potassium y possèdent tous deux des bureaux importants.
+**Canon.** La capitale administrative de Higher Ground. Ses conseils coordonnent la diplomatie, la politique des routes et les différends entre territoires reliés. Bread Operations et la Potassium Division y maintiennent d’importants bureaux.
 
-La ville gouverne un réseau qui ne peut être compris à partir d’une seule ligne d’horizon. Son autorité dépend des relations de fonctionnement à travers les Gates.
+La ville gouverne un réseau qu’aucune ligne d’horizon ne suffit à comprendre. Son autorité dépend de relations qui continuent de fonctionner à travers les Gates.
 
 ## The Floating Realms
 
-**Canon.** Une étendue d'îles flottantes habitées reliées par des ponts, des navires et Gates. Certaines îles dérivent ; d'autres se sont arrêtés pendant The Ascension. Les maisons, les marchés, les jardins et les villes entières voyagent sous des cieux changeants.
+**Canon.** Une étendue d’îles flottantes habitées, reliées par des ponts, des vaisseaux et des Gates. Certaines îles dérivent encore ; d’autres se sont immobilisées pendant The Ascension. Maisons, marchés, jardins et villes entières voyagent sous des ciels changeants.
 
-La région connue dans les études du champ visuel sous le nom de **The Kindness Drift** est Semi-Canon jusqu'à ce qu'elle soit cartographiée plus précisément.
+La région connue dans les études visuelles de terrain sous le nom de **The Kindness Drift** est Semi-Canon tant qu’elle n’est pas cartographiée plus précisément.
 
 ## The Deep Cities
 
-**Canon.** Civilisations construites au sein d'immenses océans. Certains sont visibles en bleu Gates dans les archives visuelles. Leurs gouvernements, leur biologie et leurs relations avec les territoires de surface restent ouverts.
+**Canon.** Des civilisations bâties au sein d’immenses océans. Certaines apparaissent dans les archives visuelles à travers des Gates bleus. Leurs gouvernements, leur biologie et leur rapport aux territoires de surface restent ouverts.
 
 ## The Outer Routes
 
-**Canon.** Chemins étudiés utilisés pour l'exploration spatiale et interdimensionnelle. Un voyage nécessite un Gate stable, des balises fonctionnelles et des informations d'itinéraire actuelles. Le voyage est puissant mais ni facile ni illimité.
+**Canon.** Des voies relevées, utilisées pour l’exploration spatiale et interdimensionnelle. Un voyage exige un Gate stable, des balises en état de marche et des informations de route à jour. Voyager est puissant, mais ni facile ni illimité.
 
 ## The Silent Worlds
 
-**Canon.** Planètes apparemment abandonnées découvertes au-delà des colonies établies. Des rues vides et des structures intactes ont été signalées, mais la cause et l'âge de leur silence restent inconnus.
+**Canon.** Des planètes apparemment abandonnées, trouvées au-delà des implantations établies. On y signale des rues vides et des structures intactes, mais la cause et l’ancienneté de ce silence demeurent inconnues.
 
 ## The Far Ground
 
-**Canon comme une région inexplorée.** La réalité mal cartographiée au-delà des itinéraires entretenus. Le nouveau Gates s'ouvre de plus en plus sur ses villes abandonnées, ses immenses structures et ses versions modifiées de territoires familiers.
+**Canon en tant que région inexplorée.** La réalité mal cartographiée au-delà des routes entretenues. De nouveaux Gates s’ouvrent de plus en plus souvent vers ses villes abandonnées, ses structures immenses et ses versions altérées de territoires familiers.
 
-Les endroits vides sur la carte ne sont pas des endroits vides. L’exploration doit rencontrer d’autres histoires et modes de vie, et pas seulement des ressources en attente d’être revendiquées.
+Les blancs sur la carte ne sont pas des lieux vides. L’exploration doit y rencontrer d’autres histoires et d’autres façons de vivre, et non de simples ressources en attente d’être revendiquées.
 
 ## Les Gates
 
-Gates relie des endroits qui peuvent être distants de plusieurs millions d'années-lumière. Certaines semblent artificielles, d’autres spontanées et d’autres encore plus anciennes que toutes les civilisations connues. The Ascension a stabilisé de nombreux Gates, mais pas tous.
+Les Gates relient des lieux parfois distants de millions d’années-lumière. Certains paraissent artificiels, d’autres spontanés, d’autres encore plus anciens que toute civilisation connue. The Ascension a stabilisé de nombreux Gates, mais pas tous.
 
-La stabilité moderne du Gate semble liée au cône. Les géomètres ne peuvent pas déterminer si le cône alimente le réseau, le régule ou indique simplement des conditions déjà existantes.
+La stabilité des Gates modernes semble liée au Cône. Les arpenteurs ne parviennent pas à déterminer si le Cône alimente le réseau, le régule, ou signale seulement des conditions qui existaient déjà.
 
 ## Technologie et vie quotidienne
 
-The Potassium Division gère les ordinateurs, les communications, l'intelligence artificielle, l'automatisation, les systèmes énergétiques, l'infrastructure de portail et les balises de navigation. La robotique et l'équipement des astronautes cohabitent avec des lanternes, des tasses en céramique et des tissus d'ameublement usés.
+La Potassium Division entretient les ordinateurs, les communications, l’intelligence artificielle, l’automatisation, les systèmes énergétiques, l’infrastructure des portails et les balises de navigation. Robotique et équipement d’astronaute côtoient lanternes, tasses en céramique et tissus usés.
 
-Bread Operations gère le transport, les chaînes d'approvisionnement, le commerce, les réserves stratégiques et la distribution. Le pain est important parce que les civilisations ont besoin de manger. Il n’est pas nécessaire que ce soit magique pour construire des mondes.
+Bread Operations gère le transport, les chaînes d’approvisionnement, le commerce, les réserves stratégiques et la distribution. Le pain compte parce que les civilisations doivent manger. Il n’a pas besoin d’être magique pour bâtir des mondes.
 
-Le thé est à la fois une boisson quotidienne et une pause institutionnelle : un temps réservé aux décisions qui ne doivent pas être prises à la vitesse de la panique.
+Le thé est à la fois une boisson quotidienne et une pause institutionnelle : du temps réservé aux décisions qui ne devraient pas se prendre à la vitesse de la panique.
 
 ## Sources de conflit
 
-Échec de Gates. Les itinéraires bougent. Les fournitures arrivent en retard. Les institutions se disputent l’accès et l’attention. Les nouveaux mondes remettent en question les hypothèses des anciens conseils. Bread Operations et la division Potassium peuvent être en désaccord sans devenir méchants.
+Des Gates tombent en panne. Des routes se déplacent. Les approvisionnements arrivent en retard. Les institutions se disputent l’accès et l’attention. De nouveaux mondes bousculent les certitudes des anciens conseils. Bread Operations et la Potassium Division peuvent s’opposer sans que l’une ou l’autre devienne malfaisante.
 
-Le conflit central actuel est l'apparition de Gates inconnus et du signal répétitif **HIGHER GROUND EXISTS**. Le danger peut résider dans l'expéditeur, la destination ou dans la possibilité que quelqu'un d'autre suive les mêmes conseils depuis bien plus longtemps.
+Le conflit central du présent est l’apparition de Gates inconnus et le signal répété **HIGHER GROUND EXISTS**. Le danger tient peut-être à l’émetteur, à la destination — ou à la possibilité que quelqu’un d’autre suive la même Guidance depuis bien plus longtemps.

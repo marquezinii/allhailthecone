@@ -1,141 +1,141 @@
-# Base de connaissances officielle v0.1
+# Récit officiel v0.1
 
 ## Un univers fragmenté
 
-**All Hail the Cone** se déroule à travers des mondes, des îles flottantes, des villes suspendues, des portails cosmiques et des territoires qui n'obéissent pas entièrement à la réalité ordinaire.
+**All Hail the Cone** se déroule à travers des mondes, des îles flottantes, des villes suspendues, des portails cosmiques et des territoires qui n’obéissent pas entièrement à la réalité ordinaire.
 
-Au centre de tout cela se trouve un objet apparemment simple : **le Cône**. Un cône de signalisation.
+Au centre de tout cela se tient un objet d’apparence banale : **le Cône**. Un cône de signalisation.
 
-Personne ne sait qui l’a fabriqué, d’où il vient ni pourquoi il a une signification cosmique. Certains disent qu’elle existait avant les étoiles. D'autres l'attribuent à une civilisation perdue. Certains soutiennent qu’il s’agit d’un objet ordinaire autour duquel s’est rassemblée toute une foi.
+Personne ne sait qui l’a fabriqué, d’où il vient ni pourquoi il porte une signification cosmique. Certains disent qu’il existait avant les étoiles. D’autres l’attribuent à une civilisation perdue. Quelques-uns soutiennent qu’il s’agit d’un objet ordinaire autour duquel une foi entière s’est simplement rassemblée.
 
-Presque tout le monde accepte une chose :
+Presque tout le monde s’accorde sur un point :
 
-> **Les guides Cône.**
+> **Le Cône guide.**
 
-Où il guide reste incertain.
+Vers où, nul ne saurait le dire.
 
 ## The Ascension
 
-Avant l’ordre actuel, des milliers de civilisations existaient de manière isolée. Des portails sont apparus et ont disparu sans avertissement. Les villes se sont réveillées sous des cieux inconnus. Des îles flottantes erraient. Les routes commerciales ont disparu du jour au lendemain.
+Avant l’ordre actuel, des milliers de civilisations vivaient isolées. Des portails apparaissaient et disparaissaient sans prévenir. Des villes s’éveillaient sous des cieux qui n’étaient pas les leurs. Des îles flottantes dérivaient. Des routes commerciales s’évanouissaient du jour au lendemain.
 
 Puis vint **The Ascension**.
 
-Dans un endroit inconnu, quelqu’un a trouvé un cône ordinaire sur une plateforme en pierre. Lorsqu’ils essayèrent de le déplacer, une vague d’énergie traversa plusieurs mondes. Portails stabilisés. Les îles errantes se sont arrêtées. Des systèmes incompatibles ont commencé à fonctionner ensemble.
+En un lieu inconnu, quelqu’un trouva un cône ordinaire sur une plateforme de pierre. En tentant de le déplacer, une onde d’énergie traversa plusieurs mondes. Les portails se stabilisèrent. Les îles errantes s’immobilisèrent. Des systèmes incompatibles se mirent à fonctionner ensemble.
 
-Pendant quelques secondes, de nombreuses civilisations ont été témoins du même phénomène : une étoile dorée est apparue au-dessus du Cône.
+Pendant quelques secondes, de nombreuses civilisations observèrent le même phénomène : une étoile dorée apparut au-dessus du Cône.
 
-C'était suffisant. L'objet est devenu connu sous le nom de **The Sacred Cone**.
+Ce fut suffisant. L’objet devint connu sous le nom de **The Sacred Cone**.
 
-## Terrain plus élevé
+## Higher Ground
 
-Les mondes connectés ont formé **Higher Ground**. Ce n’est ni exactement une nation ni entièrement un empire. C'est un réseau de territoires, de villes, d'institutions, de routes interdimensionnelles et de communautés unies par un principe :
+Les mondes reliés formèrent **Higher Ground**. Ce n’est pas tout à fait une nation, ni entièrement un empire. C’est un réseau de territoires, de villes, d’institutions, de routes interdimensionnelles et de communautés unies par un seul principe :
 
-> Il existe toujours un chemin vers un terrain plus élevé.
+> Il existe toujours un chemin vers un terrain plus haut.
 
-Cette philosophie s'appelle **The Guidance**. Ses adeptes pensent que le Cône n’offre aucune réponse. Il offre une direction.
+Cette philosophie s’appelle **The Guidance**. Ses adeptes estiment que le Cône n’offre pas de réponses. Il offre une direction.
 
 **Higher Ground Awaits.**
 
 ## The King
 
-La principale personnalité politique de Higher Ground est simplement connue sous le nom de **The King** : un capybara, un astronaute, un monarque, un explorateur et un diplomate, et peut-être la créature la plus calme du multivers.
+La principale figure politique de Higher Ground est simplement connue sous le nom de **The King** : un capybara, astronaute, monarque, explorateur et diplomate — et sans doute la créature la plus calme du multivers.
 
-Son vrai nom n'apparaît pas dans les documents officiels. Certains disent qu'il y a renoncé. D'autres disent qu'il n'en a jamais eu.
+Son véritable nom n’apparaît dans aucun document officiel. Certains disent qu’il y a renoncé. D’autres disent qu’il n’en a jamais eu.
 
-Au cours des premières années qui ont suivi The Ascension, il a dirigé des expéditions à travers les Gates nouvellement stabilisés. Il établit le premier contact entre les civilisations et empêcha les guerres entre des territoires qui venaient tout juste de se découvrir. À un moment donné, il est devenu le dirigeant de Higher Ground. Personne ne sait précisément comment. Curieusement, peu de gens semblent l’avoir remis en question.
+Durant les premières années après The Ascension, il mena des expéditions à travers les Gates nouvellement stabilisés. Il établit le premier contact entre civilisations et évita des guerres entre territoires qui venaient tout juste de se découvrir. À un moment donné, il devint le dirigeant de Higher Ground. Personne ne sait exactement comment. Curieusement, peu de gens l’ont demandé.
 
-Il fait rarement de longs discours. Il boit du thé lors des crises interdimensionnelles et considère chaque réunion importante comme une occasion de prendre une bonne tasse.
+Il fait rarement de longs discours. Il boit du thé au milieu des crises interdimensionnelles et traite chaque réunion importante comme l’occasion d’une tasse convenable.
 
 > **Good Tea. Better Decisions.**
 
 ## The Sacred Cone
 
-Le cône se trouve dans **The Sanctuary**, une structure colossale au centre de **The First Ground**. Des milliers de personnes visitent chaque année.
+Le Cône se dresse dans **The Sanctuary**, une structure colossale au centre de **The First Ground**. Des milliers de visiteurs s’y rendent chaque année.
 
-Le Cône interfère avec les portails, réagit à certaines étoiles, produit occasionnellement des signaux énergétiques et influence les systèmes de navigation. Cela semble impossible à détruire. Son âge ne peut pas être déterminé et différents capteurs renvoient des résultats mutuellement incompatibles.
+Le Cône perturbe les portails, réagit à certaines étoiles, émet parfois des signaux d’énergie et influence les systèmes de navigation. Il paraît impossible à détruire. Son âge ne peut être déterminé, et différents capteurs renvoient des mesures incompatibles entre elles.
 
-Il existe des centaines de théories sur son origine. Aucun n’est officiellement vrai. Son origine ne doit jamais être complètement expliquée.
+Il existe des centaines de théories sur son origine. Aucune n’est officiellement vraie. Et son origine ne doit jamais être entièrement expliquée.
 
 ## The Order of Guidance
 
-**The Order of Guidance** étudie et protège le Cône. Ce n'est pas une religion conventionnelle. Il combine science, philosophie, bureaucratie, exploration, rituels et entretien des infrastructures.
+**The Order of Guidance** étudie et protège le Cône. Ce n’est pas une religion ordinaire : l’Ordre mêle science, philosophie, bureaucratie, exploration, rituel et entretien des infrastructures.
 
-Ses membres estiment que le Cône ne gouverne pas. Cela pointe. L'Ordre gère des observatoires, des archives, des centres scientifiques et des avant-postes dans tout Higher Ground.
+Ses membres estiment que le Cône ne gouverne pas. Il indique. L’Ordre entretient des observatoires, des archives, des centres scientifiques et des avant-postes dans tout Higher Ground.
 
-Sa marque est le cône entouré d'un halo orbital surmonté d'une étoile.
+Son emblème est le Cône entouré d’un halo orbital, surmonté d’une étoile.
 
 > **Guidance, not answers.**
 
 ## The Keepers
 
-Les assistants les plus dévoués du Cône sont de petits robots connus sous le nom de **The Keepers**. Ils ont commencé comme machines de maintenance. Après The Ascension, ils se sont rassemblés spontanément autour du Cône. Personne n'a programmé ce comportement.
+Les serviteurs les plus dévoués du Cône sont de petits robots appelés **The Keepers**. Ils ont commencé comme machines d’entretien. Après The Ascension, ils se sont rassemblés d’eux-mêmes autour du Cône. Personne n’a programmé ce comportement.
 
-Lorsqu'on leur demande pourquoi, ils proposent généralement une variante de :
+Quand on leur demande pourquoi, ils répondent le plus souvent par une variante de :
 
-> **Direction confirmée.**
+> **Direction confirmed.**
 
-The Keepers entretient désormais le sanctuaire, analyse l'énergie, gère l'éclairage et la sécurité, conserve les artefacts et effectue des tâches cérémonielles. Qu’ils possèdent la foi ou suivent une instruction ancienne reste en suspens.
+Les Keepers entretiennent aujourd’hui The Sanctuary, analysent l’énergie, gèrent l’éclairage et la sécurité, conservent les artefacts et accomplissent des tâches cérémonielles. Foi ou instruction ancienne : la question reste ouverte.
 
 ## Bread Operations
 
-La bureaucratie de Higher Ground est exceptionnellement ambitieuse. **Bread Operations** a commencé comme un bureau de distribution alimentaire et est devenu une formidable institution logistique responsable du transport, des chaînes d'approvisionnement, du commerce, des réserves stratégiques, des routes de portail et de la distribution des ressources.
+La bureaucratie de Higher Ground est ambitieuse d’une manière inhabituelle. **Bread Operations** a commencé comme un bureau de distribution alimentaire avant de devenir une redoutable institution logistique, responsable du transport, des chaînes d’approvisionnement, du commerce, des réserves stratégiques, des routes de portails et de la répartition des ressources.
 
-Son directeur est un pigeon connu uniquement sous le nom de **The COO**. Il est extrêmement compétent, tout à fait sérieux et presque totalement intolérant aux retards logistiques.
+Son directeur est un pigeon connu seulement sous le nom de **The COO**. Il est extrêmement compétent, parfaitement sérieux et à peu près totalement intolérant au moindre retard logistique.
 
 > **Bread Builds Worlds.**
 
 ## The Potassium Division
 
-La plupart de la technologie de Higher Ground est maintenue par **The Potassium Division**. Son directeur est une banane sensible. Personne ne trouve cela remarquable.
+L’essentiel de la technologie de Higher Ground est entretenu par la **Potassium Division**. Son directeur est une banane douée de conscience. Personne n’y voit rien de remarquable.
 
-La Division supervise l'informatique, les communications, la recherche technologique, les systèmes énergétiques, l'automatisation, l'intelligence artificielle et l'infrastructure des portails.
+La Division supervise l’informatique, les communications, la recherche technologique, les systèmes énergétiques, l’automatisation, l’intelligence artificielle et l’infrastructure des portails.
 
 > **Potassium Fuels Progress.**
 
-The Banana détient un siège au conseil de Higher Ground et entre régulièrement en conflit bureaucratique avec Bread Operations. Les départements sont constamment en désaccord et travaillent remarquablement bien ensemble.
+The Banana siège au conseil de Higher Ground et entre régulièrement en conflit bureaucratique avec Bread Operations. Les deux départements sont constamment en désaccord et travaillent remarquablement bien ensemble.
 
 ## The Maestro et The Resonance
 
-La politique, la logistique et la science ne suffisent pas à soutenir Higher Ground. Ses itinéraires interdimensionnels véhiculent une énorme culture artistique.
+La politique, la logistique et la science ne suffisent pas à soutenir Higher Ground. Ses routes interdimensionnelles transportent une immense culture artistique.
 
-Son personnage le plus célèbre est **The Maestro**, une pieuvre qui dirige les festivals et les transmissions musicales entre les mondes. The Maestro exploite **The Resonance**, un réseau diffusant de la musique, de l'art, des actualités et des événements culturels via les Gates.
+Sa figure la plus célèbre est **The Maestro**, une pieuvre qui dirige festivals et transmissions musicales entre les mondes. The Maestro exploite **The Resonance**, un réseau qui achemine musique, art, actualités et événements culturels à travers les Gates.
 
 > **Music Unites Worlds.**
 
 ## Les Gates
 
-Les portails s'appellent officiellement **Gates**. Ils relient des lieux séparés par des millions d’années-lumière. Certains semblent conçus. D'autres émergent spontanément. L'ancien Gates existait bien avant The Ascension ; leurs constructeurs sont inconnus.
+Les portails sont officiellement appelés **Gates**. Ils relient des lieux séparés par des millions d’années-lumière. Certains semblent construits. D’autres surgissent seuls. Des Gates anciens existaient bien avant The Ascension, et leurs bâtisseurs sont inconnus.
 
-La stabilité de la plupart des Gates modernes semble liée au cône. Higher Ground vit donc avec une peur persistante :
+La stabilité de la plupart des Gates modernes semble liée au Cône. Higher Ground vit donc avec une crainte persistante :
 
-> Que se passe-t-il si le cône cesse de fonctionner ?
+> Que se passera-t-il si le Cône cesse d’agir ?
 
-## L'univers connu
+## L’univers connu
 
-- **The First Ground :** domicile de The Sanctuary et du cône.
-- **Crown City :** la capitale administrative de Higher Ground.
-- **The Floating Realms :** îles reliées par Gates.
-- **The Deep Cities :** civilisations construites dans d'immenses océans.
-- **The Outer Routes :** les principales routes de l'exploration spatiale.
-- **The Silent Worlds :** planètes apparemment abandonnées.
-- **The Far Ground :** régions mal explorées au-delà du réseau maintenu.
+- **The First Ground :** le foyer de The Sanctuary et du Cône.
+- **Crown City :** la capitale administrative de Higher Ground.
+- **The Floating Realms :** des îles reliées par des Gates.
+- **The Deep Cities :** des civilisations bâties dans d’immenses océans.
+- **The Outer Routes :** les principales voies de l’exploration spatiale.
+- **The Silent Worlds :** des planètes apparemment abandonnées.
+- **The Far Ground :** des régions peu explorées au-delà du réseau entretenu.
 
-Des milliers de mondes pourraient rester inconnus.
+Des milliers de mondes restent peut-être à découvrir.
 
-## Le symbole de retour
+## Le symbole qui revient
 
-Les archives anciennes de civilisations sans contact connu affichent la même forme : un triangle vertical, un cercle orbital et une étoile. Certains ont des millions d’années de plus que tous les enregistrements connus du Cône.
+D’anciennes archives de civilisations sans contact connu entre elles présentent la même forme : un triangle vertical, un cercle orbital et une étoile. Certaines sont plus vieilles de millions d’années que toute trace connue du Cône.
 
-Cela a donné naissance à une théorie controversée :
+D’où une théorie controversée :
 
-> Peut-être que The Ascension n'était pas un début. C'était peut-être un retour.
+> Peut-être que The Ascension ne fut pas un commencement. Peut-être fut-ce un retour.
 
 ## La perturbation actuelle
 
-Les nouveaux Gates ont commencé à s'ouvrir sur des lieux absents de toutes les cartes : des villes abandonnées, d'immenses structures, des signaux inconnus, des versions alternatives de territoires familiers et des symboles associés au Cône.
+De nouveaux Gates se sont mis à s’ouvrir vers des lieux absents de toutes les cartes : villes abandonnées, structures immenses, signaux inconnus, versions alternatives de territoires familiers et symboles associés au Cône.
 
-Les instruments à l’intérieur de The Sanctuary détectent désormais un signal répétitif provenant d’au-delà de l’univers connu. Son message semble contenir seulement trois mots :
+Les instruments de The Sanctuary détectent désormais un signal répété venu d’au-delà de l’univers connu. Son message semble ne contenir que trois mots :
 
 > **HIGHER GROUND EXISTS.**
 
-Personne ne sait qui l'envoie. Pour la première fois depuis The Ascension, personne ne sait où pointe le cône.
+Personne ne sait qui l’émet. Pour la première fois depuis The Ascension, personne ne sait vers où le Cône pointe.

@@ -1,47 +1,47 @@
-# Instituições de nível superior
+# Instituições de Higher Ground
 
 ## The Order of Guidance
 
-**Canon.** A organização responsável pelo estudo e proteção do Cone Sagrado. Combina ciência, filosofia, burocracia, exploração, ritual e manutenção de infraestrutura.
+**Canon.** A organização responsável por estudar e proteger o Cone Sagrado. Combina ciência, filosofia, burocracia, exploração, ritual e manutenção de infraestrutura.
 
-A Ordem mantém The Sanctuary, observatórios, arquivos, centros científicos e postos avançados. Não afirma que o Cone governe ou se explique.
+A Ordem mantém The Sanctuary, observatórios, arquivos, centros científicos e postos avançados. Não afirma que o Cone governe, nem que ele se explique.
 
 > **Guidance, not answers.**
 
 ## The Keepers
 
-**Canon.** Atendentes robóticos que se reuniram ao redor do Cone após The Ascension sem programação conhecida. Eles mantêm o The Sanctuary, analisam sua energia, gerenciam a iluminação e a segurança, conservam artefatos e realizam cerimônias.
+**Canon.** Assistentes robóticos que se reuniram ao redor do Cone depois de The Ascension, sem programação conhecida. Cuidam de The Sanctuary, analisam sua energia, administram iluminação e segurança, conservam artefatos e realizam cerimônias.
 
-The Keepers operam juntamente com a Ordem, mas não são apenas seus equipamentos. A sua experiência interna e a fonte da sua direcção partilhada permanecem desconhecidas.
+Os Keepers trabalham ao lado da Ordem, mas não são meros equipamentos dela. Sua experiência interna e a origem de sua direção compartilhada continuam desconhecidas.
 
 ## Bread Operations
 
-**Canon.** Instituição logística da Higher Ground, liderada pelo pombo conhecido como The COO. Começou com a distribuição de alimentos e expandiu-se para transportes, cadeias de abastecimento, comércio, reservas estratégicas, rotas de portais e distribuição de recursos.
+**Canon.** A instituição logística de Higher Ground, liderada pelo pombo conhecido como The COO. Começou com distribuição de alimentos e se expandiu para transporte, cadeias de suprimentos, comércio, reservas estratégicas, rotas de portais e distribuição de recursos.
 
-O seu poder decorre de um facto simples: todo mundo conectado depende da circulação fiável de bens essenciais.
+Seu poder decorre de um fato simples: todo mundo conectado depende da circulação confiável de bens essenciais.
 
 > **Bread Builds Worlds.**
 
 ## The Potassium Division
 
-**Canon.** Organização de tecnologia e infraestrutura da Higher Ground, liderada pelo senciente Banana. Supervisiona a computação, comunicações, pesquisa, energia, automação, inteligência artificial e as máquinas do Gates.
+**Canon.** A organização de tecnologia e infraestrutura de Higher Ground, liderada pela banana senciente. Supervisiona computação, comunicações, pesquisa, energia, automação, inteligência artificial e o maquinário dos Gates.
 
-O seu conflito burocrático de longa data com Bread Operations diz respeito a prioridades, calendários e recursos. A rivalidade deles é séria, produtiva e não uma guerra.
+Seu longo conflito burocrático com Bread Operations gira em torno de prioridades, prazos e recursos. A rivalidade é séria, produtiva e não é uma guerra.
 
 > **Potassium Fuels Progress.**
 
 ## The Resonance
 
-**Canon.** Uma rede intermundial cultural e de comunicações operada por The Maestro. Transmite música, arte, notícias, festivais e eventos públicos através do Gates.
+**Canon.** Uma rede cultural e de comunicações entre mundos, operada por The Maestro. Transmite música, arte, notícias, festivais e eventos públicos através dos Gates.
 
-The Resonance é infraestrutura e cultura. Impede que a ligação se torne um acordo puramente administrativo.
+The Resonance é infraestrutura e cultura ao mesmo tempo. É o que impede a conexão entre mundos de virar um arranjo puramente administrativo.
 
 > **Music Unites Worlds.**
 
 ## The Council of Higher Ground
 
-**Canon em função; a adesão exata permanece aberta.** O fórum político no qual The King, representantes territoriais e diretores institucionais coordenam a rede. The Banana ocupa um assento. The COO aparece frequentemente antes dele. A sua constituição, regras de votação e adesão plena ainda não foram estabelecidas.
+**Canon em função; a composição exata continua em aberto.** O fórum político em que The King, representantes territoriais e diretores institucionais coordenam a rede. The Banana ocupa um assento. The COO comparece diante dele com frequência. Sua constituição, suas regras de votação e sua composição completa ainda não foram estabelecidas.
 
 ## The Office of Continuity
 
-**Dispositivo editorial em nível de projeto.** O arquivo público usa esse nome para registros que distinguem Canon, Semi-Canon e Coneposting. Se existe uma instituição com nome idêntico dentro da história é atualmente Semi-Canon.
+**Recurso editorial do projeto.** O arquivo público usa esse nome para os registros que distinguem Canon, Semi-Canon e Coneposting. Se existe uma instituição de mesmo nome dentro da história é, por ora, Semi-Canon.
