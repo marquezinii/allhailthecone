@@ -248,11 +248,13 @@ test("language switch keeps the current route in all five locales", async ({
   }
 });
 
-test("official Discord links are present in the community and shared footer", async ({
+test("official support and Discord links are present in the community and footer", async ({
   page,
 }) => {
   await page.goto("/community");
   const discord = "https://discord.gg/9VyUNRk7N";
+  const kofi = "https://ko-fi.com/allhailthecone";
+  const buyMeACoffee = "https://buymeacoffee.com/allhailthecone";
   await expect(
     page.getByRole("link", { name: "Join the official Discord" }),
   ).toHaveAttribute("href", discord);
@@ -260,4 +262,13 @@ test("official Discord links are present in the community and shared footer", as
     "href",
     discord,
   );
+  await expect(
+    page.getByRole("link", { name: "Support on Ko-fi" }),
+  ).toHaveAttribute("href", kofi);
+  await expect(
+    page.getByRole("link", { name: /Prefer another platform/ }),
+  ).toHaveAttribute("href", buyMeACoffee);
+  await expect(
+    page.getByRole("link", { name: "Buy Me a Coffee ↗" }),
+  ).toHaveAttribute("href", buyMeACoffee);
 });

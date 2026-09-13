@@ -1,5 +1,11 @@
 # Support and community
 
+## Support the project
+
+If the archive has been useful or memorable, support helps keep new lore, art and expeditions moving.
+
+**[Support on Ko-fi](https://ko-fi.com/allhailthecone)** is the primary support path. Prefer another platform? **[Buy Me a Coffee](https://buymeacoffee.com/allhailthecone)** is available as an alternative.
+
 ## Join the conversation
 
 - **[Official Discord](https://discord.gg/9VyUNRk7N)** — quick conversation, shared discoveries and community presence.

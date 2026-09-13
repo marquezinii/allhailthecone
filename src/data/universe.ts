@@ -4,6 +4,7 @@ export const site = {
   repo: "https://github.com/marquezinii/allhailthecone",
   discord: "https://discord.gg/9VyUNRk7N",
   kofi: "https://ko-fi.com/allhailthecone",
+  buyMeACoffee: "https://buymeacoffee.com/allhailthecone",
   description:
     "A cosmic bureaucracy held together by tea, bread, potassium, and an extraordinary faith in a traffic cone.",
 };

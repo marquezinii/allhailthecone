@@ -46,6 +46,7 @@ In Higher Ground, a crowned capybara is the calmest monarch in the multiverse. A
 - [Technical architecture](#technical-architecture)
 - [Languages and localization](#languages-and-localization)
 - [Artwork, identity and provenance](#artwork-identity-and-provenance)
+- [Support the project](#support-the-project)
 - [Run locally](#run-locally)
 - [Quality gates](#quality-gates)
 - [Repository map](#repository-map)
@@ -55,16 +56,16 @@ In Higher Ground, a crowned capybara is the calmest monarch in the multiverse. A
 
 ## Start here
 
-| If you want to…                               | Start here                                                                                                                                                            |
-| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Understand why the Cone matters               | [LORE.md](LORE.md)                                                                                                                                                    |
-| Meet the people keeping reality operational   | [CHARACTERS.md](CHARACTERS.md)                                                                                                                                        |
-| Explore territories, Gates and unknown routes | [WORLD.md](WORLD.md)                                                                                                                                                  |
-| Read the official continuity boundaries       | [CANON.md](CANON.md)                                                                                                                                                  |
-| Browse the visual archive                     | [Gallery](https://allhailthecone.com/gallery)                                                                                                                         |
-| See the visual rules before making art        | [ART_GUIDE.md](ART_GUIDE.md)                                                                                                                                          |
-| Join the community or support the archive     | [Discord](https://discord.gg/9VyUNRk7N), [Ko-fi](https://ko-fi.com/allhailthecone) or [GitHub Discussions](https://github.com/marquezinii/allhailthecone/discussions) |
-| Propose a thoughtful addition                 | [CONTRIBUTING.md](CONTRIBUTING.md)                                                                                                                                    |
+| If you want to…                               | Start here                                                                                                                                                                                                                        |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Understand why the Cone matters               | [LORE.md](LORE.md)                                                                                                                                                                                                                |
+| Meet the people keeping reality operational   | [CHARACTERS.md](CHARACTERS.md)                                                                                                                                                                                                    |
+| Explore territories, Gates and unknown routes | [WORLD.md](WORLD.md)                                                                                                                                                                                                              |
+| Read the official continuity boundaries       | [CANON.md](CANON.md)                                                                                                                                                                                                              |
+| Browse the visual archive                     | [Gallery](https://allhailthecone.com/gallery)                                                                                                                                                                                     |
+| See the visual rules before making art        | [ART_GUIDE.md](ART_GUIDE.md)                                                                                                                                                                                                      |
+| Join the community or support the archive     | [Discord](https://discord.gg/9VyUNRk7N), [Ko-fi](https://ko-fi.com/allhailthecone), [Buy Me a Coffee](https://buymeacoffee.com/allhailthecone) or [GitHub Discussions](https://github.com/marquezinii/allhailthecone/discussions) |
+| Propose a thoughtful addition                 | [CONTRIBUTING.md](CONTRIBUTING.md)                                                                                                                                                                                                |
 
 ## What this project is
 
@@ -79,6 +80,14 @@ This repository is the source of record for the first public edition of All Hail
 | **Interaction earns its cost**   | WebGL is isolated to a single purposeful scene; the archive remains fast and readable everywhere else. |
 
 This is not a generic meme site, a content-management product, or an unfinished game pitch. It is a public creative property with a website designed to carry its own tone.
+
+## ❤️ Support the project
+
+If this archive has been useful or memorable, consider supporting its development.
+
+**[Support on Ko-fi](https://ko-fi.com/allhailthecone)**
+
+Prefer another platform? **[Buy Me a Coffee](https://buymeacoffee.com/allhailthecone)**
 
 ## The world in one minute
 

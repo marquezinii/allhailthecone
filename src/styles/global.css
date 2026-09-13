@@ -941,6 +941,35 @@ p {
   width: 18px;
   height: 18px;
 }
+.support-panel {
+  margin: 0 0 42px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid #9472d148;
+  background:
+    radial-gradient(circle at 88% 10%, #9472d124, transparent 32%),
+    linear-gradient(120deg, #f2a8360d, transparent 55%);
+}
+.support-panel h2 {
+  margin: 9px 0 10px;
+}
+.support-panel > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 0;
+}
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+.support-alternative {
+  color: var(--soft);
+  font-size: 12px;
+}
+.support-alternative:hover {
+  color: var(--gold);
+}
 .footer-bottom button {
   font-size: 10px;
   background: none;
