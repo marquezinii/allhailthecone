@@ -29,6 +29,18 @@ test("public routes render with accessible navigation and no broken assets", asy
   ]) {
     await page.goto(path);
     await page.waitForLoadState("networkidle");
+    // The hero fades in through GSAP, which networkidle does not wait for.
+    // Axe reads the transitional opacity as a contrast violation, so let the
+    // reveal settle first. Resolves immediately where it never runs.
+    await expect
+      .poll(() =>
+        page.evaluate(() =>
+          [...document.querySelectorAll("[data-hero-reveal]")].every(
+            (el) => getComputedStyle(el).opacity === "1",
+          ),
+        ),
+      )
+      .toBeTruthy();
     await expect(page.locator("main h1:visible")).toHaveCount(1);
     expect(
       await page.evaluate(
@@ -156,7 +168,12 @@ test("menu supports keyboard and mobile; motion preferences and observations wor
     page.getByRole("button", { name: "Resume atmosphere" }),
   ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Resume atmosphere" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-motion", "active");
+  // Chromium applies the media override before it delivers the matchMedia
+  // change event, and drops the event entirely under load. Reload so the page
+  // reads the preference at startup instead of racing the notification.
   await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-motion", "paused");
   expect(
     await page
