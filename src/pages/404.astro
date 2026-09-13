@@ -1,6 +1,45 @@
 ---
 import Base from "../layouts/Base.astro";
 import ConeScene from "../components/ConeScene.astro";
+import { localeMeta, locales, localizePath } from "../i18n";
+
+const copy = {
+  en: [
+    "Route 404 · Destination unfiled",
+    "This island is not on the map.",
+    "The address may have changed, or the record may not exist. The Cone is still where you left it.",
+    "Return to Higher Ground",
+    "Consult the atlas",
+  ],
+  pt: [
+    "Rota 404 · Destino não catalogado",
+    "Esta ilha não está no mapa.",
+    "O endereço pode ter mudado, ou o registro pode não existir. O Cone continua onde você o deixou.",
+    "Voltar para Higher Ground",
+    "Consultar o atlas",
+  ],
+  zh: [
+    "路线 404 · 目的地未收录",
+    "这座岛屿不在地图上。",
+    "地址可能已经变更，也可能这条记录并不存在。交通锥仍在你离开时的位置。",
+    "返回 Higher Ground",
+    "查阅图集",
+  ],
+  de: [
+    "Route 404 · Ziel nicht verzeichnet",
+    "Diese Insel steht nicht auf der Karte.",
+    "Die Adresse hat sich vielleicht geändert, oder den Eintrag gibt es nicht. Der Kegel steht noch dort, wo du ihn gelassen hast.",
+    "Zurück nach Higher Ground",
+    "Den Atlas einsehen",
+  ],
+  fr: [
+    "Route 404 · Destination non répertoriée",
+    "Cette île n’est pas sur la carte.",
+    "L’adresse a peut-être changé, ou la fiche n’existe pas. Le Cône est toujours là où vous l’avez laissé.",
+    "Retourner à Higher Ground",
+    "Consulter l’atlas",
+  ],
+} as const;
 ---
 
 <Base
@@ -10,21 +49,39 @@ import ConeScene from "../components/ConeScene.astro";
 >
   <section class="wrap character-detail">
     <div>
-      <p class="eyebrow">Route 404 · Destination unfiled</p>
-      <h1>This island is not on the map.</h1>
-      <p>
-        The address may have changed, or the record may not exist. The Cone is
-        still where you left it.
-      </p>
-      <div class="profile-links">
-        <a class="button button-primary" href="/">
-          Return to Higher Ground ↗
-        </a>
-        <a class="text-link" href="/world">
-          Consult the atlas ↗
-        </a>
-      </div>
+      {locales.map((locale) => (
+        <div
+          data-notfound={locale}
+          lang={localeMeta[locale].html}
+          hidden={locale !== "en"}
+        >
+          <p class="eyebrow">{copy[locale][0]}</p>
+          <h1>{copy[locale][1]}</h1>
+          <p>{copy[locale][2]}</p>
+          <div class="profile-links">
+            <a class="button button-primary" href={localizePath("/", locale)}>
+              {copy[locale][3]} ↗
+            </a>
+            <a class="text-link" href={localizePath("/world", locale)}>
+              {copy[locale][4]} ↗
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
     <ConeScene compact />
   </section>
+  <script>
+    // The host serves one static 404.html for every path, so the locale can
+    // only be read on the client. Without JS the English block stays visible.
+    {
+      const segment = location.pathname.split("/")[1];
+      const blocks = [
+        ...document.querySelectorAll<HTMLElement>("[data-notfound]"),
+      ];
+      const match =
+        blocks.find((el) => el.dataset.notfound === segment) ?? blocks[0];
+      for (const el of blocks) el.hidden = el !== match;
+    }
+  </script>
 </Base>
